@@ -1,17 +1,11 @@
 import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navbar />
-
-      <section>
-        <h2>Welcome to my digital home.</h2>
-
-        <p>
-          Building technology that makes a difference.
-        </p>
-      </section>
-    </main>
+      <Hero />
+    </>
   );
 }
