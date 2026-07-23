@@ -33,7 +33,10 @@ const timeline = [
 
 export default function Timeline() {
   return (
-    <section className="bg-slate-900 py-20">
+<section
+  id="timeline"
+  className="bg-slate-900 py-20"
+>
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-12 text-center text-4xl font-bold">
           Career Timeline

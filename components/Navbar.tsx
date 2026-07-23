@@ -10,31 +10,25 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 text-slate-300">
 
           <li>
-            <a href="#" className="hover:text-sky-400 transition">
+<a href="/" className="hover:text-sky-400 transition">
               Home
             </a>
           </li>
 
           <li>
-            <a href="#" className="hover:text-sky-400 transition">
+<a href="#about" className="hover:text-sky-400 transition">
               About
             </a>
           </li>
 
           <li>
-            <a href="#" className="hover:text-sky-400 transition">
+<a href="#projects" className="hover:text-sky-400 transition">
               Projects
             </a>
           </li>
 
           <li>
-            <a href="#" className="hover:text-sky-400 transition">
-              Blog
-            </a>
-          </li>
-
-          <li>
-            <a href="#" className="hover:text-sky-400 transition">
+<a href="#contact" className="hover:text-sky-400 transition">
               Contact
             </a>
           </li>

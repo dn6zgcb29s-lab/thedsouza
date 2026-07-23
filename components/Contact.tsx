@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <section className="bg-slate-800 py-20">
+<section
+  id="contact"
+  className="bg-slate-800 py-20"
+>
       <div className="mx-auto max-w-4xl px-6 text-center">
         <h2 className="mb-6 text-4xl font-bold">
           Let&apos;s Connect
