@@ -6,19 +6,26 @@ import Skills from "@/components/Skills";
 import Timeline from "@/components/Timeline";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
       <main>
         <Hero />
-        <About />
+
+        <FadeIn>
+          <About />
+        </FadeIn>
+
         <Projects />
         <Skills />
         <Timeline />
         <Contact />
       </main>
+
       <Footer />
     </>
   );
