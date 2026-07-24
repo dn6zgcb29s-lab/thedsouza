@@ -35,9 +35,12 @@ export default function Navbar() {
 
         </ul>
 
-        <button className="bg-sky-500 hover:bg-sky-400 transition px-5 py-2 rounded-lg text-white font-medium">
-          Let's Talk
-        </button>
+<a
+  href="#contact"
+  className="bg-sky-500 hover:bg-sky-400 transition px-5 py-2 rounded-lg text-white font-medium"
+>
+  Let's Talk
+</a>   
 
       </div>
     </nav>
