@@ -20,10 +20,21 @@ export default function Home() {
           <About />
         </FadeIn>
 
-        <Projects />
-        <Skills />
-        <Timeline />
-        <Contact />
+        <FadeIn>
+          <Projects />
+        </FadeIn>
+
+        <FadeIn>
+          <Skills />
+        </FadeIn>
+
+        <FadeIn>
+          <Timeline />
+        </FadeIn>
+
+        <FadeIn>
+          <Contact />
+        </FadeIn>
       </main>
 
       <Footer />
