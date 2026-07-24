@@ -18,7 +18,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/lbbextreme"
             target="_blank"
             rel="noreferrer"
             className="rounded-lg border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-blue-400 hover:text-blue-400"
