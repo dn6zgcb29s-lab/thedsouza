@@ -33,10 +33,7 @@ const timeline = [
 
 export default function Timeline() {
   return (
-<section
-  id="timeline"
-  className="bg-slate-900 py-20"
->
+    <section id="timeline" className="bg-slate-900 py-20">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-12 text-center text-4xl font-bold">
           Career Timeline
@@ -52,13 +49,9 @@ export default function Timeline() {
                 {item.period}
               </p>
 
-              <h3 className="mb-3 text-2xl font-semibold">
-                {item.title}
-              </h3>
+              <h3 className="mb-3 text-2xl font-semibold">{item.title}</h3>
 
-              <p className="leading-7 text-slate-400">
-                {item.description}
-              </p>
+              <p className="leading-7 text-slate-400">{item.description}</p>
             </article>
           ))}
         </div>

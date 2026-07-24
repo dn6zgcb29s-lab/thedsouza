@@ -15,20 +15,17 @@ const projects = [
   },
   {
     title: "thedsouza.com",
-    description:
-      "My personal portfolio documenting my journey as a developer.",
+    description: "My personal portfolio documenting my journey as a developer.",
     tech: "Next.js • TypeScript • Tailwind",
   },
   {
     title: "Epping Tennis Club",
-    description:
-      "Managed Microsoft 365, email migration and IT improvements.",
+    description: "Managed Microsoft 365, email migration and IT improvements.",
     tech: "Microsoft 365 • Outlook • DNS",
   },
   {
     title: "GVI Home Lab",
-    description:
-      "Built a virtual home lab using Proxmox, Docker and Linux.",
+    description: "Built a virtual home lab using Proxmox, Docker and Linux.",
     tech: "Proxmox • Docker • Linux",
   },
   {
@@ -41,11 +38,9 @@ const projects = [
 
 export default function Projects() {
   return (
-     <section id="projects" className="bg-slate-900 py-20">
+    <section id="projects" className="bg-slate-900 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-4xl font-bold">
-          Projects
-        </h2>
+        <h2 className="mb-12 text-center text-4xl font-bold">Projects</h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (

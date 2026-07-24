@@ -11,17 +11,11 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-800 p-6 transition hover:border-blue-500 hover:shadow-lg">
-      <h3 className="text-2xl font-semibold mb-3">
-        {title}
-      </h3>
+      <h3 className="text-2xl font-semibold mb-3">{title}</h3>
 
-      <p className="text-slate-400 mb-4">
-        {description}
-      </p>
+      <p className="text-slate-400 mb-4">{description}</p>
 
-      <span className="text-sm text-blue-400 font-medium">
-        {tech}
-      </span>
+      <span className="text-sm text-blue-400 font-medium">{tech}</span>
     </div>
   );
 }
