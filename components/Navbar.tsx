@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -16,9 +17,9 @@ export default function Navbar() {
 
         <ul className="hidden gap-8 text-slate-300 md:flex">
           <li>
-            <a href="/" className="transition hover:text-sky-400">
+            <Link href="/" className="transition hover:text-sky-400">
               Home
-            </a>
+            </Link>
           </li>
 
           <li>
@@ -62,13 +63,13 @@ export default function Navbar() {
         <div className="border-t border-slate-800 bg-slate-950 px-6 py-6 md:hidden">
           <ul className="flex flex-col gap-5 text-slate-300">
             <li>
-              <a
+              <Link
                 href="/"
                 onClick={closeMenu}
                 className="block transition hover:text-sky-400"
               >
                 Home
-              </a>
+              </Link>
             </li>
 
             <li>
