@@ -18,15 +18,6 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-blue-400 hover:text-blue-400"
-          >
-            LinkedIn
-          </a>
-
-          <a
             href="https://github.com"
             target="_blank"
             rel="noreferrer"
