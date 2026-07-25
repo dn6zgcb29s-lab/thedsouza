@@ -20,7 +20,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Welcome
+          Hello, I&apos;m Glen
         </motion.p>
 
         <motion.h1
@@ -29,7 +29,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Glen D&apos;Souza
+          IT Professional &amp; Hands-On Technical Builder
         </motion.h1>
 
         <motion.h2
@@ -38,7 +38,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Building technology that makes a difference.
+          I design reliable systems and build practical software solutions.
         </motion.h2>
 
         <motion.p
@@ -47,12 +47,12 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          I&apos;m documenting my journey as I build websites, explore AI,
-          create digital products and help businesses embrace technology.
+          I approach every technical challenge with an owner&apos;s mindset to
+          deliver lasting value.
         </motion.p>
 
         <motion.div
-          className="mt-10 flex justify-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
@@ -61,14 +61,14 @@ export default function Hero() {
             href="#projects"
             className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400"
           >
-            View My Projects
+            View Technical Projects
           </a>
 
           <a
             href="#contact"
             className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
           >
-            Contact Me
+            Let&apos;s Connect
           </a>
         </motion.div>
       </motion.div>
