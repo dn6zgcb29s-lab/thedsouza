@@ -54,9 +54,12 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
         >
-          <button className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400">
+          <a
+            href="#projects"
+            className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400"
+          >
             View My Projects
-          </button>
+          </a>
 
           <button className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400">
             Contact Me
