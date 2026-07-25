@@ -47,7 +47,14 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-slate-900 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-4xl font-bold">Projects</h2>
+        <h2 className="mb-4 text-center text-4xl font-bold">
+          Selected Technical Initiatives
+        </h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">
+          A selection of my recent work, ranging from live deployments and
+          active development to system architecture and design. Documentation
+          and case studies are actively being added.
+        </p>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
