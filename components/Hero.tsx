@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center bg-slate-950 px-8 text-white">
+    <section
+      id="home"
+      className="flex min-h-screen items-center justify-center bg-slate-950 px-8 text-white"
+    >
       <motion.div
         className="max-w-4xl text-center"
         initial={{ opacity: 0, y: 30 }}
@@ -61,9 +64,12 @@ export default function Hero() {
             View My Projects
           </a>
 
-          <button className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400">
+          <a
+            href="#contact"
+            className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+          >
             Contact Me
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </section>
