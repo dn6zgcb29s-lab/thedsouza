@@ -6,33 +6,40 @@ const projects = [
     description:
       "An AI-powered recruitment platform for intelligent candidate screening.",
     tech: "FastAPI • React • PostgreSQL",
+    status: "Case study coming soon",
   },
   {
     title: "TD Group Website",
     description:
       "Business website showcasing services and digital transformation projects.",
     tech: "Next.js • Tailwind CSS",
+    status: "Case study coming soon",
   },
   {
     title: "thedsouza.com",
     description: "My personal portfolio documenting my journey as a developer.",
     tech: "Next.js • TypeScript • Tailwind",
+    href: "https://thedsouza.com",
   },
   {
     title: "Epping Tennis Club",
     description: "Managed Microsoft 365, email migration and IT improvements.",
     tech: "Microsoft 365 • Outlook • DNS",
+    href: "http://www.eppingtennisclub.com.au",
+    status: "Under construction",
   },
   {
     title: "GVI Home Lab",
     description: "Built a virtual home lab using Proxmox, Docker and Linux.",
     tech: "Proxmox • Docker • Linux",
+    status: "Case study coming soon",
   },
   {
     title: "Microbetting Framework",
     description:
       "Designed a data-driven betting framework using statistical analysis.",
     tech: "Python • Excel • Data Analysis",
+    status: "Case study coming soon",
   },
 ];
 
@@ -49,6 +56,8 @@ export default function Projects() {
               title={project.title}
               description={project.description}
               tech={project.tech}
+              href={project.href}
+              status={project.status}
             />
           ))}
         </div>
