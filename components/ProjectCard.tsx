@@ -1,9 +1,12 @@
+import Link from "next/link";
+
 type ProjectCardProps = {
   title: string;
   description: string;
   tech: string;
   href?: string;
   status?: string;
+  action?: string;
 };
 
 export default function ProjectCard({
@@ -12,6 +15,7 @@ export default function ProjectCard({
   tech,
   href,
   status,
+  action,
 }: ProjectCardProps) {
   const cardContent = (
     <>
@@ -28,17 +32,29 @@ export default function ProjectCard({
       <p className="mb-4 text-slate-400">{description}</p>
 
       <span className="text-sm font-medium text-blue-400">{tech}</span>
+
+      {action && (
+        <span className="mt-5 block font-semibold text-sky-400">
+          {action} <span aria-hidden="true">→</span>
+        </span>
+      )}
     </>
   );
 
   if (href) {
+    const cardClassName =
+      "block rounded-xl border border-slate-700 bg-slate-800 p-6 transition hover:border-blue-500 hover:shadow-lg";
+
+    if (href.startsWith("/")) {
+      return (
+        <Link href={href} className={cardClassName}>
+          {cardContent}
+        </Link>
+      );
+    }
+
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        className="block rounded-xl border border-slate-700 bg-slate-800 p-6 transition hover:border-blue-500 hover:shadow-lg"
-      >
+      <a href={href} target="_blank" rel="noreferrer" className={cardClassName}>
         {cardContent}
       </a>
     );

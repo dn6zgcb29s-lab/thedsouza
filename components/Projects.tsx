@@ -2,11 +2,13 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "AI Recruitment Platform",
+    title: "Home Datacenter",
     description:
-      "An AI-powered recruitment platform for intelligent candidate screening.",
-    tech: "FastAPI • React • PostgreSQL",
-    status: "Case study coming soon",
+      "A private virtualization and container environment built to develop, run and manage self-hosted services while strengthening practical infrastructure skills.",
+    tech: "Proxmox • Docker • Linux • Virtualization • Tailscale",
+    href: "/projects/home-datacenter",
+    status: "Featured case study",
+    action: "View case study",
   },
   {
     title: "TD Group Website",
@@ -45,7 +47,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-slate-900 py-20">
+    <section id="projects" className="bg-slate-900 py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-4 text-center text-4xl font-bold">
           Selected Technical Initiatives
@@ -65,6 +67,7 @@ export default function Projects() {
               tech={project.tech}
               href={project.href}
               status={project.status}
+              action={project.action}
             />
           ))}
         </div>
