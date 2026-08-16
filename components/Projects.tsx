@@ -2,13 +2,13 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Home Datacenter",
+    title: "GHDC — Home Datacenter",
     description:
-      "A private virtualization and container environment built to develop, run and manage self-hosted services while strengthening practical infrastructure skills.",
-    tech: "Proxmox • Docker • Linux • Virtualization • Tailscale",
+      "A two-year infrastructure and professional-development project evolving my working home lab into a secure, modular and heterogeneous private datacenter.",
+    tech: "Proxmox • Linux • Docker • Tailscale • Private Cloud",
     href: "/projects/home-datacenter",
-    status: "Featured case study",
-    action: "View case study",
+    status: "In development · Phase 0",
+    action: "Explore the GHDC roadmap",
   },
   {
     title: "TD Group Website",
