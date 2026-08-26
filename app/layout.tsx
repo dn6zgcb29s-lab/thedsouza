@@ -12,41 +12,46 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Glen D'Souza | Technology Consultant & AI Solutions";
+const description =
+  "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by more than 22 years of enterprise IT experience.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://thedsouza.com"),
   title: {
-    default: "Glen D'Souza | Technology, AI & Digital Projects",
+    default: title,
     template: "%s | Glen D'Souza",
   },
-  description:
-    "The personal website of Glen D'Souza, showcasing technology, artificial intelligence, digital projects, business ideas, and ongoing learning.",
+  description,
   keywords: [
     "Glen D'Souza",
-    "technology",
-    "artificial intelligence",
-    "AI projects",
-    "digital projects",
-    "web development",
-    "Next.js",
+    "technology consultant",
+    "small business technology consulting",
+    "AI solutions",
+    "proof of concept development",
     "business technology",
+    "website development",
+    "business email migration",
+    "Microsoft 365",
+    "digital infrastructure",
+    "workflow automation",
+    "Melbourne technology consultant",
   ],
   authors: [{ name: "Glen D'Souza" }],
   creator: "Glen D'Souza",
-  publisher: "Glen D'Souza",
+  publisher: "TD Group of Companies Pty Ltd",
   openGraph: {
     type: "website",
     locale: "en_AU",
     url: "https://thedsouza.com",
     siteName: "Glen D'Souza",
-    title: "Glen D'Souza | Technology, AI & Digital Projects",
-    description:
-      "Explore Glen D'Souza's technology journey, AI projects, digital initiatives, and ongoing learning.",
+    title,
+    description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Glen D'Souza | Technology, AI & Digital Projects",
-    description:
-      "Explore Glen D'Souza's technology journey, AI projects, digital initiatives, and ongoing learning.",
+    title,
+    description,
   },
 };
 
@@ -58,6 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>

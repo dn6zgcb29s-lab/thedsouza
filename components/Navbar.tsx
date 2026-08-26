@@ -2,6 +2,17 @@
 
 import { useState } from "react";
 
+const navigation = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
+const linkFocus =
+  "rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400";
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,104 +21,72 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-8">
-        <h1 className="text-xl font-bold text-white">Glen D&apos;Souza</h1>
+        <a
+          href="#home"
+          className={`text-xl font-bold text-white ${linkFocus}`}
+        >
+          Glen D&apos;Souza
+        </a>
 
-        <ul className="hidden gap-8 text-slate-300 md:flex">
-          <li>
-            <a href="#home" className="transition hover:text-sky-400">
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="transition hover:text-sky-400">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#projects" className="transition hover:text-sky-400">
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact" className="transition hover:text-sky-400">
-              Contact
-            </a>
-          </li>
+        <ul className="hidden gap-6 text-slate-300 md:flex lg:gap-8">
+          {navigation.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className={`transition hover:text-sky-400 ${linkFocus}`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <a
           href="#contact"
-          className="hidden rounded-lg bg-sky-500 px-5 py-2 font-medium text-white transition hover:bg-sky-400 md:inline-block"
+          className="hidden rounded-lg bg-sky-500 px-5 py-2 font-medium text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 md:inline-block"
         >
-          Let&apos;s Talk
+          Discuss Your Project
         </a>
 
         <button
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="rounded-md p-2 text-2xl text-white transition hover:bg-slate-800 md:hidden"
+          className="rounded-md p-2 text-2xl text-white transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 md:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-slate-800 bg-slate-950 px-6 py-6 md:hidden">
+        <div
+          id="mobile-navigation"
+          className="border-t border-slate-800 bg-slate-950 px-6 py-6 md:hidden"
+        >
           <ul className="flex flex-col gap-5 text-slate-300">
-            <li>
-              <a
-                href="#home"
-                onClick={closeMenu}
-                className="block transition hover:text-sky-400"
-              >
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#about"
-                onClick={closeMenu}
-                className="block transition hover:text-sky-400"
-              >
-                About
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#projects"
-                onClick={closeMenu}
-                className="block transition hover:text-sky-400"
-              >
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="block transition hover:text-sky-400"
-              >
-                Contact
-              </a>
-            </li>
+            {navigation.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={closeMenu}
+                  className={`block transition hover:text-sky-400 ${linkFocus}`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <a
             href="#contact"
             onClick={closeMenu}
-            className="mt-6 block rounded-lg bg-sky-500 px-5 py-3 text-center font-medium text-white transition hover:bg-sky-400"
+            className="mt-6 block rounded-lg bg-sky-500 px-5 py-3 text-center font-medium text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
           >
-            Let&apos;s Talk
+            Discuss Your Project
           </a>
         </div>
       )}
