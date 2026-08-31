@@ -37,11 +37,13 @@ const projects = [
     status: "Case study coming soon",
   },
   {
-    title: "Microbetting Framework",
+    title: "Self-Hosted Business Mail Server",
     description:
-      "Designed a data-driven betting framework using statistical analysis.",
-    tech: "Python • Excel • Data Analysis",
-    status: "Case study coming soon",
+      "A privately operated business email platform designed and validated with secure mail delivery, authenticated outbound relay, TLS and modern domain authentication.",
+    tech: "Mailcow • Postfix • Docker • DNS • TLS",
+    href: "/projects/self-hosted-mail-server",
+    status: "Operational proof of concept",
+    action: "Explore the mail server case study",
   },
 ];
 
