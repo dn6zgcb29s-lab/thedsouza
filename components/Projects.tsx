@@ -11,13 +11,6 @@ const projects = [
     action: "Explore the GHDC roadmap",
   },
   {
-    title: "TD Group Website",
-    description:
-      "Business website showcasing services and digital transformation projects.",
-    tech: "Next.js • Tailwind CSS",
-    status: "Case study coming soon",
-  },
-  {
     title: "thedsouza.com",
     description: "My personal portfolio documenting my journey as a developer.",
     tech: "Next.js • TypeScript • Tailwind",
