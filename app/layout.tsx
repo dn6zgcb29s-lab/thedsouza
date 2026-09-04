@@ -15,9 +15,36 @@ const geistMono = Geist_Mono({
 const title = "Glen D'Souza | Technology Consultant & AI Solutions";
 const description =
   "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by more than 22 years of enterprise IT experience.";
+const siteUrl = "https://www.thedsouza.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Glen D'Souza",
+  url: siteUrl,
+  jobTitle: "Technology Consultant",
+  worksFor: {
+    "@type": "Organization",
+    name: "TD Group of Companies Pty Ltd",
+  },
+  knowsAbout: [
+    "Technology consulting",
+    "AI solutions",
+    "Digital infrastructure",
+    "Linux",
+    "Docker",
+    "Proxmox",
+    "Microsoft 365",
+    "Workflow automation",
+    "Cybersecurity",
+    "Networking",
+    "Monitoring and observability",
+    "Disaster recovery",
+  ],
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thedsouza.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: title,
     template: "%s | Glen D'Souza",
@@ -40,10 +67,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Glen D'Souza" }],
   creator: "Glen D'Souza",
   publisher: "TD Group of Companies Pty Ltd",
+  applicationName: "Glen D'Souza",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://thedsouza.com",
+    url: siteUrl,
     siteName: "Glen D'Souza",
     title,
     description,
@@ -66,6 +97,14 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

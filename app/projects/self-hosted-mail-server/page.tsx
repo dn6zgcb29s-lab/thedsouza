@@ -2,9 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Self-Hosted Business Mail Server | Glen D'Souza",
+  title: "Self-Hosted Business Mail Server",
   description:
     "How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery.",
+  alternates: {
+    canonical: "/projects/self-hosted-mail-server",
+  },
+  openGraph: {
+    type: "article",
+    url: "https://www.thedsouza.com/projects/self-hosted-mail-server",
+    siteName: "Glen D'Souza",
+    title: "Self-Hosted Business Mail Server",
+    description:
+      "How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Self-Hosted Business Mail Server",
+    description:
+      "How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery.",
+  },
 };
 
 const section = "px-6 py-20 sm:px-8";

@@ -2,9 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: { absolute: "Building GHDC | Glen D'Souza" },
+  title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
   description:
     "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",
+  alternates: {
+    canonical: "/projects/home-datacenter",
+  },
+  openGraph: {
+    type: "article",
+    url: "https://www.thedsouza.com/projects/home-datacenter",
+    siteName: "Glen D'Souza",
+    title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
+    description:
+      "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
+    description:
+      "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",
+  },
 };
 
 const projectStatus = [
