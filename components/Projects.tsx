@@ -12,9 +12,11 @@ const projects = [
   },
   {
     title: "thedsouza.com",
-    description: "My personal portfolio documenting my journey as a developer.",
-    tech: "Next.js • TypeScript • Tailwind",
-    href: "https://thedsouza.com",
+    description:
+      "A continuously evolving consulting portfolio built with modern web technologies, structured case studies and a controlled delivery workflow.",
+    tech: "Next.js • TypeScript • Tailwind CSS • Vercel",
+    href: "/projects/thedsouza-com",
+    status: "Live • Continuously improved",
   },
   {
     title: "Epping Tennis Club — Digital Support",
@@ -44,6 +46,15 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="bg-slate-900 py-20 text-white">
+      <style>{`
+        #projects > div > div > :is(a, div) > div:first-child > span {
+          min-width: 0;
+          overflow-wrap: anywhere;
+          text-align: right;
+          white-space: normal;
+          flex-shrink: 1;
+        }
+      `}</style>
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-4 text-center text-4xl font-bold">
           Selected Technical Initiatives
