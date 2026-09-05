@@ -17,11 +17,12 @@ const projects = [
     href: "https://thedsouza.com",
   },
   {
-    title: "Epping Tennis Club",
-    description: "Managed Microsoft 365, email migration and IT improvements.",
-    tech: "Microsoft 365 • Outlook • DNS",
-    href: "http://www.eppingtennisclub.com.au",
-    status: "Under construction",
+    title: "Epping Tennis Club — Digital Support",
+    description:
+      "Ongoing email, domain and user support, alongside a functional merchandise-store proof of concept.",
+    tech: "Outlook • DNS • Email Migration • GitHub Pages",
+    href: "/projects/epping-tennis-club",
+    status: "Ongoing support • POC completed",
   },
   {
     title: "GVI Home Lab",
