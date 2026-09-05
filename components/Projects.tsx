@@ -27,10 +27,12 @@ const projects = [
     status: "Ongoing support • POC completed",
   },
   {
-    title: "GVI Home Lab",
-    description: "Built a virtual home lab using Proxmox, Docker and Linux.",
-    tech: "Proxmox • Docker • Linux",
-    status: "Case study coming soon",
+    title: "GVI — Foundation of GHDC",
+    description:
+      "A personal virtualisation lab that applied enterprise experience to Proxmox, mixed workloads, containerised services and remote operations.",
+    tech: "Proxmox • PowerCLI • Docker • Linux",
+    href: "/projects/gvi-home-lab",
+    status: "Operational foundation • Evolved into GHDC",
   },
   {
     title: "Self-Hosted Business Mail Server",
