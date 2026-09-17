@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Services from "@/components/Services";
 import Proof from "@/components/Proof";
+import Delivery from "@/components/Delivery";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Timeline from "@/components/Timeline";
@@ -33,6 +34,10 @@ export default function Home() {
 
         <FadeIn>
           <Proof />
+        </FadeIn>
+
+        <FadeIn>
+          <Delivery />
         </FadeIn>
 
         <FadeIn>

@@ -54,6 +54,8 @@ const homepageJourney = [
   "About",
   "Experience",
   "Services",
+  "Proof",
+  "Delivery",
   "Projects",
   "Skills",
   "Timeline",
@@ -74,11 +76,22 @@ const searchFeatures = [
 const accessibilityPractices = [
   "Semantic headings and sections",
   "Keyboard-accessible navigation and links",
-  "Visible focus styles",
-  "Responsive desktop and mobile layouts",
-  "Reduced-motion consideration where implemented",
+  "Skip-to-content navigation",
+  "Visible keyboard focus styles",
+  "A consistent main-content target",
+  "Reduced-motion support for shared entrance animations",
+  "Responsive desktop and mobile verification",
   "Contrast-conscious dark interface",
   "Checks for overflow, clipping and awkward wrapping",
+];
+
+const securityBaseline = [
+  "Content Security Policy for allowed content sources",
+  "MIME-sniffing protection",
+  "Referrer and permissions policies",
+  "Frame protection",
+  "Cross-origin isolation and resource policies",
+  "HTTPS and HSTS supplied through production hosting",
 ];
 
 const improvements = [
@@ -91,6 +104,11 @@ const improvements = [
   "SEO and structured metadata foundation",
   "Removal or correction of outdated portfolio records",
   "Responsive and accessibility verification",
+  "Production security headers",
+  "Skip navigation",
+  "Reduced-motion support",
+  "Trust and Proof section",
+  "Public delivery-method section",
 ];
 
 const lessons = [
@@ -103,15 +121,14 @@ const lessons = [
 ];
 
 const workflow = [
-  "Define one bounded milestone",
-  "Verify the clean repository baseline",
-  "Implement only the approved scope",
-  "Run formatting, TypeScript, lint and production-build checks",
-  "Review source changes and privacy exposure",
-  "Test desktop, mobile, navigation and browser behaviour",
-  "Commit only after review",
-  "Publish normally through GitHub",
-  "Verify the live Vercel deployment",
+  "Define the problem and intended outcome",
+  "Confirm evidence, ownership and privacy boundaries",
+  "Design and build the smallest useful solution",
+  "Validate quality, accessibility and privacy",
+  "Review claims and the complete change",
+  "Publish through controlled versioning",
+  "Verify routes, content and browser health",
+  "Record the result and next decision",
 ];
 
 function BulletList({ items }: { items: string[] }) {
@@ -233,13 +250,45 @@ export default function ThedsouzaComPage() {
 
         <section className={`${section} bg-slate-900`}>
           <div className="mx-auto max-w-5xl">
+            <h2 className={heading}>Production security baseline</h2>
+            <p className={`mt-8 ${body}`}>
+              The public site now has a strengthened defensive baseline through
+              the following controls. These reduce avoidable exposure without
+              representing a guarantee of perfect security or formal
+              certification.
+            </p>
+            <BulletList items={securityBaseline} />
+          </div>
+        </section>
+
+        <section className={`${section} bg-slate-900`}>
+          <div className="mx-auto max-w-5xl">
             <h2 className={heading}>Accessibility and responsive design</h2>
             <p className={`mt-8 ${body}`}>
-              The implementation is reviewed as an interactive public site, with
-              attention to structure, keyboard access and small-screen behavior
-              rather than a claim of formal certification.
+              The implementation is reviewed as an interactive public site with
+              implemented accessibility practices for structure, keyboard
+              access, motion preferences and small-screen behavior. It does not
+              claim formal accessibility certification or full compliance.
             </p>
             <BulletList items={accessibilityPractices} />
+          </div>
+        </section>
+
+        <section className={`${section} bg-slate-800`}>
+          <div className="mx-auto max-w-5xl">
+            <h2 className={heading}>Trust and Proof layer</h2>
+            <p className={`mt-8 ${body}`}>
+              The homepage now presents evidence rather than promises: more than
+              22 years of enterprise IT experience, five published technical
+              case studies and delivery signals covering security,
+              accessibility, human-led AI use and controlled releases.
+            </p>
+            <p className={`mt-8 ${body}`}>
+              Google PageSpeed Insights mobile lab results measured 9 September
+              2026 recorded Performance 98, Accessibility 96, Best Practices 100
+              and SEO 100. These are dated lab results, and scores can vary
+              between test runs.
+            </p>
           </div>
         </section>
 
@@ -255,6 +304,12 @@ export default function ThedsouzaComPage() {
                 publication control remain human-led.
               </p>
             </div>
+            <p className={`mt-8 ${body}`}>
+              The internal release discipline is now expressed publicly as a
+              controlled delivery method: focused definition, evidence and
+              privacy boundaries, small implementation increments, review,
+              normal versioned publication and production verification.
+            </p>
             <p className={`mt-8 ${body}`}>The controlled workflow is:</p>
             <ol className="mt-8 space-y-4">
               {workflow.map((item, index) => (
