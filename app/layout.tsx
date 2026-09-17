@@ -105,7 +105,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-md focus:bg-sky-500 focus:px-4 focus:py-3 focus:font-medium focus:text-white focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-sky-400"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
