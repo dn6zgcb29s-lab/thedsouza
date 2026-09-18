@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import CurrentlyBuilding from "@/components/CurrentlyBuilding";
 
 const projects = [
   {
@@ -66,6 +67,8 @@ export default function Projects() {
           active development to system architecture and design. Documentation
           and case studies are actively being added.
         </p>
+
+        <CurrentlyBuilding />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
