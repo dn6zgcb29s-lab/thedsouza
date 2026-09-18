@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import {
+  StructuredData,
+  siteUrl,
+  socialImageUrl,
+  personId,
+  websiteId,
+} from "@/components/StructuredData";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,31 +22,44 @@ const geistMono = Geist_Mono({
 const title = "Glen D'Souza | Technology Consultant & AI Solutions";
 const description =
   "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by more than 22 years of enterprise IT experience.";
-const siteUrl = "https://www.thedsouza.com";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Glen D'Souza",
-  url: siteUrl,
-  jobTitle: "Technology Consultant",
-  worksFor: {
-    "@type": "Organization",
-    name: "TD Group of Companies Pty Ltd",
-  },
-  knowsAbout: [
-    "Technology consulting",
-    "AI solutions",
-    "Digital infrastructure",
-    "Linux",
-    "Docker",
-    "Proxmox",
-    "Microsoft 365",
-    "Workflow automation",
-    "Cybersecurity",
-    "Networking",
-    "Monitoring and observability",
-    "Disaster recovery",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: "Glen D'Souza",
+      url: siteUrl,
+      jobTitle: "Technology Consultant",
+      worksFor: {
+        "@type": "Organization",
+        name: "TD Group of Companies Pty Ltd",
+      },
+      knowsAbout: [
+        "Technology consulting",
+        "AI solutions",
+        "Digital infrastructure",
+        "Linux",
+        "Docker",
+        "Proxmox",
+        "Microsoft 365",
+        "Workflow automation",
+        "Cybersecurity",
+        "Networking",
+        "Monitoring and observability",
+        "Disaster recovery",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: siteUrl,
+      name: "Glen D'Souza",
+      description,
+      publisher: { "@id": personId },
+      inLanguage: "en-AU",
+    },
   ],
 };
 
@@ -78,11 +98,13 @@ export const metadata: Metadata = {
     siteName: "Glen D'Souza",
     title,
     description,
+    images: [{ url: socialImageUrl, width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [socialImageUrl],
   },
 };
 
@@ -98,12 +120,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <StructuredData data={jsonLd} />
       </head>
       <body className="flex min-h-full flex-col">
         <a

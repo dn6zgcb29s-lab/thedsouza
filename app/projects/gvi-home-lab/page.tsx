@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 const title = "GVI: The Virtualisation Foundation of GHDC";
 const description =
@@ -22,11 +23,13 @@ export const metadata: Metadata = {
     siteName: "Glen D'Souza",
     title,
     description,
+    images: [{ url: socialImageUrl, width: 1200, height: 630, alt: title }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [socialImageUrl],
   },
 };
 
@@ -95,6 +98,11 @@ export default function GviHomeLabPage() {
       tabIndex={-1}
       className="min-h-screen overflow-x-hidden bg-slate-950 text-white"
     >
+      <ProjectStructuredData
+        title={title}
+        description={description}
+        path="/projects/gvi-home-lab"
+      />
       <article>
         <header className="border-b border-slate-800 px-6 pb-20 pt-10 sm:px-8 sm:pt-12">
           <div className="mx-auto max-w-5xl">

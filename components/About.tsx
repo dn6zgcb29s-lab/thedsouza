@@ -20,9 +20,9 @@ export default function About() {
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-6 text-lg leading-8 text-slate-300">
             <p>
-              I&apos;m Glen D&apos;Souza, a technology consultant with more than
-              22 years of professional IT experience supporting people,
-              workplaces and business-critical systems.
+              I&apos;m Glen D&apos;Souza, a technology consultant. More than 30
+              years immersed in technology, including 22+ years delivering
+              professionally across enterprise IT environments.
             </p>
 
             <p>

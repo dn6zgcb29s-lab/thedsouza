@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
@@ -15,12 +16,21 @@ export const metadata: Metadata = {
     title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
     description:
       "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",
+    images: [
+      {
+        url: socialImageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Building GHDC: A Staged Heterogeneous Home Datacenter",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
     description:
       "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",
+    images: [socialImageUrl],
   },
 };
 
@@ -218,6 +228,11 @@ export default function HomeDatacenterPage() {
       tabIndex={-1}
       className="min-h-screen overflow-x-hidden bg-slate-950 text-white"
     >
+      <ProjectStructuredData
+        title="Building GHDC: A Staged Heterogeneous Home Datacenter"
+        description="Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale."
+        path="/projects/home-datacenter"
+      />
       <article>
         <header className="border-b border-slate-800 px-6 pb-20 pt-10 sm:px-8 sm:pt-12">
           <div className="mx-auto max-w-5xl">

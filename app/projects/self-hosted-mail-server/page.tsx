@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Self-Hosted Business Mail Server",
@@ -15,12 +16,21 @@ export const metadata: Metadata = {
     title: "Self-Hosted Business Mail Server",
     description:
       "How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery.",
+    images: [
+      {
+        url: socialImageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Self-Hosted Business Mail Server",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Self-Hosted Business Mail Server",
     description:
       "How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery.",
+    images: [socialImageUrl],
   },
 };
 
@@ -70,6 +80,11 @@ export default function SelfHostedMailServerPage() {
       tabIndex={-1}
       className="min-h-screen overflow-x-hidden bg-slate-950 text-white"
     >
+      <ProjectStructuredData
+        title="Self-Hosted Business Mail Server"
+        description="How Glen D'Souza designed and validated a privately operated business email platform using Mailcow, Postfix, Docker, TLS and authenticated mail delivery."
+        path="/projects/self-hosted-mail-server"
+      />
       <article>
         <header className="border-b border-slate-800 px-6 pb-20 pt-10 sm:px-8 sm:pt-12">
           <div className="mx-auto max-w-5xl">
