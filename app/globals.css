@@ -29,10 +29,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Scroll reveal: applied by FadeIn only after hydration, only below the fold. */
+[data-fade-in][data-reveal] {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+[data-fade-in][data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Hero entrance: transform-only, so text is never invisible. */
+@keyframes hero-rise {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 0.8s ease-out both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-fade-in] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .hero-rise {
+    animation: none;
+  }
+}
+
+@media print {
+  [data-fade-in] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
