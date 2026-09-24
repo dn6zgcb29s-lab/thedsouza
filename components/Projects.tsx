@@ -17,6 +17,7 @@ const projects = [
       "A continuously evolving consulting portfolio built with modern web technologies, structured case studies and a controlled delivery workflow.",
     tech: "Next.js • TypeScript • Tailwind CSS • Vercel",
     href: "/projects/thedsouza-com",
+    action: "Read the thedsouza.com case study",
     status: "Live • Continuously improved",
   },
   {
@@ -25,6 +26,7 @@ const projects = [
       "Ongoing email, domain and user support, alongside a functional merchandise-store proof of concept.",
     tech: "Outlook • DNS • Email Migration • GitHub Pages",
     href: "/projects/epping-tennis-club",
+    action: "Read the Epping Tennis Club case study",
     status: "Ongoing support • POC completed",
   },
   {
@@ -33,6 +35,7 @@ const projects = [
       "A personal virtualisation lab that applied enterprise experience to Proxmox, mixed workloads, containerised services and remote operations.",
     tech: "Proxmox • PowerCLI • Docker • Linux",
     href: "/projects/gvi-home-lab",
+    action: "Read the GVI case study",
     status: "Operational foundation • Evolved into GHDC",
   },
   {

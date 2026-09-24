@@ -1,5 +1,5 @@
 const proofMetrics = [
-  { value: "22+", label: "Years of enterprise IT experience" },
+  { value: "22+", label: "Years of professional IT experience" },
   { value: "5", label: "Published technical case studies" },
   { value: "98", label: "Mobile performance", score: true },
   { value: "96", label: "Accessibility", score: true },
@@ -32,9 +32,9 @@ export default function Proof() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              More than two decades of enterprise technology experience,
-              supported by demonstrable systems, published case studies and a
-              controlled delivery workflow.
+              22+ years of professional IT experience, supported by demonstrable
+              systems, published case studies and a controlled delivery
+              workflow.
             </p>
           </div>
 

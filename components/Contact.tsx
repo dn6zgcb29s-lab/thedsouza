@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <section id="contact" className="bg-slate-800 px-6 py-20 text-white sm:px-8">
+    <section
+      id="contact"
+      className="bg-slate-800 px-6 py-20 text-white sm:px-8"
+    >
       <div className="mx-auto max-w-4xl text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
           Start a conversation
@@ -28,7 +31,7 @@ export default function Contact() {
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <a
-            href="mailto:glen@td-group.com.au?subject=Project%20discussion"
+            href="mailto:glen@thedsouza.com?subject=Project%20discussion"
             className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
           >
             Email Glen
@@ -45,11 +48,10 @@ export default function Contact() {
         </div>
 
         <p className="mt-10 text-sm leading-6 text-slate-400">
-          Technology consulting delivered through TD Group of Companies Pty
-          Ltd.
+          Technology consulting delivered through TD Group of Companies Pty Ltd.
         </p>
         <p className="mt-2 text-sm text-slate-500">
-          glen@td-group.com.au · thedsouza.com
+          glen@thedsouza.com · thedsouza.com
         </p>
       </div>
     </section>

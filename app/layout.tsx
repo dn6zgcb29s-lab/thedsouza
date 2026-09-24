@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 const title = "Glen D'Souza | Technology Consultant & AI Solutions";
 const description =
-  "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by more than 22 years of enterprise IT experience.";
+  "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by 22+ years of professional IT experience.";
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -1,23 +1,4 @@
-const stages = [
-  {
-    period: "2003–2024",
-    title: "IT Support Foundation",
-    description:
-      "Built a strong foundation in user support, incident resolution, Windows environments and structured troubleshooting.",
-  },
-  {
-    period: "2024–2025",
-    title: "End User Computing Engineering",
-    description:
-      "Expanded into endpoint engineering, deployment, Microsoft Intune, Autopilot, Microsoft Entra ID, VMware vCenter, PowerCLI and enterprise support workflows.",
-  },
-  {
-    period: "2025–Present",
-    title: "Technical Consulting and Project Delivery",
-    description:
-      "Applying practical experience to independent consulting, self-hosted infrastructure, web projects and documented technical delivery.",
-  },
-];
+import { careerStages, formatPeriod } from "@/data/career";
 
 const capabilities = [
   "End User Computing",
@@ -54,25 +35,25 @@ export default function Experience() {
         </p>
 
         <ol className="mt-12 grid gap-6 lg:grid-cols-3">
-          {stages.map((stage, index) => (
+          {careerStages.map((stage, index) => (
             <li
-              key={stage.title}
+              key={stage.id}
               className="rounded-2xl border border-slate-700 bg-slate-900 p-6"
             >
               <div className="flex items-center justify-between gap-4">
                 <span className="text-sm font-semibold uppercase tracking-[0.15em] text-sky-400">
                   Stage {index + 1}
                 </span>
-                <span className="text-sm text-slate-400">{stage.period}</span>
+                <span className="text-sm text-slate-400">
+                  {formatPeriod(stage)}
+                </span>
               </div>
 
               <h3 className="mt-6 text-xl font-semibold text-white">
                 {stage.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-slate-300">
-                {stage.description}
-              </p>
+              <p className="mt-4 leading-7 text-slate-300">{stage.summary}</p>
             </li>
           ))}
         </ol>
