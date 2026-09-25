@@ -63,12 +63,12 @@ export default function Projects() {
       `}</style>
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-4 text-center text-4xl font-bold">
-          Selected Technical Initiatives
+          Case studies: the work behind the services
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">
-          A selection of my recent work, ranging from live deployments and
-          active development to system architecture and design. Documentation
-          and case studies are actively being added.
+          Real systems I have built, supported or operate, each written up with
+          what was done and what was learned. More case studies are added as
+          work is completed.
         </p>
 
         <CurrentlyBuilding />

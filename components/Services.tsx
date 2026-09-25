@@ -1,50 +1,96 @@
-const services = [
+import Link from "next/link";
+
+type ProofLink = { label: string; href: string };
+
+const services: {
+  title: string;
+  description: string;
+  deliverables: string[];
+  proof?: ProofLink[];
+}[] = [
   {
-    title: "Modern Workplace and End User Computing",
+    title: "Workplace technology that just works",
     description:
-      "Support and improve the devices, identity systems and workplace technology people use every day.",
+      "Get computers, email, accounts and Microsoft 365 set up properly, secured and easy to manage, so your team can get on with their work.",
     deliverables: [
-      "Windows endpoint assessment",
-      "Microsoft Intune and Autopilot guidance",
-      "Microsoft Entra ID administration",
-      "Device deployment and troubleshooting",
-      "Process and support documentation",
+      "Setting up and securing new computers and staff accounts",
+      "Sorting out email, domains and mail delivery problems",
+      "Moving email and files away from old or unreliable services",
+      "Tidying up who has access to what",
+      "Clear notes so you are not dependent on one person",
+    ],
+    proof: [
+      {
+        label: "Epping Tennis Club",
+        href: "/projects/epping-tennis-club",
+      },
     ],
   },
   {
-    title: "Infrastructure and Virtualisation",
+    title: "Websites and digital platforms",
     description:
-      "Plan, build and improve practical infrastructure for small environments, laboratories and self-hosted services.",
+      "Design and build fast, maintainable websites, online stores and internal tools that you own and that keep working after launch.",
     deliverables: [
-      "Infrastructure discovery and planning",
-      "Virtual machine and service deployment",
-      "VMware and Proxmox-based environments",
-      "Self-hosted service implementation",
-      "Operational and recovery documentation",
+      "New websites or rebuilds of outdated ones",
+      "Online store and ordering proofs of concept",
+      "Internal tools and simple business applications",
+      "Hosting, domains and deployment you control",
+      "Testing on phones, tablets and desktops before go-live",
+    ],
+    proof: [
+      { label: "thedsouza.com", href: "/projects/thedsouza-com" },
+      {
+        label: "Epping Tennis Club store POC",
+        href: "/projects/epping-tennis-club",
+      },
     ],
   },
   {
-    title: "Websites and Digital Projects",
+    title: "Automating repetitive work",
     description:
-      "Create and improve modern websites that communicate clearly, work across devices and remain maintainable after launch.",
+      "Replace manual copying, re-keying and repetitive admin with scripts, integrations and sensible automation that is documented and easy to hand over.",
     deliverables: [
-      "Website planning and information architecture",
-      "Responsive interface implementation",
-      "Next.js and React development",
-      "Content and project presentation",
-      "Deployment and post-launch verification",
+      "Identifying the tasks that are worth automating",
+      "Scripts and scheduled jobs for routine admin",
+      "Connecting the systems you already use",
+      "Documentation so the automation can be maintained",
     ],
   },
   {
-    title: "Technical Discovery and Documentation",
+    title: "Reliable, secure infrastructure",
     description:
-      "Turn unclear requirements or inherited technology into an understandable plan with documented next steps.",
+      "Design, build and fix the servers, networks, cloud and self-hosted services your business depends on, with security and recovery planned from the start.",
     deliverables: [
-      "Current-state discovery",
-      "Technical option assessment",
-      "Implementation roadmap",
-      "Troubleshooting and remediation plan",
-      "Knowledge-transfer documentation",
+      "Planning practical cloud, on-premises or hybrid setups",
+      "Building and hardening servers and self-hosted services",
+      "Secure remote access for you and your team",
+      "Backup and recovery that has actually been tested",
+      "Operational documentation for what was built",
+    ],
+    proof: [
+      {
+        label: "Self-hosted mail server",
+        href: "/projects/self-hosted-mail-server",
+      },
+      { label: "GHDC", href: "/projects/home-datacenter" },
+      { label: "GVI", href: "/projects/gvi-home-lab" },
+    ],
+  },
+  {
+    title: "Solving difficult technical problems",
+    description:
+      "When something keeps breaking and nobody can explain why, I investigate the root cause, fix it and show you what changed.",
+    deliverables: [
+      "Investigating recurring faults and unexplained failures",
+      "Untangling inherited or undocumented setups",
+      "A clear explanation of the cause and the fix",
+      "A practical plan for anything that should change next",
+    ],
+    proof: [
+      {
+        label: "Epping Tennis Club",
+        href: "/projects/epping-tennis-club",
+      },
     ],
   },
 ];
@@ -85,18 +131,17 @@ export default function Services() {
       <div className="mx-auto max-w-6xl">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-            Consulting services
+            What I can help with
           </p>
 
           <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
-            Practical technology services built around real needs
+            Technology problems I can solve for your business
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            I help individuals, small organisations and growing teams improve
-            the technology they rely on—from workplace devices and cloud
-            administration to infrastructure, websites and documented technical
-            projects.
+            You don&apos;t need to know the technical terms. Tell me what is
+            slowing the business down, and I will design, build or fix the
+            technology behind it.
           </p>
 
           <p className="mt-5 leading-7 text-slate-400">
@@ -106,7 +151,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}
@@ -122,7 +167,7 @@ export default function Services() {
 
               <div className="mt-6">
                 <h4 className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-400">
-                  Typical deliverables
+                  What this can look like
                 </h4>
                 <ul className="mt-4 space-y-3">
                   {service.deliverables.map((deliverable) => (
@@ -138,6 +183,25 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
+
+              {service.proof && (
+                <p className="mt-6 border-t border-slate-800 pt-4 text-sm leading-6 text-slate-400">
+                  <span className="font-semibold text-slate-300">
+                    See it in practice:{" "}
+                  </span>
+                  {service.proof.map((item, index) => (
+                    <span key={item.label}>
+                      {index > 0 && ", "}
+                      <Link
+                        href={item.href}
+                        className={`text-sky-400 underline-offset-4 hover:underline ${linkFocus}`}
+                      >
+                        {item.label}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
+              )}
             </article>
           ))}
         </div>

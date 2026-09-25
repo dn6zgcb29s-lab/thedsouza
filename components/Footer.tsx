@@ -5,7 +5,9 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold text-white">Glen D&apos;Souza</h2>
 
-          <p className="mt-2">Technology • AI • Digital Projects</p>
+          <p className="mt-2">
+            Practical technology engineering for small businesses and founders
+          </p>
         </div>
 
         <nav

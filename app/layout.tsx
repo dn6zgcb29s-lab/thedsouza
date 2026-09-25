@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Glen D'Souza | Technology Consultant & AI Solutions";
+const title = "Glen D'Souza | Technology Engineering for Small Businesses";
 const description =
-  "Technology consulting, AI solutions and digital infrastructure for small businesses, backed by 22+ years of professional IT experience.";
+  "Practical technology engineering for small businesses and founders in Melbourne and across Australia: workplace IT, websites, automation and infrastructure, backed by 22+ years of professional IT experience.";
 
 const jsonLd = {
   "@context": "https://schema.org",
