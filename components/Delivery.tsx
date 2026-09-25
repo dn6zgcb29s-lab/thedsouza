@@ -3,51 +3,27 @@ import Link from "next/link";
 const workflow = [
   {
     number: "01",
-    title: "Define the problem",
+    title: "Understand the problem",
     description:
-      "Clarify the practical need, intended users and successful outcome before selecting technology.",
+      "We talk through what is going wrong or what you need, and what a good outcome looks like, before any technology is chosen.",
   },
   {
     number: "02",
-    title: "Confirm evidence and boundaries",
+    title: "Agree a focused plan",
     description:
-      "Separate verified facts from assumptions while identifying privacy, ownership and disclosure constraints.",
+      "The smallest useful solution, with clear scope, stopping points and any privacy or ownership constraints agreed up front.",
   },
   {
     number: "03",
-    title: "Design the smallest useful solution",
+    title: "Build and check in small steps",
     description:
-      "Choose a maintainable technical approach that delivers useful value without unnecessary complexity.",
+      "Work is delivered in small, reviewable increments and checked for security, accessibility and reliability as it goes.",
   },
   {
     number: "04",
-    title: "Build in focused micro-sprints",
+    title: "Release safely and hand over",
     description:
-      "Implement small, reviewable increments with explicit scope and stopping points.",
-  },
-  {
-    number: "05",
-    title: "Validate quality and privacy",
-    description:
-      "Run type, lint, build, responsive, accessibility, security and privacy checks appropriate to the work.",
-  },
-  {
-    number: "06",
-    title: "Review before release",
-    description:
-      "Inspect the complete change, confirm claims and obtain approval before committing or publishing.",
-  },
-  {
-    number: "07",
-    title: "Publish through controlled versioning",
-    description:
-      "Use Git history and normal deployment workflows so every production change remains attributable and recoverable.",
-  },
-  {
-    number: "08",
-    title: "Verify production",
-    description:
-      "Confirm live routes, content, metadata, security behavior and browser health after propagation.",
+      "Changes go live through a controlled, recoverable process, are verified afterwards and come with clear notes so you are not dependent on one person.",
   },
 ];
 
@@ -68,13 +44,12 @@ export default function Delivery() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            Every engagement is divided into focused, reviewable steps so
-            decisions remain clear, risk stays contained and releases remain
-            recoverable.
+            Four simple steps, so you always know what is being done, why, and
+            what comes next.
           </p>
         </div>
 
-        <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {workflow.map((step) => (
             <li
               key={step.number}
