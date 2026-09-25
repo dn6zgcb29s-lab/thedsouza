@@ -7,6 +7,7 @@ type ProjectCardProps = {
   href?: string;
   status?: string;
   action?: string;
+  relevance?: string[];
 };
 
 export default function ProjectCard({
@@ -16,22 +17,28 @@ export default function ProjectCard({
   href,
   status,
   action,
+  relevance,
 }: ProjectCardProps) {
   const cardContent = (
     <>
-      <div className="mb-3 flex items-start justify-between gap-4">
-        <h3 className="text-2xl font-semibold">{title}</h3>
+      {status && (
+        <span className="mb-4 inline-block rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300">
+          {status}
+        </span>
+      )}
 
-        {status && (
-          <span className="shrink-0 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300">
-            {status}
-          </span>
-        )}
-      </div>
+      <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
 
       <p className="mb-4 text-slate-400">{description}</p>
 
       <span className="text-sm font-medium text-blue-400">{tech}</span>
+
+      {relevance && relevance.length > 0 && (
+        <p className="mt-4 text-sm text-slate-300">
+          <span className="font-semibold text-slate-200">Relevant to: </span>
+          {relevance.join(" · ")}
+        </p>
+      )}
 
       {action && (
         <span className="mt-5 block font-semibold text-sky-400">

@@ -1,25 +1,8 @@
+import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import CurrentlyBuilding from "@/components/CurrentlyBuilding";
 
-const projects = [
-  {
-    title: "GHDC — Home Datacenter",
-    description:
-      "A two-year infrastructure and professional-development project evolving my working home lab into a secure, modular and heterogeneous private datacenter.",
-    tech: "Proxmox • Linux • Docker • Tailscale • Private Cloud",
-    href: "/projects/home-datacenter",
-    status: "In development · Phase 0",
-    action: "Explore the GHDC roadmap",
-  },
-  {
-    title: "thedsouza.com",
-    description:
-      "A continuously evolving consulting portfolio built with modern web technologies, structured case studies and a controlled delivery workflow.",
-    tech: "Next.js • TypeScript • Tailwind CSS • Vercel",
-    href: "/projects/thedsouza-com",
-    action: "Read the thedsouza.com case study",
-    status: "Live • Continuously improved",
-  },
+const featuredProjects = [
   {
     title: "Epping Tennis Club — Digital Support",
     description:
@@ -28,15 +11,11 @@ const projects = [
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
     status: "Ongoing support • POC completed",
-  },
-  {
-    title: "GVI — Foundation of GHDC",
-    description:
-      "A personal virtualisation lab that applied enterprise experience to Proxmox, mixed workloads, containerised services and remote operations.",
-    tech: "Proxmox • PowerCLI • Docker • Linux",
-    href: "/projects/gvi-home-lab",
-    action: "Read the GVI case study",
-    status: "Operational foundation • Evolved into GHDC",
+    relevance: [
+      "Workplace technology",
+      "Websites and digital platforms",
+      "Difficult technical problems",
+    ],
   },
   {
     title: "Self-Hosted Business Mail Server",
@@ -46,21 +25,37 @@ const projects = [
     href: "/projects/self-hosted-mail-server",
     status: "Operational proof of concept",
     action: "Explore the mail server case study",
+    relevance: ["Reliable, secure infrastructure"],
+  },
+  {
+    title: "GHDC — Home Datacenter",
+    description:
+      "A two-year infrastructure and professional-development project evolving my working home lab into a secure, modular and heterogeneous private datacenter.",
+    tech: "Proxmox • Linux • Docker • Tailscale • Private Cloud",
+    href: "/projects/home-datacenter",
+    status: "In development · Phase 0",
+    action: "Explore the GHDC roadmap",
+    relevance: ["Reliable, secure infrastructure"],
+  },
+];
+
+const moreProjects = [
+  {
+    title: "thedsouza.com",
+    description:
+      "This consulting site, built with Next.js and a controlled delivery workflow.",
+    href: "/projects/thedsouza-com",
+  },
+  {
+    title: "GVI — Foundation of GHDC",
+    description: "The personal virtualisation lab that evolved into GHDC.",
+    href: "/projects/gvi-home-lab",
   },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="bg-slate-900 py-20 text-white">
-      <style>{`
-        #projects > div > div > :is(a, div) > div:first-child > span {
-          min-width: 0;
-          overflow-wrap: anywhere;
-          text-align: right;
-          white-space: normal;
-          flex-shrink: 1;
-        }
-      `}</style>
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-4 text-center text-4xl font-bold">
           Case studies: the work behind the services
@@ -71,21 +66,40 @@ export default function Projects() {
           work is completed.
         </p>
 
-        <CurrentlyBuilding />
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              tech={project.tech}
-              href={project.href}
-              status={project.status}
-              action={project.action}
-            />
+        <div className="grid gap-6 lg:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
+
+        <div className="mt-12 border-t border-slate-800 pt-8">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+            More case studies
+          </h3>
+
+          <ul className="mt-4 grid gap-4 md:grid-cols-2">
+            {moreProjects.map((project) => (
+              <li key={project.title}>
+                <Link
+                  href={project.href}
+                  className="block rounded-xl border border-slate-800 p-5 transition hover:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
+                >
+                  <span className="font-semibold text-white">
+                    {project.title}
+                  </span>
+                  <span className="mt-1 block text-sm text-slate-400">
+                    {project.description}
+                  </span>
+                  <span className="mt-3 block text-sm font-semibold text-sky-400">
+                    Read the case study <span aria-hidden="true">→</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <CurrentlyBuilding />
       </div>
     </section>
   );

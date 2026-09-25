@@ -2,7 +2,7 @@ export default function CurrentlyBuilding() {
   return (
     <article
       aria-labelledby="currently-building-heading"
-      className="mb-12 border border-sky-400/30 border-l-2 bg-slate-950/70 p-6 sm:p-8"
+      className="mt-12 border border-sky-400/30 border-l-2 bg-slate-950/70 p-6 sm:p-8"
     >
       <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
         <span
@@ -14,7 +14,7 @@ export default function CurrentlyBuilding() {
 
       <h3
         id="currently-building-heading"
-        className="mt-5 text-2xl font-bold leading-tight text-white sm:text-3xl"
+        className="mt-4 text-xl font-bold leading-tight text-white sm:text-2xl"
       >
         Something new is taking shape.
       </h3>
