@@ -1,35 +1,4 @@
-const timeline = [
-  {
-    period: "2003–2024",
-    title: "Enterprise IT Support",
-    description:
-      "Built more than two decades of experience supporting users, devices, infrastructure and business systems across complex enterprise environments.",
-  },
-  {
-    period: "2024",
-    title: "End User Computing Engineer",
-    description:
-      "Progressed into a broader engineering role focused on modern workplace technology, endpoint management and user experience.",
-  },
-  {
-    period: "2025",
-    title: "Independent Technology Builder",
-    description:
-      "Started building websites, digital services and technology solutions independently through TD Group.",
-  },
-  {
-    period: "2026",
-    title: "AI and Product Development",
-    description:
-      "Expanded into AI-powered applications, recruitment technology, automation, home-lab infrastructure and modern web development.",
-  },
-  {
-    period: "Today",
-    title: "Building the Future",
-    description:
-      "Continuing to learn, create and develop practical technology that makes a meaningful difference.",
-  },
-];
+import { careerStages, formatPeriod } from "@/data/career";
 
 export default function Timeline() {
   return (
@@ -39,22 +8,43 @@ export default function Timeline() {
           Career Timeline
         </h2>
 
-        <div className="space-y-8">
-          {timeline.map((item) => (
-            <article
-              key={`${item.period}-${item.title}`}
-              className="rounded-xl border border-slate-700 bg-slate-800 p-6"
-            >
-              <p className="mb-2 text-sm font-semibold text-blue-400">
-                {item.period}
-              </p>
+        <ol className="space-y-8">
+          {careerStages.map((stage) => (
+            <li key={stage.id}>
+              <article className="rounded-xl border border-slate-700 bg-slate-800 p-6">
+                <p className="mb-2 text-sm font-semibold text-blue-400">
+                  {formatPeriod(stage)}
+                </p>
 
-              <h3 className="mb-3 text-2xl font-semibold">{item.title}</h3>
+                <h3 className="mb-3 text-2xl font-semibold">{stage.title}</h3>
 
-              <p className="leading-7 text-slate-400">{item.description}</p>
-            </article>
+                <p className="leading-7 text-slate-400">{stage.description}</p>
+
+                {stage.milestones?.map((milestone) => (
+                  <div
+                    key={`${milestone.year}-${milestone.title}`}
+                    className="mt-6 border-l-2 border-sky-500/60 pl-4"
+                  >
+                    <p className="text-sm font-semibold text-sky-400">
+                      {milestone.year}
+                    </p>
+                    <h4 className="mt-1 text-lg font-semibold">
+                      {milestone.title}
+                    </h4>
+                    <p className="mt-2 leading-7 text-slate-400">
+                      {milestone.description}
+                    </p>
+                  </div>
+                ))}
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
+
+        <p className="mt-10 text-center leading-7 text-slate-400">
+          Today, I&apos;m continuing to learn, create and develop practical
+          technology that makes a meaningful difference.
+        </p>
       </div>
     </section>
   );

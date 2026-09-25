@@ -21,8 +21,8 @@ export default function Hero() {
         </p>
 
         <p className="mx-auto mt-6 max-w-2xl leading-7 text-slate-400">
-          Backed by more than 22 years of enterprise IT experience and a
-          hands-on, owner-focused approach to delivery.
+          Backed by 22+ years of professional IT experience and a hands-on,
+          owner-focused approach to delivery.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
