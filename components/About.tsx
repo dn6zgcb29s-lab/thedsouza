@@ -22,16 +22,16 @@ export default function About() {
             <p>
               I&apos;m Glen D&apos;Souza, a technology engineer with 22+ years
               of professional IT experience. Most of that time was spent inside
-              large enterprise environments, where technology has to work for
-              thousands of people and problems have to be properly solved, not
+              large enterprise environments, where technology has to work
+              reliably at scale and problems have to be properly solved, not
               patched over.
             </p>
 
             <p>
               I now bring that same standard to small businesses and founders. I
-              don&apos;t hand you a report and leave, and I don&apos;t resell
-              products. I get into the problem, design the fix, build it, test
-              it and explain it in plain language.
+              don&apos;t hand you a report and leave. I get into the problem,
+              design the fix, build it, test it and explain it in plain
+              language.
             </p>
 
             <p>
