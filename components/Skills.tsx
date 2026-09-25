@@ -3,7 +3,7 @@ export default function Skills() {
     <section id="skills" className="bg-slate-800 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-12 text-center text-4xl font-bold">
-          Technical Expertise
+          The technical toolkit underneath
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

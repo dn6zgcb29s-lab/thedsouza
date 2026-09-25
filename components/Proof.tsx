@@ -32,9 +32,11 @@ export default function Proof() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              22+ years of professional IT experience, supported by demonstrable
-              systems, published case studies and a controlled delivery
-              workflow.
+              The best evidence is working technology. The case studies below
+              show real systems I have designed, built and supported, from a
+              community club&apos;s email and domains to self-hosted
+              infrastructure. They sit on top of 22+ years of professional IT
+              experience.
             </p>
           </div>
 
@@ -67,8 +69,9 @@ export default function Proof() {
 
         <div className="mt-10 grid gap-8 border-t border-slate-800 pt-8 lg:grid-cols-[1fr_2fr] lg:items-start">
           <p className="max-w-sm text-sm leading-6 text-slate-400">
-            Google PageSpeed Insights mobile lab results measured 9 September
-            2026. Scores can vary between test runs.
+            Scores are this website&apos;s own Google PageSpeed Insights mobile
+            lab results, measured 9 September 2026, shown as an example of build
+            quality. Scores can vary between test runs.
           </p>
 
           <ul className="grid gap-3 sm:grid-cols-2">

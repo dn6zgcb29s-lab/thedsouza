@@ -6,23 +6,26 @@ export default function Hero() {
     >
       <div className="hero-rise max-w-5xl text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400 sm:tracking-[0.3em]">
-          Glen D&apos;Souza · Technology Consultant
+          Glen D&apos;Souza · Technology Engineer
         </p>
 
         <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
-          Technology consulting, AI solutions and digital infrastructure for
-          small businesses.
+          Practical technology engineering for small businesses and founders.
         </h1>
 
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-          I help small-business owners and founders solve practical technology
-          problems, build proof-of-concept solutions and create reliable systems
-          that support their next stage of growth.
+          When your computers, email, website or systems are slowing the
+          business down, I design, build and fix the technology myself—from
+          everyday workplace IT to websites, automation and infrastructure.
         </p>
 
         <p className="mx-auto mt-6 max-w-2xl leading-7 text-slate-400">
-          Backed by 22+ years of professional IT experience and a hands-on,
-          owner-focused approach to delivery.
+          22+ years of professional IT experience, applied hands-on to
+          businesses that don&apos;t have an IT department of their own.
+        </p>
+
+        <p className="mt-6 text-sm font-medium text-slate-400">
+          Melbourne, Victoria · Remote consulting across Australia
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">

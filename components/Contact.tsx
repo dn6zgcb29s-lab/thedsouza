@@ -14,9 +14,9 @@ export default function Contact() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Tell me what your business is trying to improve, build or resolve. I
-          can help clarify the problem, identify the right next step and
-          determine whether we are a good fit to work together.
+          Tell me what your business is trying to improve, build or fix. I will
+          help clarify the problem, suggest a sensible first step and tell you
+          honestly whether I am the right person for the job.
         </p>
 
         <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6">
@@ -51,7 +51,8 @@ export default function Contact() {
           Technology consulting delivered through TD Group of Companies Pty Ltd.
         </p>
         <p className="mt-2 text-sm text-slate-500">
-          glen@thedsouza.com · thedsouza.com
+          glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
+          Australia
         </p>
       </div>
     </section>

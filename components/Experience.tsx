@@ -20,18 +20,18 @@ export default function Experience() {
     >
       <div className="mx-auto max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-          Professional experience
+          Background
         </p>
 
         <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
-          Experience that connects support, engineering and delivery
+          Enterprise-grade depth, applied to smaller businesses
         </h2>
 
         <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
-          My career began in frontline IT support and evolved through enterprise
-          end-user computing into hands-on infrastructure projects and
-          independent technical consulting. That background helps me understand
-          both the user experience and the systems operating behind it.
+          22+ years of professional IT experience, starting on the frontline of
+          enterprise support and moving into engineering. Today that depth goes
+          directly to small businesses and founders, who get the same standard
+          of work without needing an enterprise budget or an IT department.
         </p>
 
         <ol className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -61,7 +61,7 @@ export default function Experience() {
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
           <div>
             <h3 className="text-xl font-semibold text-white">
-              Practical capabilities
+              Technical foundation
             </h3>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {capabilities.map((capability) => (
