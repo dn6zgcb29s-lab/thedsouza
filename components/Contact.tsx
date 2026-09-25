@@ -1,3 +1,5 @@
+import ContactCtas from "@/components/ContactCtas";
+
 export default function Contact() {
   return (
     <section
@@ -29,23 +31,22 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="mailto:glen@thedsouza.com?subject=Project%20discussion"
-            className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
-          >
-            Email Glen
-          </a>
+        <div className="mt-10">
+          <ContactCtas />
+        </div>
 
+        <p className="mt-6 text-sm text-slate-400">
+          Prefer to see the code first?{" "}
           <a
             href="https://github.com/lbbextreme"
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
+            className="font-medium text-sky-400 underline underline-offset-4 hover:text-sky-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
           >
-            View GitHub
+            View my GitHub
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
-        </div>
+        </p>
 
         <p className="mt-10 text-sm leading-6 text-slate-400">
           Technology consulting delivered through TD Group of Companies Pty Ltd.

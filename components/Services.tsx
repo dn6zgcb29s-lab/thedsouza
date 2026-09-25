@@ -1,3 +1,5 @@
+import ContactCtas, { PlaceholderTag } from "@/components/ContactCtas";
+import { isPricePlaceholder, pricing } from "@/data/contact";
 import Link from "next/link";
 
 type ProofLink = { label: string; href: string };
@@ -97,25 +99,28 @@ const services: {
 
 const engagementModels = [
   {
-    title: "Discovery and Roadmap",
+    title: "Technology Health Check",
+    price: pricing.healthCheck,
     description:
-      "For an unclear problem, early-stage idea or environment that needs assessment before implementation.",
+      "For when technology is slowing the business down and you are not sure why, or where to start. I review how your systems are set up and used, and find the practical improvements that matter most.",
     outcome:
-      "A documented understanding of the current state, priorities, options and recommended next steps.",
+      "A clear, prioritised action plan you can act on yourself or hand to me to implement.",
   },
   {
-    title: "Focused Technical Sprint",
+    title: "Focused Build Sprint",
+    price: pricing.buildSprint,
     description:
-      "For a defined task or small technical outcome that can be completed and verified within a tightly controlled scope.",
+      "A short, defined piece of hands-on work: fixing a specific workplace problem, improving your website, automating a repetitive process or making a defined infrastructure improvement.",
     outcome:
-      "A completed piece of work with testing, documentation and a clear handover.",
+      "The work done, tested and handed over, with notes on what changed.",
   },
   {
-    title: "Staged Project Delivery",
+    title: "Project Delivery",
+    price: pricing.projectDelivery,
     description:
-      "For larger outcomes that need to be planned, implemented and reviewed across multiple controlled milestones.",
+      "For larger or multi-stage work, such as a new platform, a migration or a significant infrastructure build. Scope is agreed up front and delivered in stages you can review.",
     outcome:
-      "A structured delivery process with agreed scope, progress checkpoints, verification and final handover.",
+      "An agreed scope, visible progress at each milestone and a documented handover.",
   },
 ];
 
@@ -208,16 +213,17 @@ export default function Services() {
 
         <div className="mt-20 max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-            Engagement models
+            How to get started
           </p>
 
           <h3 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
-            Ways we can work together
+            Ways to work together
           </h3>
 
           <p className="mt-5 text-lg leading-8 text-slate-300">
-            The right starting point depends on how clearly the problem is
-            understood and how much delivery support is required.
+            Bring me the problem. Most work starts small, with a Health Check or
+            a single focused sprint, and grows into a staged project only if
+            that is what the business actually needs.
           </p>
         </div>
 
@@ -230,6 +236,15 @@ export default function Services() {
               <h4 className="text-xl font-semibold text-white">
                 {model.title}
               </h4>
+
+              <p className="mt-3 flex flex-wrap items-center gap-2 text-lg font-semibold text-sky-300">
+                <span>{model.price}</span>
+                {isPricePlaceholder(model.price) && (
+                  <PlaceholderTag>
+                    Placeholder: price not yet set
+                  </PlaceholderTag>
+                )}
+              </p>
 
               <p className="mt-4 leading-7 text-slate-300">
                 {model.description}
@@ -245,30 +260,24 @@ export default function Services() {
           ))}
         </div>
 
+        <div className="mt-10">
+          <ContactCtas />
+        </div>
+
         <div className="mt-16 rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
           <div className="max-w-2xl">
             <h3 className="text-2xl font-bold leading-tight sm:text-3xl">
               Not sure where your project fits?
             </h3>
             <p className="mt-4 leading-7 text-slate-300">
-              Start with the problem you are trying to solve. I can help define
-              the right first step before committing to a larger piece of work.
+              Start with the problem you are trying to solve. A free 15-minute
+              call is enough to work out the right first step before committing
+              to anything larger.
             </p>
           </div>
 
-          <div className="mt-6 flex flex-col gap-4 sm:mt-0 sm:shrink-0">
-            <a
-              href="#contact"
-              className={`inline-flex justify-center rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400 ${linkFocus}`}
-            >
-              Discuss Your Project
-            </a>
-            <a
-              href="#projects"
-              className={`inline-flex justify-center rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400 ${linkFocus}`}
-            >
-              View My Work
-            </a>
+          <div className="mt-6 sm:mt-0 sm:shrink-0">
+            <ContactCtas stack align="start" />
           </div>
         </div>
       </div>
