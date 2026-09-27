@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactCtas from "@/components/ContactCtas";
 import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 const title = "GVI: The Virtualisation Foundation of GHDC";
@@ -255,20 +256,15 @@ export default function GviHomeLabPage() {
                 I can help turn practical requirements into a staged, documented
                 technical environment with clear operational boundaries.
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/#contact"
-                  className={`inline-flex justify-center rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400 ${focus}`}
-                >
-                  Discuss Your Project
-                </Link>
-                <Link
-                  href="/#projects"
-                  className={`inline-flex justify-center rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400 ${focus}`}
-                >
-                  Return to Projects
-                </Link>
+              <div className="mt-8">
+                <ContactCtas align="start" />
               </div>
+              <Link
+                href="/#projects"
+                className={`mt-6 inline-flex font-medium text-sky-400 transition hover:text-sky-300 ${focus}`}
+              >
+                Return to Projects
+              </Link>
             </aside>
           </div>
         </section>

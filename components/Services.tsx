@@ -260,10 +260,6 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-10">
-          <ContactCtas />
-        </div>
-
         <div className="mt-16 rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
           <div className="max-w-2xl">
             <h3 className="text-2xl font-bold leading-tight sm:text-3xl">

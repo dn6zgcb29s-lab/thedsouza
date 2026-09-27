@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactCtas from "@/components/ContactCtas";
 import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -310,6 +311,7 @@ export default function SelfHostedMailServerPage() {
                 operations, secure communications and privately operated
                 business platforms.
               </p>
+              <ContactCtas align="start" />
               <Link
                 href="/#projects"
                 className={`inline-flex font-medium text-sky-400 transition hover:text-sky-300 ${focus}`}
