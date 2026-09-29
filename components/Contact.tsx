@@ -1,4 +1,5 @@
 import ContactCtas from "@/components/ContactCtas";
+import { scopeCommitment } from "@/data/contact";
 
 export default function Contact() {
   return (
@@ -22,13 +23,13 @@ export default function Contact() {
         </p>
 
         <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6">
-          <p className="font-semibold text-sky-200">
-            Begin with a free 15-minute fit discussion
-          </p>
+          <p className="font-semibold text-sky-200">Start with a short email</p>
           <p className="mt-2 leading-7 text-slate-300">
-            No obligation and no technical preparation required. A short
-            description of the business problem is enough to begin.
+            Explain what you are trying to achieve and the problem you would
+            like help with. No technical preparation is required; a short
+            description is enough to begin.
           </p>
+          <p className="mt-3 leading-7 text-slate-300">{scopeCommitment}</p>
         </div>
 
         <div className="mt-10">

@@ -45,7 +45,7 @@ const jsonLd = {
         "Proxmox",
         "Microsoft 365",
         "Workflow automation",
-        "Cybersecurity",
+        "Email authentication and deliverability",
         "Networking",
         "Monitoring and observability",
         "Disaster recovery",

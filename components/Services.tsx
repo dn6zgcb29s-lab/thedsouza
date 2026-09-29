@@ -1,5 +1,5 @@
-import ContactCtas, { PlaceholderTag } from "@/components/ContactCtas";
-import { isPricePlaceholder, pricing } from "@/data/contact";
+import ContactCtas from "@/components/ContactCtas";
+import { scopeCommitment } from "@/data/contact";
 import Link from "next/link";
 
 type ProofLink = { label: string; href: string };
@@ -100,7 +100,6 @@ const services: {
 const engagementModels = [
   {
     title: "Technology Health Check",
-    price: pricing.healthCheck,
     description:
       "For when technology is slowing the business down and you are not sure why, or where to start. I review how your systems are set up and used, and find the practical improvements that matter most.",
     outcome:
@@ -108,7 +107,6 @@ const engagementModels = [
   },
   {
     title: "Focused Build Sprint",
-    price: pricing.buildSprint,
     description:
       "A short, defined piece of hands-on work: fixing a specific workplace problem, improving your website, automating a repetitive process or making a defined infrastructure improvement.",
     outcome:
@@ -116,7 +114,6 @@ const engagementModels = [
   },
   {
     title: "Project Delivery",
-    price: pricing.projectDelivery,
     description:
       "For larger or multi-stage work, such as a new platform, a migration or a significant infrastructure build. Scope is agreed up front and delivered in stages you can review.",
     outcome:
@@ -225,6 +222,8 @@ export default function Services() {
             a single focused sprint, and grows into a staged project only if
             that is what the business actually needs.
           </p>
+
+          <p className="mt-4 font-semibold text-sky-300">{scopeCommitment}</p>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -236,15 +235,6 @@ export default function Services() {
               <h4 className="text-xl font-semibold text-white">
                 {model.title}
               </h4>
-
-              <p className="mt-3 flex flex-wrap items-center gap-2 text-lg font-semibold text-sky-300">
-                <span>{model.price}</span>
-                {isPricePlaceholder(model.price) && (
-                  <PlaceholderTag>
-                    Placeholder: price not yet set
-                  </PlaceholderTag>
-                )}
-              </p>
 
               <p className="mt-4 leading-7 text-slate-300">
                 {model.description}
@@ -266,14 +256,14 @@ export default function Services() {
               Not sure where your project fits?
             </h3>
             <p className="mt-4 leading-7 text-slate-300">
-              Start with the problem you are trying to solve. A free 15-minute
-              call is enough to work out the right first step before committing
-              to anything larger.
+              Start with the problem you are trying to solve. A short email is
+              enough to work out the right first step before committing to
+              anything larger.
             </p>
           </div>
 
           <div className="mt-6 sm:mt-0 sm:shrink-0">
-            <ContactCtas stack align="start" />
+            <ContactCtas align="start" />
           </div>
         </div>
       </div>
