@@ -110,7 +110,8 @@ export default function EppingTennisClubPage() {
               Back to projects
             </Link>
             <p className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400 sm:tracking-[0.25em]">
-              Ongoing technical support • Merchandise proof of concept completed
+              Formalised technical support • Merchandise proof of concept
+              completed
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
               {title}
@@ -207,10 +208,8 @@ export default function EppingTennisClubPage() {
             <h2 className={heading}>Current status</h2>
             <div className={`mt-8 space-y-6 ${body}`}>
               <p>
-                Glen continues to provide technical assistance to ETC. The next
-                operational step is to formalise the support arrangement so that
-                ongoing responsibilities, project scope and costs are clearly
-                understood.
+                Glen continues to provide technical assistance to ETC, and the
+                support arrangement has since been formalised.
               </p>
               <p>
                 The merchandise store remains a completed proof of concept only.

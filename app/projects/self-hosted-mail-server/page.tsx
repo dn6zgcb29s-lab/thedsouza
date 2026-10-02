@@ -96,7 +96,7 @@ export default function SelfHostedMailServerPage() {
               ← Back to selected projects
             </Link>
             <p className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400 sm:tracking-[0.25em]">
-              Infrastructure engineering · Operational proof of concept
+              Infrastructure engineering · Completed proof of concept
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
               Building a Self-Hosted Business Mail Server
@@ -111,7 +111,7 @@ export default function SelfHostedMailServerPage() {
               Mailcow • Postfix • Docker • DNS • TLS
             </p>
             <p className="mt-6 inline-flex rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-2 text-sm font-semibold text-amber-200">
-              Operational proof of concept
+              Completed proof of concept · Retired
             </p>
           </div>
         </header>
@@ -253,8 +253,9 @@ export default function SelfHostedMailServerPage() {
                 documented support procedures.
               </p>
               <p>
-                The proof of concept validates the architecture and core mail
-                flow. Continued operation will be governed by reliability,
+                The proof of concept validated the architecture and core mail
+                flow, and the platform has since been retired. Any future
+                production mail service would be governed by reliability,
                 security and recovery requirements rather than by software
                 licensing cost alone.
               </p>
@@ -267,8 +268,8 @@ export default function SelfHostedMailServerPage() {
             <h2 className={heading}>Built through GHDC</h2>
             <div className={`mt-8 space-y-6 ${body}`}>
               <p>
-                The mail platform is one of the infrastructure workloads used to
-                extend GHDC from a virtualisation home lab into a privately
+                The mail platform was one of the infrastructure workloads used
+                to extend GHDC from a virtualisation home lab into a privately
                 operated project-hosting and test-cloud environment.
               </p>
               <Link

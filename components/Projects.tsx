@@ -23,11 +23,11 @@ const projects = [
   {
     title: "Epping Tennis Club — Digital Support",
     description:
-      "Ongoing email, domain and user support, alongside a functional merchandise-store proof of concept.",
+      "Email, domain and user support under a formalised engagement, alongside a functional merchandise-store proof of concept.",
     tech: "Outlook • DNS • Email Migration • GitHub Pages",
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
-    status: "Ongoing support • POC completed",
+    status: "Formalised engagement • POC completed",
   },
   {
     title: "GVI — Foundation of GHDC",
@@ -41,10 +41,10 @@ const projects = [
   {
     title: "Self-Hosted Business Mail Server",
     description:
-      "A privately operated business email platform designed and validated with secure mail delivery, authenticated outbound relay, TLS and modern domain authentication.",
+      "A business email platform designed and validated as a proof of concept, with secure mail delivery, authenticated outbound relay, TLS and modern domain authentication. Since retired.",
     tech: "Mailcow • Postfix • Docker • DNS • TLS",
     href: "/projects/self-hosted-mail-server",
-    status: "Operational proof of concept",
+    status: "Completed proof of concept • Retired",
     action: "Explore the mail server case study",
   },
 ];

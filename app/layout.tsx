@@ -46,7 +46,6 @@ const jsonLd = {
         "Workflow automation",
         "Email authentication and deliverability",
         "Networking",
-        "Monitoring and observability",
       ],
     },
     {

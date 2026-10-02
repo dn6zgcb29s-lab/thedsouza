@@ -26,6 +26,7 @@ const services: {
         label: "Epping Tennis Club",
         href: "/projects/epping-tennis-club",
       },
+      { label: "Enterprise background", href: "/#experience" },
     ],
   },
   {
@@ -66,7 +67,7 @@ const services: {
       "Planning practical cloud, on-premises or hybrid setups",
       "Building and hardening servers and self-hosted services",
       "Secure remote access for you and your team",
-      "Backup and recovery that has actually been tested",
+      "Backup and recovery planning",
       "Operational documentation for what was built",
     ],
     proof: [

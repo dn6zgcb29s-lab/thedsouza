@@ -51,7 +51,6 @@ const technicalFoundation = [
   "React",
   "TypeScript",
   "Tailwind CSS",
-  "Framer Motion",
   "GitHub",
   "Vercel",
 ];
