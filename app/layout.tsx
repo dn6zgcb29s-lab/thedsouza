@@ -31,14 +31,13 @@ const jsonLd = {
       "@id": personId,
       name: "Glen D'Souza",
       url: siteUrl,
-      jobTitle: "Technology Consultant",
+      jobTitle: "Technology Consultant & Engineer",
       worksFor: {
         "@type": "Organization",
         name: "TD Group of Companies Pty Ltd",
       },
       knowsAbout: [
         "Technology consulting",
-        "AI solutions",
         "Digital infrastructure",
         "Linux",
         "Docker",
@@ -48,7 +47,6 @@ const jsonLd = {
         "Email authentication and deliverability",
         "Networking",
         "Monitoring and observability",
-        "Disaster recovery",
       ],
     },
     {
@@ -73,8 +71,7 @@ export const metadata: Metadata = {
   keywords: [
     "Glen D'Souza",
     "technology consultant",
-    "small business technology consulting",
-    "AI solutions",
+    "technology consultant and engineer",
     "proof of concept development",
     "business technology",
     "website development",
