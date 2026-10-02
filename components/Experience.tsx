@@ -24,14 +24,13 @@ export default function Experience() {
         </p>
 
         <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
-          Enterprise-grade depth, applied to smaller businesses
+          Enterprise-grade depth, applied{" "}
+          <span className="whitespace-nowrap">hands-on</span>
         </h2>
 
         <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
           22+ years of professional IT experience, starting on the frontline of
-          enterprise support and moving into engineering. Today that depth goes
-          directly to small businesses and founders, who get the same standard
-          of work without needing an enterprise budget or an IT department.
+          enterprise support and moving into engineering.
         </p>
 
         <ol className="mt-12 grid gap-6 lg:grid-cols-3">
