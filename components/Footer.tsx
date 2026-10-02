@@ -6,7 +6,7 @@ export default function Footer() {
           <h2 className="text-xl font-bold text-white">Glen D&apos;Souza</h2>
 
           <p className="mt-2">
-            Practical technology engineering for small businesses and founders
+            Technology Consultant &amp; Engineer · Melbourne, Victoria
           </p>
         </div>
 
