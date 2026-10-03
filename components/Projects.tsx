@@ -23,11 +23,11 @@ const projects = [
   {
     title: "Epping Tennis Club — Digital Support",
     description:
-      "Email, domain and user support under a formalised engagement, alongside a functional merchandise-store proof of concept.",
-    tech: "Outlook • DNS • Email Migration • GitHub Pages",
+      "Email, domain and user support, including the migration and stabilisation of the club's email environment.",
+    tech: "Outlook • DNS • Email Migration",
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
-    status: "Formalised engagement • POC completed",
+    status: "Email migration completed • Technology consulting available",
   },
   {
     title: "GVI — Foundation of GHDC",

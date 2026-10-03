@@ -40,13 +40,7 @@ const services: {
       "Hosting, domains and deployment you control",
       "Testing on phones, tablets and desktops before go-live",
     ],
-    proof: [
-      { label: "thedsouza.com", href: "/projects/thedsouza-com" },
-      {
-        label: "Epping Tennis Club store POC",
-        href: "/projects/epping-tennis-club",
-      },
-    ],
+    proof: [{ label: "thedsouza.com", href: "/projects/thedsouza-com" }],
   },
   {
     title: "Automating repetitive work",
