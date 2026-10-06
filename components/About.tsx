@@ -48,9 +48,7 @@ export default function About() {
             </p>
 
             <p>
-              I didn&apos;t always have the title Solution Architect, but
-              increasingly I realise that the way I approached problems was very
-              much solution architecture.
+              The titles changed; the way I approached problems didn&apos;t.
             </p>
 
             <p>

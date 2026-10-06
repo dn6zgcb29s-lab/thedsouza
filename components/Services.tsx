@@ -35,7 +35,6 @@ const services: {
       "Design and build fast, maintainable websites, online stores and internal tools that you own and that keep working after launch.",
     deliverables: [
       "New websites or rebuilds of outdated ones",
-      "Online store and ordering proofs of concept",
       "Internal tools and simple business applications",
       "Hosting, domains and deployment you control",
       "Testing on phones, tablets and desktops before go-live",
