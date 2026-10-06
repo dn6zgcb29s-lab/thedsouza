@@ -7,7 +7,6 @@ import Proof from "@/components/Proof";
 import Delivery from "@/components/Delivery";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Timeline from "@/components/Timeline";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -46,10 +45,6 @@ export default function Home() {
 
         <FadeIn>
           <Skills />
-        </FadeIn>
-
-        <FadeIn>
-          <Timeline />
         </FadeIn>
 
         <FadeIn>

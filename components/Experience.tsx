@@ -9,47 +9,46 @@ const capabilities = [
   "Web and Technical Project Delivery",
 ];
 
-const linkFocus =
-  "rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400";
-
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="bg-slate-950 px-6 py-20 text-white sm:px-8"
+      className="border-t border-white/5 bg-slate-900/40 px-6 py-24 text-white sm:px-8 lg:py-32"
     >
-      <div className="mx-auto max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-          Background
-        </p>
+      <div className="mx-auto max-w-6xl">
+        <p className="eyebrow">Background</p>
 
-        <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
-          Enterprise-grade depth, applied to smaller businesses
+        <h2 className="section-title mt-5 max-w-3xl">
+          Enterprise-grade depth, applied{" "}
+          <span className="whitespace-nowrap">hands-on</span>
         </h2>
 
-        <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
+        <p className="lead mt-6 max-w-3xl">
           22+ years of professional IT experience, starting on the frontline of
-          enterprise support and moving into engineering. Today that depth goes
-          directly to small businesses and founders, who get the same standard
-          of work without needing an enterprise budget or an IT department.
+          enterprise support and moving into engineering.
         </p>
 
-        <ol className="mt-12 grid gap-6 lg:grid-cols-3">
+        <ol className="mt-14 grid gap-6 lg:grid-cols-3">
           {careerStages.map((stage, index) => (
             <li
               key={stage.id}
-              className="rounded-2xl border border-slate-700 bg-slate-900 p-6"
+              className="card relative overflow-hidden p-6 sm:p-8"
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="text-sm font-semibold uppercase tracking-[0.15em] text-sky-400">
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-sky-400/70 via-sky-400/20 to-transparent"
+              />
+
+              <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">
                   Stage {index + 1}
                 </span>
-                <span className="text-sm text-slate-400">
+                <span className="font-mono text-xs text-slate-400">
                   {formatPeriod(stage)}
                 </span>
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold text-white">
+              <h3 className="mt-6 text-xl font-semibold leading-snug text-white">
                 {stage.title}
               </h3>
 
@@ -58,37 +57,32 @@ export default function Experience() {
           ))}
         </ol>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+        <div className="mt-16 grid gap-10 border-t border-white/10 pt-12 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           <div>
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-lg font-semibold text-white">
               Technical foundation
             </h3>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
               {capabilities.map((capability) => (
                 <li
                   key={capability}
-                  className="flex gap-3 leading-7 text-slate-300"
+                  className="flex gap-4 leading-7 text-slate-300"
                 >
-                  <span aria-hidden="true" className="text-sky-400">
-                    •
-                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-3.5 h-px w-4 shrink-0 bg-sky-400"
+                  />
                   <span>{capability}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="flex flex-wrap gap-4 lg:justify-end lg:pt-1">
-            <a
-              href="#projects"
-              className={`inline-flex rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:border-sky-400 hover:text-sky-400 ${linkFocus}`}
-            >
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <a href="#projects" className="btn-secondary">
               View Projects
             </a>
-            <a
-              href="#contact"
-              className={`inline-flex rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400 ${linkFocus}`}
-            >
+            <a href="#contact" className="btn-primary">
               Discuss a Project
             </a>
           </div>

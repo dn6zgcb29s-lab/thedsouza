@@ -1,14 +1,18 @@
 export default function Skills() {
   return (
-    <section id="skills" className="bg-slate-800 py-20">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-4xl font-bold">
+    <section
+      id="skills"
+      className="border-t border-white/5 bg-slate-950 px-6 py-24 sm:px-8 lg:py-32"
+    >
+      <div className="mx-auto max-w-6xl">
+        <span aria-hidden="true" className="title-rule mx-auto mb-5" />
+        <h2 className="mb-12 text-center text-4xl font-bold text-white">
           The technical toolkit underneath
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-sky-400">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="card p-6">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">
               Web &amp; Application
             </h3>
             <ul className="flex flex-wrap gap-2">
@@ -21,7 +25,7 @@ export default function Skills() {
                 "PostgreSQL",
               ].map((skill) => (
                 <li key={skill}>
-                  <span className="rounded-lg bg-slate-700/50 px-3 py-1.5 text-sm font-medium text-slate-200 border border-slate-600">
+                  <span className="inline-block rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-slate-200">
                     {skill}
                   </span>
                 </li>
@@ -29,8 +33,8 @@ export default function Skills() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-sky-400">
+          <div className="card p-6">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">
               Infrastructure &amp; DevOps
             </h3>
             <ul className="flex flex-wrap gap-2">
@@ -44,7 +48,7 @@ export default function Skills() {
                 "Proxmox",
               ].map((skill) => (
                 <li key={skill}>
-                  <span className="rounded-lg bg-slate-700/50 px-3 py-1.5 text-sm font-medium text-slate-200 border border-slate-600">
+                  <span className="inline-block rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-slate-200">
                     {skill}
                   </span>
                 </li>
@@ -52,14 +56,14 @@ export default function Skills() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-sky-400">
+          <div className="card p-6">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">
               Enterprise &amp; Emerging
             </h3>
             <ul className="flex flex-wrap gap-2">
               {["Microsoft 365", "AI & Automation"].map((skill) => (
                 <li key={skill}>
-                  <span className="rounded-lg bg-slate-700/50 px-3 py-1.5 text-sm font-medium text-slate-200 border border-slate-600">
+                  <span className="inline-block rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-slate-200">
                     {skill}
                   </span>
                 </li>

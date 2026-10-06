@@ -1,22 +1,23 @@
 /**
- * Single source for conversion links and commercial placeholders.
- * Replace the placeholders here only — every CTA and price reads from this file.
+ * Single source for the enquiry path. Every enquiry CTA reads from this file.
  */
 
 export const contactEmail = "glen@thedsouza.com";
-export const emailHref = `mailto:${contactEmail}?subject=Project%20discussion`;
 
-// TODO(P3): replace with the real Cal.com 15-minute booking URL.
-export const bookingUrl = "https://cal.com/PLACEHOLDER";
-export const bookingIsPlaceholder = bookingUrl.includes("PLACEHOLDER");
+const emailSubject = "Technology enquiry";
+const emailBody = [
+  "Hi Glen,",
+  "",
+  "What I'm trying to achieve:",
+  "",
+  "The problem I'd like help with:",
+  "",
+  "Any relevant context:",
+  "",
+].join("\r\n");
 
-// TODO(P3): replace "$X" values with approved prices before merge.
-export const PRICE_PLACEHOLDER = "$X";
-export const pricing = {
-  healthCheck: `Fixed price · ${PRICE_PLACEHOLDER}`,
-  buildSprint: `From ${PRICE_PLACEHOLDER}`,
-  projectDelivery: "Quoted by project or milestone",
-};
+export const emailHref = `mailto:${contactEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
-export const isPricePlaceholder = (price: string) =>
-  price.includes(PRICE_PLACEHOLDER);
+export const responseCommitment = "I reply to every enquiry within 48 hours.";
+export const scopeCommitment =
+  "Scope and cost are agreed before any work starts.";

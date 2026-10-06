@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Glen D'Souza | Technology Engineering for Small Businesses";
+const title = "Glen D'Souza | Technology Consultant & Engineer";
 const description =
-  "Practical technology engineering for small businesses and founders in Melbourne and across Australia: workplace IT, websites, automation and infrastructure, backed by 22+ years of professional IT experience.";
+  "Technology consultant and engineer in Melbourne, working across Australia. Practical problem solving across workplace IT, software, infrastructure and automation, backed by 22+ years of professional IT experience.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -31,24 +31,21 @@ const jsonLd = {
       "@id": personId,
       name: "Glen D'Souza",
       url: siteUrl,
-      jobTitle: "Technology Consultant",
+      jobTitle: "Technology Consultant & Engineer",
       worksFor: {
         "@type": "Organization",
         name: "TD Group of Companies Pty Ltd",
       },
       knowsAbout: [
         "Technology consulting",
-        "AI solutions",
         "Digital infrastructure",
         "Linux",
         "Docker",
         "Proxmox",
         "Microsoft 365",
         "Workflow automation",
-        "Cybersecurity",
+        "Email authentication and deliverability",
         "Networking",
-        "Monitoring and observability",
-        "Disaster recovery",
       ],
     },
     {
@@ -73,8 +70,7 @@ export const metadata: Metadata = {
   keywords: [
     "Glen D'Souza",
     "technology consultant",
-    "small business technology consulting",
-    "AI solutions",
+    "technology consultant and engineer",
     "proof of concept development",
     "business technology",
     "website development",
@@ -125,7 +121,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-md focus:bg-sky-500 focus:px-4 focus:py-3 focus:font-medium focus:text-white focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-sky-400"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-lg focus:bg-sky-400 focus:px-4 focus:py-3 focus:font-semibold focus:text-slate-950 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
         >
           Skip to main content
         </a>

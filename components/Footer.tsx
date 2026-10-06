@@ -1,28 +1,37 @@
+const footerLink =
+  "rounded-sm text-sm transition-colors hover:text-white focus-ring";
+
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 px-8 py-10 text-slate-400">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
+    <footer className="border-t border-white/10 bg-slate-950 px-6 py-12 text-slate-400 sm:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 text-center md:flex-row md:items-start md:justify-between md:text-left">
         <div>
-          <h2 className="text-xl font-bold text-white">Glen D&apos;Souza</h2>
+          <h2 className="flex items-center justify-center gap-3 text-lg font-semibold tracking-tight text-white md:justify-start">
+            <span
+              aria-hidden="true"
+              className="h-2.5 w-2.5 shrink-0 rounded-sm bg-sky-400"
+            />
+            Glen D&apos;Souza
+          </h2>
 
-          <p className="mt-2">
-            Practical technology engineering for small businesses and founders
+          <p className="mt-2 text-sm">
+            Technology Consultant &amp; Engineer · Melbourne, Victoria
           </p>
         </div>
 
         <nav
           aria-label="Footer navigation"
-          className="flex flex-wrap justify-center gap-6"
+          className="flex flex-wrap justify-center gap-x-6 gap-y-3"
         >
-          <a href="#about" className="transition hover:text-sky-400">
+          <a href="#about" className={footerLink}>
             About
           </a>
 
-          <a href="#projects" className="transition hover:text-sky-400">
+          <a href="#projects" className={footerLink}>
             Projects
           </a>
 
-          <a href="#contact" className="transition hover:text-sky-400">
+          <a href="#contact" className={footerLink}>
             Contact
           </a>
 
@@ -30,16 +39,16 @@ export default function Footer() {
             href="https://github.com/lbbextreme"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-sky-400"
+            className={footerLink}
           >
             GitHub
           </a>
         </nav>
-
-        <p className="text-sm">
-          © {new Date().getFullYear()} Glen D&apos;Souza. All rights reserved.
-        </p>
       </div>
+
+      <p className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6 text-center text-xs text-slate-400 md:text-left">
+        © {new Date().getFullYear()} Glen D&apos;Souza. All rights reserved.
+      </p>
     </footer>
   );
 }

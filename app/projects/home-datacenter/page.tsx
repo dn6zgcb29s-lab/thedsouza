@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactCtas from "@/components/ContactCtas";
 import {
   ProjectStructuredData,
   socialImageUrl,
@@ -532,6 +533,9 @@ export default function HomeDatacenterPage() {
                 The platform will grow alongside my technical knowledge,
                 businesses and future software products.
               </p>
+            </div>
+            <div className="mt-8">
+              <ContactCtas align="start" />
             </div>
             <Link
               href="/#projects"
