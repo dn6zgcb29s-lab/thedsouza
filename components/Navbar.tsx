@@ -11,9 +11,6 @@ const navigation = [
   { label: "Contact", href: "#contact" },
 ];
 
-const linkFocus =
-  "rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400";
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,18 +19,25 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-8">
-        <a href="#home" className={`text-xl font-bold text-white ${linkFocus}`}>
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/85 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 md:px-8">
+        <a
+          href="#home"
+          className="flex items-center gap-3 rounded-sm text-lg font-semibold tracking-tight text-white focus-ring"
+        >
+          <span
+            aria-hidden="true"
+            className="h-2.5 w-2.5 shrink-0 rounded-sm bg-sky-400"
+          />
           Glen D&apos;Souza
         </a>
 
-        <ul className="hidden gap-6 text-slate-300 md:flex lg:gap-8">
+        <ul className="hidden items-center gap-1 text-sm font-medium text-slate-300 md:flex lg:gap-2">
           {navigation.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className={`transition hover:text-sky-400 ${linkFocus}`}
+                className="rounded-md px-2.5 py-2 transition-colors hover:bg-white/5 hover:text-white focus-ring lg:px-3"
               >
                 {item.label}
               </a>
@@ -43,7 +47,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-lg bg-sky-500 px-5 py-2 font-medium text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 md:inline-block"
+          className="btn-primary hidden px-5 py-2.5 text-sm lg:inline-flex"
         >
           Discuss Your Project
         </a>
@@ -51,7 +55,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="rounded-md p-2 text-2xl text-white transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 md:hidden"
+          className="rounded-lg border border-white/10 px-3 py-1.5 text-xl text-white transition-colors hover:bg-white/5 focus-ring md:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
@@ -63,15 +67,15 @@ export default function Navbar() {
       {isMenuOpen && (
         <div
           id="mobile-navigation"
-          className="border-t border-slate-800 bg-slate-950 px-6 py-6 md:hidden"
+          className="border-t border-white/10 bg-slate-950 px-6 pb-8 pt-2 md:hidden"
         >
-          <ul className="flex flex-col gap-5 text-slate-300">
+          <ul className="flex flex-col divide-y divide-white/5 text-lg font-medium text-slate-200">
             {navigation.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   onClick={closeMenu}
-                  className={`block transition hover:text-sky-400 ${linkFocus}`}
+                  className="block rounded-sm py-4 transition-colors hover:text-sky-400 focus-ring"
                 >
                   {item.label}
                 </a>
@@ -82,7 +86,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={closeMenu}
-            className="mt-6 block rounded-lg bg-sky-500 px-5 py-3 text-center font-medium text-white transition hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
+            className="btn-primary mt-6 flex w-full"
           >
             Discuss Your Project
           </a>

@@ -115,26 +115,21 @@ const engagementModels = [
   },
 ];
 
-const linkFocus =
-  "rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400";
-
 export default function Services() {
   return (
     <section
       id="services"
-      className="bg-slate-950 px-6 py-20 text-white sm:px-8"
+      className="border-t border-white/5 bg-slate-950 px-6 py-24 text-white sm:px-8 lg:py-32"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-            What I can help with
-          </p>
+        <div className="max-w-3xl">
+          <p className="eyebrow">What I can help with</p>
 
-          <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
+          <h2 className="section-title mt-5">
             Technology problems I can solve for your business
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-300">
+          <p className="lead mt-6">
             You don&apos;t need to know the technical terms. Tell me what is
             slowing the business down, and I will design, build or fix the
             technology behind it.
@@ -147,71 +142,76 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+        <div className="mt-16 border-t border-white/10">
+          {services.map((service, index) => (
             <article
               key={service.title}
-              className="rounded-2xl border border-slate-700 bg-slate-900 p-6 sm:p-8"
+              className="grid gap-6 border-b border-white/10 py-10 lg:grid-cols-12 lg:gap-12 lg:py-12"
             >
-              <h3 className="text-xl font-semibold text-sky-300">
-                {service.title}
-              </h3>
+              <div className="lg:col-span-5">
+                <span
+                  aria-hidden="true"
+                  className="font-mono text-sm text-sky-400"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-              <p className="mt-4 leading-7 text-slate-300">
-                {service.description}
-              </p>
+                <h3 className="mt-3 text-2xl font-semibold leading-snug tracking-tight text-white">
+                  {service.title}
+                </h3>
 
-              <div className="mt-6">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-400">
+                <p className="mt-4 leading-7 text-slate-300">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="lg:col-span-7 lg:pt-9">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                   What this can look like
                 </h4>
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                   {service.deliverables.map((deliverable) => (
                     <li
                       key={deliverable}
-                      className="flex gap-3 leading-6 text-slate-400"
+                      className="flex gap-4 leading-6 text-slate-300"
                     >
-                      <span aria-hidden="true" className="text-sky-400">
-                        •
-                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="mt-3 h-px w-4 shrink-0 bg-sky-400"
+                      />
                       <span>{deliverable}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
 
-              {service.proof && (
-                <p className="mt-6 border-t border-slate-800 pt-4 text-sm leading-6 text-slate-400">
-                  <span className="font-semibold text-slate-300">
-                    See it in practice:{" "}
-                  </span>
-                  {service.proof.map((item, index) => (
-                    <span key={item.label}>
-                      {index > 0 && ", "}
-                      <Link
-                        href={item.href}
-                        className={`text-sky-400 underline-offset-4 hover:underline ${linkFocus}`}
-                      >
-                        {item.label}
-                      </Link>
+                {service.proof && (
+                  <p className="mt-6 text-sm leading-6 text-slate-400">
+                    <span className="font-semibold text-slate-200">
+                      See it in practice:{" "}
                     </span>
-                  ))}
-                </p>
-              )}
+                    {service.proof.map((item, index) => (
+                      <span key={item.label}>
+                        {index > 0 && ", "}
+                        <Link href={item.href} className="text-link">
+                          {item.label}
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
+                )}
+              </div>
             </article>
           ))}
         </div>
 
-        <div className="mt-20 max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-            How to get started
-          </p>
+        <div className="mt-24 max-w-3xl">
+          <p className="eyebrow">How to get started</p>
 
-          <h3 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+          <h3 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
             Ways to work together
           </h3>
 
-          <p className="mt-5 text-lg leading-8 text-slate-300">
+          <p className="lead mt-5">
             Bring me the problem. Most work starts small, with a Health Check or
             a single focused sprint, and grows into a staged project only if
             that is what the business actually needs.
@@ -224,7 +224,7 @@ export default function Services() {
           {engagementModels.map((model) => (
             <article
               key={model.title}
-              className="rounded-2xl border border-slate-700 bg-slate-900 p-6"
+              className="card flex flex-col p-6 sm:p-8"
             >
               <h4 className="text-xl font-semibold text-white">
                 {model.title}
@@ -234,19 +234,19 @@ export default function Services() {
                 {model.description}
               </p>
 
-              <div className="mt-6 border-l-2 border-sky-400 pl-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sky-400">
+              <div className="mt-auto border-t border-white/10 pt-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">
                   Outcome
                 </p>
-                <p className="mt-2 leading-7 text-slate-400">{model.outcome}</p>
+                <p className="mt-2 leading-7 text-slate-300">{model.outcome}</p>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="mt-16 rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6 sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
+        <div className="mt-16 rounded-2xl border border-sky-400/25 bg-sky-400/[0.06] p-6 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
           <div className="max-w-2xl">
-            <h3 className="text-2xl font-bold leading-tight sm:text-3xl">
+            <h3 className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
               Not sure where your project fits?
             </h3>
             <p className="mt-4 leading-7 text-slate-300">
@@ -256,7 +256,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="mt-6 sm:mt-0 sm:shrink-0">
+          <div className="mt-8 lg:mt-0 lg:shrink-0">
             <ContactCtas align="start" />
           </div>
         </div>

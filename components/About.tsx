@@ -7,18 +7,19 @@ const experienceAreas = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-slate-900 px-6 py-20 text-white sm:px-8">
-      <div className="mx-auto max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-          About me
-        </p>
+    <section
+      id="about"
+      className="border-t border-white/5 bg-slate-950 px-6 py-24 text-white sm:px-8 lg:py-32"
+    >
+      <div className="mx-auto max-w-6xl">
+        <p className="eyebrow">About me</p>
 
-        <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
+        <h2 className="section-title mt-5 max-w-3xl">
           I&apos;ve realised I&apos;ve always been a problem solver
         </h2>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-6 text-lg leading-8 text-slate-300">
+        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+          <div className="max-w-[65ch] space-y-6 text-lg leading-8 text-slate-300">
             <p>
               I&apos;m Glen D&apos;Souza, a technology consultant and engineer.
               In 22+ years of IT, I&apos;ve worked under different titles and
@@ -68,17 +69,21 @@ export default function About() {
             </p>
           </div>
 
-          <div className="self-start rounded-2xl border border-slate-700 bg-slate-800 p-6 sm:p-8">
-            <h3 className="text-xl font-semibold text-white">
+          <div className="card self-start p-6 sm:p-8 lg:sticky lg:top-28">
+            <h3 className="text-lg font-semibold text-white">
               What that experience includes
             </h3>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 divide-y divide-white/5">
               {experienceAreas.map((area) => (
-                <li key={area} className="flex gap-3 leading-7 text-slate-300">
-                  <span aria-hidden="true" className="text-sky-400">
-                    •
-                  </span>
+                <li
+                  key={area}
+                  className="flex gap-4 py-4 leading-7 text-slate-300 first:pt-0 last:pb-0"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mt-3.5 h-px w-4 shrink-0 bg-sky-400"
+                  />
                   <span>{area}</span>
                 </li>
               ))}
@@ -86,7 +91,7 @@ export default function About() {
           </div>
         </div>
 
-        <p className="mt-10 border-l-2 border-sky-400 pl-5 text-lg leading-8 text-slate-300">
+        <p className="mt-16 max-w-4xl border-l-2 border-sky-400 pl-6 text-xl font-medium leading-9 text-white sm:text-2xl sm:leading-10">
           Find the problem. Understand the real need. Design the simplest
           practical solution. Build it. Automate what can be automated. Then let
           the technology do the repetitive work.

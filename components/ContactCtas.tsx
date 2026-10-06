@@ -1,8 +1,5 @@
 import { contactEmail, emailHref, responseCommitment } from "@/data/contact";
 
-const focus =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400";
-
 type ContactCtasProps = {
   align?: "center" | "start";
 };
@@ -16,7 +13,7 @@ export default function ContactCtas({ align = "center" }: ContactCtasProps) {
       <a
         href={emailHref}
         data-cta="email"
-        className={`inline-flex max-w-full justify-center rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition [overflow-wrap:anywhere] hover:bg-sky-400 ${focus}`}
+        className="btn-primary max-w-full text-center [overflow-wrap:anywhere]"
       >
         Email {contactEmail}
         <span className="sr-only"> (opens your email app)</span>

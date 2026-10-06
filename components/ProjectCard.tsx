@@ -1,12 +1,27 @@
 import Link from "next/link";
 
+/** Visual tone of the status badge; the status wording itself is unchanged. */
+export type ProjectTone = "completed" | "development";
+
 type ProjectCardProps = {
   title: string;
   description: string;
   tech: string;
   href?: string;
   status?: string;
+  tone?: ProjectTone;
   action?: string;
+};
+
+const toneStyles: Record<ProjectTone, { badge: string; dot: string }> = {
+  completed: {
+    badge: "border-emerald-400/25 bg-emerald-400/10 text-emerald-300",
+    dot: "bg-emerald-400",
+  },
+  development: {
+    badge: "border-amber-400/25 bg-amber-400/10 text-amber-300",
+    dot: "bg-amber-400",
+  },
 };
 
 export default function ProjectCard({
@@ -15,27 +30,43 @@ export default function ProjectCard({
   tech,
   href,
   status,
+  tone = "completed",
   action,
 }: ProjectCardProps) {
   const cardContent = (
     <>
-      <div className="mb-3 flex items-start justify-between gap-4">
-        <h3 className="text-2xl font-semibold">{title}</h3>
+      <h3 className="text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl">
+        {title}
+      </h3>
 
-        {status && (
-          <span className="shrink-0 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300">
-            {status}
-          </span>
-        )}
-      </div>
+      {/* Shown above the title, but read after it. */}
+      {status && (
+        <span
+          className={`order-first mb-5 inline-flex items-center gap-2 self-start rounded-full border px-3 py-1 text-xs font-medium [overflow-wrap:anywhere] ${toneStyles[tone].badge}`}
+        >
+          <span
+            aria-hidden="true"
+            className={`h-1.5 w-1.5 shrink-0 rounded-full ${toneStyles[tone].dot}`}
+          />
+          {status}
+        </span>
+      )}
 
-      <p className="mb-4 text-slate-400">{description}</p>
+      <p className="mb-6 mt-3 leading-7 text-slate-400">{description}</p>
 
-      <span className="text-sm font-medium text-blue-400">{tech}</span>
+      <span className="mt-auto block border-t border-white/10 pt-5 font-mono text-xs leading-6 text-slate-400">
+        {tech}
+      </span>
 
       {action && (
-        <span className="mt-5 block font-semibold text-sky-400">
-          {action} <span aria-hidden="true">→</span>
+        <span className="mt-5 block font-semibold text-sky-400 transition-colors group-hover:text-sky-300">
+          {action}{" "}
+          <span
+            aria-hidden="true"
+            className="inline-block transition-transform motion-safe:group-hover:translate-x-1"
+          >
+            →
+          </span>
         </span>
       )}
     </>
@@ -43,7 +74,7 @@ export default function ProjectCard({
 
   if (href) {
     const cardClassName =
-      "block rounded-xl border border-slate-700 bg-slate-800 p-6 transition hover:border-blue-500 hover:shadow-lg";
+      "group card-interactive flex h-full flex-col p-6 sm:p-7";
 
     if (href.startsWith("/")) {
       return (
@@ -61,8 +92,6 @@ export default function ProjectCard({
   }
 
   return (
-    <div className="rounded-xl border border-slate-700 bg-slate-800 p-6">
-      {cardContent}
-    </div>
+    <div className="card flex h-full flex-col p-6 sm:p-7">{cardContent}</div>
   );
 }

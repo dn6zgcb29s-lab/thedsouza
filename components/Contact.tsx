@@ -5,31 +5,34 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-slate-800 px-6 py-20 text-white sm:px-8"
+      className="border-t border-white/5 bg-slate-900/40 px-6 py-24 text-white sm:px-8 lg:py-32"
     >
-      <div className="mx-auto max-w-4xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
-          Start a conversation
-        </p>
+      <div className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950 px-6 py-14 text-center sm:px-12 sm:py-20">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-10%,rgb(56_189_248/0.14),transparent_70%)]"
+        />
 
-        <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-          Discuss Your Project
-        </h2>
+        <p className="eyebrow justify-center">Start a conversation</p>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        <h2 className="section-title mt-5">Discuss Your Project</h2>
+
+        <p className="lead mx-auto mt-6 max-w-2xl">
           Tell me what your business is trying to improve, build or fix. I will
           help clarify the problem, suggest a sensible first step and tell you
           honestly whether I am the right person for the job.
         </p>
 
-        <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-sky-400/30 bg-sky-400/10 p-6">
-          <p className="font-semibold text-sky-200">Start with a short email</p>
+        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-left sm:p-8">
+          <p className="font-semibold text-white">Start with a short email</p>
           <p className="mt-2 leading-7 text-slate-300">
             Explain what you are trying to achieve and the problem you would
             like help with. No technical preparation is required; a short
             description is enough to begin.
           </p>
-          <p className="mt-3 leading-7 text-slate-300">{scopeCommitment}</p>
+          <p className="mt-4 border-t border-white/10 pt-4 font-medium leading-7 text-sky-300">
+            {scopeCommitment}
+          </p>
         </div>
 
         <div className="mt-10">
@@ -42,20 +45,23 @@ export default function Contact() {
             href="https://github.com/lbbextreme"
             target="_blank"
             rel="noreferrer"
-            className="font-medium text-sky-400 underline underline-offset-4 hover:text-sky-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400"
+            className="text-link"
           >
             View my GitHub
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         </p>
 
-        <p className="mt-10 text-sm leading-6 text-slate-400">
-          Technology consulting delivered through TD Group of Companies Pty Ltd.
-        </p>
-        <p className="mt-2 text-sm text-slate-500">
-          glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
-          Australia
-        </p>
+        <div className="mx-auto mt-12 max-w-2xl border-t border-white/10 pt-8">
+          <p className="text-sm leading-6 text-slate-400">
+            Technology consulting delivered through TD Group of Companies Pty
+            Ltd.
+          </p>
+          <p className="mt-2 text-sm text-slate-400">
+            glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
+            Australia
+          </p>
+        </div>
       </div>
     </section>
   );

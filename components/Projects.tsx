@@ -1,7 +1,15 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard, { type ProjectTone } from "@/components/ProjectCard";
 import CurrentlyBuilding from "@/components/CurrentlyBuilding";
 
-const projects = [
+const projects: {
+  title: string;
+  description: string;
+  tech: string;
+  href: string;
+  status: string;
+  tone: ProjectTone;
+  action: string;
+}[] = [
   {
     title: "GHDC — Home Datacenter",
     description:
@@ -9,6 +17,7 @@ const projects = [
     tech: "Proxmox • Linux • Docker • Tailscale • Private Cloud",
     href: "/projects/home-datacenter",
     status: "In development · Phase 0",
+    tone: "development",
     action: "Explore the GHDC roadmap",
   },
   {
@@ -19,6 +28,7 @@ const projects = [
     href: "/projects/thedsouza-com",
     action: "Read the thedsouza.com case study",
     status: "Live • Continuously improved",
+    tone: "completed",
   },
   {
     title: "Epping Tennis Club — Digital Support",
@@ -28,6 +38,7 @@ const projects = [
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
     status: "Email migration completed • Technology consulting available",
+    tone: "completed",
   },
   {
     title: "GVI — Foundation of GHDC",
@@ -37,6 +48,7 @@ const projects = [
     href: "/projects/gvi-home-lab",
     action: "Read the GVI case study",
     status: "Operational foundation • Evolved into GHDC",
+    tone: "completed",
   },
   {
     title: "Self-Hosted Business Mail Server",
@@ -45,33 +57,33 @@ const projects = [
     tech: "Mailcow • Postfix • Docker • DNS • TLS",
     href: "/projects/self-hosted-mail-server",
     status: "Completed proof of concept • Retired",
+    tone: "completed",
     action: "Explore the mail server case study",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-slate-900 py-20 text-white">
-      <style>{`
-        #projects > div > div > :is(a, div) > div:first-child > span {
-          min-width: 0;
-          overflow-wrap: anywhere;
-          text-align: right;
-          white-space: normal;
-          flex-shrink: 1;
-        }
-      `}</style>
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-4 text-center text-4xl font-bold">
-          Case studies: the work behind the services
-        </h2>
-        <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">
-          Real systems I have built, supported or operate, each written up with
-          what was done and what was learned. More case studies are added as
-          work is completed.
-        </p>
+    <section
+      id="projects"
+      className="border-t border-white/5 bg-slate-900/40 px-6 py-24 text-white sm:px-8 lg:py-32"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <span aria-hidden="true" className="title-rule" />
+          <h2 className="section-title mt-5">
+            Case studies: the work behind the services
+          </h2>
+          <p className="lead mt-6 text-slate-400">
+            Real systems I have built, supported or operate, each written up
+            with what was done and what was learned. More case studies are added
+            as work is completed.
+          </p>
+        </div>
 
-        <CurrentlyBuilding />
+        <div className="mt-14">
+          <CurrentlyBuilding />
+        </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
@@ -82,6 +94,7 @@ export default function Projects() {
               tech={project.tech}
               href={project.href}
               status={project.status}
+              tone={project.tone}
               action={project.action}
             />
           ))}
