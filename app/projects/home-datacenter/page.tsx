@@ -366,6 +366,42 @@ export default function HomeDatacenterPage() {
           </div>
         </section>
 
+        <section className={`${section} bg-slate-900`}>
+          <div className="mx-auto max-w-4xl">
+            <h2 className={heading}>
+              Current focus: AI-assisted infrastructure operations
+            </h2>
+            <div className={`mt-8 space-y-6 ${body}`}>
+              <p>
+                GHDC is also where I’m testing a different way of working: using
+                Claude directly for day-to-day infrastructure operations —
+                security, updates, configuration, rebuilds — rather than
+                treating AI assistance as something separate from hands-on IT
+                work.
+              </p>
+              <p>
+                This isn’t automation running unsupervised. Every change still
+                goes through the same controlled, reviewable process I use for
+                client and website work: scope agreed first, implementation
+                checked before anything is applied, nothing destructive or
+                irreversible without explicit sign-off. What’s changed is who’s
+                doing the hands-on execution day to day.
+              </p>
+              <p>
+                A guiding principle for GHDC: no third-party service sits in the
+                data path or holds data unnecessarily. Infrastructure is built
+                and operated in-house wherever practical — a deliberate
+                constraint, not a default.
+              </p>
+              <p>
+                Part of the lab is now also being evaluated as a home for client
+                proof-of-concept work — a controlled space to validate an idea
+                or a build before it goes anywhere near production.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className={`${section} bg-slate-800`}>
           <div className="mx-auto max-w-6xl">
             <h2 className={heading}>Target architecture</h2>
