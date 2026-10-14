@@ -1,4 +1,5 @@
 import ContactCtas from "@/components/ContactCtas";
+import ContactDetails from "@/components/ContactDetails";
 import { scopeCommitment } from "@/data/contact";
 
 export default function Contact() {
@@ -53,14 +54,7 @@ export default function Contact() {
         </p>
 
         <div className="mx-auto mt-12 max-w-2xl border-t border-white/10 pt-8">
-          <p className="text-sm leading-6 text-slate-400">
-            Technology consulting delivered through TD Group of Companies Pty
-            Ltd.
-          </p>
-          <p className="mt-2 text-sm text-slate-400">
-            glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
-            Australia
-          </p>
+          <ContactDetails />
         </div>
       </div>
     </section>
