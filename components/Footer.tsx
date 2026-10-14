@@ -36,7 +36,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://github.com/lbbextreme"
+            href="https://github.com/dn6zgcb29s-lab"
             target="_blank"
             rel="noopener noreferrer"
             className={footerLink}
