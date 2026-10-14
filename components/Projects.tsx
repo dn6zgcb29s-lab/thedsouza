@@ -13,8 +13,8 @@ const projects: {
   {
     title: "GHDC — Home Datacenter",
     description:
-      "A two-year infrastructure and professional-development project evolving my working home lab into a secure, modular and heterogeneous private datacenter.",
-    tech: "Proxmox • Linux • Docker • Tailscale • Private Cloud",
+      "A two-year infrastructure and professional-development project evolving my working home lab into a secure, modular, AI-assisted private datacenter — built and run in direct, hands-on partnership with Claude.",
+    tech: "Proxmox • Linux • Docker • Private Cloud • AI-Assisted Operations",
     href: "/projects/home-datacenter",
     status: "In development · Phase 0",
     tone: "development",
