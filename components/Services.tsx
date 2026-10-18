@@ -23,7 +23,7 @@ const services: {
     ],
     proof: [
       {
-        label: "Epping Tennis Club",
+        label: "Epping Tennis Club (volunteer)",
         href: "/projects/epping-tennis-club",
       },
       { label: "Enterprise background", href: "/#experience" },
@@ -85,7 +85,7 @@ const services: {
     ],
     proof: [
       {
-        label: "Epping Tennis Club",
+        label: "Epping Tennis Club (volunteer)",
         href: "/projects/epping-tennis-club",
       },
     ],

@@ -29,8 +29,9 @@ export default function Hero() {
           <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
             I help businesses fix, build and automate their technology —
             workplace IT and Microsoft 365, websites and internal tools,
-            automation and infrastructure. 22+ years of IT experience, delivered
-            hands-on with a human-led, AI-assisted workflow.
+            automation and infrastructure. Extensive enterprise IT experience,
+            delivered hands-on with a human-led, AI-assisted workflow. Available
+            for contract and project engagements, including MSP overflow.
           </p>
 
           <div className="border-l border-sky-400/60 pl-6 lg:self-end">
@@ -40,7 +41,7 @@ export default function Hero() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-slate-400">
-              Melbourne, Victoria · Remote consulting across Australia
+              Melbourne, Victoria · Onsite in Melbourne, remote across Australia
             </p>
           </div>
         </div>

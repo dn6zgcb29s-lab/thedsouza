@@ -33,11 +33,11 @@ const projects: {
   {
     title: "Epping Tennis Club — Digital Support",
     description:
-      "Email, domain and user support, including the migration and stabilisation of the club's email environment.",
+      "Volunteer email, domain and user support for a community club, including the migration and stabilisation of its email environment.",
     tech: "Outlook • DNS • Email Migration",
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
-    status: "Email migration completed • Technology consulting available",
+    status: "Community sponsorship (volunteer) • Completed",
     tone: "completed",
   },
   {

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 const objectives = [
   "Introduce Glen as a technical consultant",
-  "Connect 22+ years of professional IT experience with current project work",
+  "Connect extensive professional IT experience with current project work",
   "Clearly explain available services",
   "Present technical work through evidence-based case studies",
   "Give prospective clients a straightforward path to make contact",
@@ -288,10 +288,10 @@ export default function ThedsouzaComPage() {
           <div className="mx-auto max-w-5xl">
             <h2 className={heading}>Trust and Proof layer</h2>
             <p className={`mt-8 ${body}`}>
-              The homepage now presents evidence rather than promises: 22+ years
-              of professional IT experience, five published technical case
-              studies and delivery signals covering security, accessibility,
-              human-led AI use and controlled releases.
+              The homepage now presents evidence rather than promises: extensive
+              professional IT experience, five published technical case studies
+              and delivery signals covering security, accessibility, human-led
+              AI use and controlled releases.
             </p>
             <p className={`mt-8 ${body}`}>
               Google PageSpeed Insights mobile lab results measured 9 September

@@ -16,20 +16,15 @@ export default function Skills() {
               Web &amp; Application
             </h3>
             <ul className="flex flex-wrap gap-2">
-              {[
-                "React",
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "FastAPI",
-                "PostgreSQL",
-              ].map((skill) => (
-                <li key={skill}>
-                  <span className="inline-block rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-slate-200">
-                    {skill}
-                  </span>
-                </li>
-              ))}
+              {["React", "Next.js", "TypeScript", "Tailwind CSS"].map(
+                (skill) => (
+                  <li key={skill}>
+                    <span className="inline-block rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-slate-200">
+                      {skill}
+                    </span>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -43,7 +38,6 @@ export default function Skills() {
                 "Linux",
                 "Git",
                 "PowerShell",
-                "Azure",
                 "VMware",
                 "Proxmox",
               ].map((skill) => (

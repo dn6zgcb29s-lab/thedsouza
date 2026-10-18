@@ -1,10 +1,10 @@
 const proofMetrics = [
-  { value: "22+", label: "Years of professional IT experience" },
   { value: "5", label: "Published technical case studies" },
   { value: "98", label: "Mobile performance", score: true },
   { value: "96", label: "Accessibility", score: true },
   { value: "100", label: "Best Practices", score: true },
   { value: "100", label: "SEO", score: true },
+  { value: "48h", label: "Reply to every enquiry" },
 ];
 
 const deliverySignals = [
@@ -31,7 +31,7 @@ export default function Proof() {
               The best evidence is working technology. The case studies below
               show real systems I have designed, built and supported, from a
               community club&apos;s email and domains to self-hosted
-              infrastructure. They sit on top of 22+ years of professional IT
+              infrastructure. They sit on top of extensive professional IT
               experience.
             </p>
           </div>

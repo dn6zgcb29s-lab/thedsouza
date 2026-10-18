@@ -24,7 +24,7 @@ export default function Experience() {
         </h2>
 
         <p className="lead mt-6 max-w-3xl">
-          22+ years of professional IT experience, starting on the frontline of
+          Extensive professional IT experience, starting on the frontline of
           enterprise support and moving into engineering.
         </p>
 
