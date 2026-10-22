@@ -16,7 +16,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
       />
 
-      <div className="hero-rise mx-auto w-full max-w-6xl">
+      <div className="hero-rise mx-auto flex w-full max-w-6xl flex-col">
         <p className="eyebrow">
           Glen D&apos;Souza · Technology Consultant &amp; Engineer
         </p>
@@ -25,7 +25,7 @@ export default function Hero() {
           I solve <span className="text-sky-400">problems.</span>
         </h1>
 
-        <div className="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
+        <div className="order-4 mt-10 grid gap-8 lg:order-3 lg:mt-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
             I look at a complicated process and ask why it has to be so
             complicated—then find a simpler way. I combine 22+ years of IT
@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8 lg:mt-14">
+        <div className="order-3 mt-8 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8 lg:order-4 lg:mt-14">
           <ContactCtas align="start" />
 
           <p className="text-sm text-slate-400 sm:pt-3.5">
