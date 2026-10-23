@@ -64,10 +64,6 @@ const services: {
       "Operational documentation for what was built",
     ],
     proof: [
-      {
-        label: "Self-hosted mail server",
-        href: "/projects/self-hosted-mail-server",
-      },
       { label: "GHDC", href: "/projects/home-datacenter" },
       { label: "GVI", href: "/projects/gvi-home-lab" },
     ],
