@@ -50,16 +50,6 @@ const projects: {
     status: "Operational foundation • Evolved into GHDC",
     tone: "completed",
   },
-  {
-    title: "Self-Hosted Business Mail Server",
-    description:
-      "A business email platform designed and validated as a proof of concept, with secure mail delivery, authenticated outbound relay, TLS and modern domain authentication. Since retired.",
-    tech: "Mailcow • Postfix • Docker • DNS • TLS",
-    href: "/projects/self-hosted-mail-server",
-    status: "Completed proof of concept • Retired",
-    tone: "completed",
-    action: "Explore the mail server case study",
-  },
 ];
 
 export default function Projects() {

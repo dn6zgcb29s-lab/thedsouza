@@ -42,7 +42,7 @@ None of these is validated, and no client results, demand or revenue are assumed
 - **Context:** fewer than about 20 people. Technology is handled by a founder, office manager or volunteer.
 - **Problem they may pay to solve:** unreliable email or domains, M365 accounts and access in a mess, an outdated website, unclear ownership of their technology, and no documentation.
 - **Credible offer and outcome:** a Technology Health Check giving a prioritised plan, then a Focused Build Sprint (e.g. email/domain clean-up, a secured M365, a rebuilt website).
-- **Evidence present:** the Epping Tennis Club engagement (email migration, domains, SPF/DKIM/DMARC review, account access) [V]; the Services copy "Workplace technology that just works" [V]; the self-hosted mail POC, which shows email depth [V].
+- **Evidence present:** the Epping Tennis Club engagement (email migration, domains, SPF/DKIM/DMARC review, account access) [V]; the Services copy "Workplace technology that just works" [V].
 - **Evidence missing:** a second client, a quote or testimonial (with permission), dates, a before/after outcome, and any indication of price.
 - **Likely friction:** small budgets and price sensitivity [I]. Volunteer-run groups decide slowly [I]. Trust usually comes from referrals rather than search [I].
 - **Major assumptions:** that these buyers will pay for a Health Check, and that Glen wants this work.

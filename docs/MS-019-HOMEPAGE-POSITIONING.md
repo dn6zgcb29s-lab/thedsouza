@@ -19,7 +19,6 @@
 | D6 | **Every enquiry receives a response within 48 hours.** Must not imply the problem is resolved in 48 hours. |
 | D7 | GHDC: **In development · Phase 0**. |
 | D8 | Epping Tennis Club: a **formalised technology engagement**, represented within existing repository evidence. |
-| D9 | Mail server: a **completed/retired POC**; never described as currently operating. |
 | D10 | thebharattalent.com: **secondary / currently building**, not a primary case study. |
 | D11 | GitHub: **de-emphasise, do not remove**. |
 | D12 | Other projects (MyJobs etc.): existing repository evidence only. **There is none at `ef267de`, so nothing is added.** |
@@ -44,7 +43,7 @@ All proposed copy below is **draft wording for review**. It is assembled from [S
 | 4 | Services (`Services.tsx`) | Problem-led cards (good). No explicit *consulting* offer (D2). Automation card has no evidence. The Workplace card's proof link doesn't evidence M365. **Price placeholders** (D5) and **"free 15-minute call"** booking framing (D4). |
 | 5 | Proof (`Proof.tsx`) | Metrics describe the website itself. PageSpeed scores are dated before the current stack. |
 | 6 | Delivery (`Delivery.tsx`) | Eight internal engineering steps. P5 already rewrites this into four client-facing steps. |
-| 7 | Projects (`Projects.tsx`, `CurrentlyBuilding.tsx`) | The teaser is shown *before* the evidence; a Phase 0 roadmap (GHDC) is the first card; mail-server copy is present-tense (D9); Epping copy says "ongoing" (D8). The badge breaks mid-word at 375 px. |
+| 7 | Projects (`Projects.tsx`, `CurrentlyBuilding.tsx`) | The teaser is shown *before* the evidence; a Phase 0 roadmap (GHDC) is the first card; Epping copy says "ongoing" (D8). The badge breaks mid-word at 375 px. |
 | 8 | Skills (`Skills.tsx`) | Useful tags. **Heading unreadable in light colour scheme** (no text colour set). |
 | 9 | Contact (`Contact.tsx`) | Good honesty copy. Booking-dependent "15-minute" box (D4). No 48-hour commitment (D6). GitHub is prominent (D11). |
 | — | Navbar / Footer | Navbar labels follow the old order. Footer tagline narrows the audience (D3). |
@@ -106,8 +105,8 @@ The homepage goes from 9 sections to 7.
 | 1 | **Technology advice and direction** *(new)* | "When you're not sure what's wrong, what to change or where to start, I review how things are set up and give you a clear, prioritised plan." [Site: Health Check description + outcome] | Review of the current set-up and how it's used [Site: Health Check]; a prioritised action plan you can act on yourself or hand to me [Site: Health Check outcome]; an honest view of whether I'm the right person for the job [Site: `Contact.tsx`] | Epping Tennis Club (structured investigation of email, domain and access issues) | Supported by existing offer copy and Epping. **No stand-alone consulting case study.** ⚠ Stronger claims (e.g. strategy, vendor selection) need evidence. |
 | 2 | **Workplace technology and email** *(was "Workplace technology that just works")* | [Site: current description, unchanged] | [Site: current 5 bullets, unchanged] | Epping Tennis Club (email and domain migration); **"Enterprise background" → `#about`** (M365, Intune, Autopilot, Entra ID in `career.ts`) | Supported. Fixes the MS-018 finding that Epping alone does not evidence M365 administration. |
 | 3 | **Websites and business applications** *(was "Websites and digital platforms" + Automation)* | [Site: current description] + "…and simple automation that removes repetitive admin." | [Site: current 5 bullets] + "Scripts and integrations for repetitive admin" [Site: Automation card] | thedsouza.com; Epping store POC | Web: supported. ⚠ **Automation: no published example.** Keep it as one bullet only; do not expand until evidence exists. |
-| 4 | **Infrastructure, hosting and secure access** *(was "Reliable, secure infrastructure")* | [Site: current description] | [Site: current bullets], **except** "Backup and recovery that has actually been tested" → **"Backup and recovery planning"** [Site: mail server "What the project demonstrated"] | Mail server (completed POC); GVI; GHDC (in development) | Supported. ⚠ "Tested recovery" needs evidence before it is restored. |
-| 5 | **Solving difficult technical problems** | [Site: unchanged] | [Site: unchanged] | Epping Tennis Club; mail server (mail-flow diagnosis) | Supported. |
+| 4 | **Infrastructure, hosting and secure access** *(was "Reliable, secure infrastructure")* | [Site: current description] | [Site: current bullets], **except** "Backup and recovery that has actually been tested" → **"Backup and recovery planning"** | GVI; GHDC (in development) | Supported. ⚠ "Tested recovery" needs evidence before it is restored. |
+| 5 | **Solving difficult technical problems** | [Site: unchanged] | [Site: unchanged] | Epping Tennis Club | Supported. |
 
 **AI:** there is no AI service card. Evidence supports **human-led, AI-assisted delivery** as a *way of working* ([Site] `Proof.tsx` signals, `Delivery.tsx` note, thedsouza.com case study), which goes in §2.5. ⚠ **"AI solutions for clients" is not evidenced;** do not claim it.
 
@@ -118,13 +117,13 @@ The homepage goes from 9 sections to 7.
 | **Purpose** | Prove capability with the most client-relevant, *completed* work. |
 | **Current** | Teaser first, then 5 equal cards: GHDC, thedsouza.com, Epping, GVI, Mail. |
 | **Remains** | `ProjectCard`, the H2 "Case studies: the work behind the services", the intro paragraph (tense adjusted), all 5 case-study routes. |
-| **Changes** | **Featured 3 + "More case studies"** (the P4 pattern). **GHDC and the teaser move** to §2.4. Status and description updated per D8/D9. "Relevant to:" tags mapped to the new service names. The badge sits above the title (fixes the 375 px break). |
-| **Featured (order)** | 1. **Epping Tennis Club — Technology Engagement**. 2. **Self-Hosted Business Mail Server**. 3. **thedsouza.com**. |
+| **Changes** | **Featured 3 + "More case studies"** (the P4 pattern). **GHDC and the teaser move** to §2.4. Status and description updated per D8. "Relevant to:" tags mapped to the new service names. The badge sits above the title (fixes the 375 px break). |
+| **Featured (order)** | 1. **Epping Tennis Club — Technology Engagement**. 2. **thedsouza.com**. |
 | **More case studies** | GVI — Foundation of GHDC. |
-| **Proposed intro** | "Real systems I have built, supported or operated, each written up with what was done and what was learned." [Site; "operate" → "operated" per D9]. |
-| **Proposed card copy** | **Epping:** status "Formalised engagement · Store POC completed" [D8, Site]; description "A formalised technology engagement covering email migration, domain and user support, plus a completed merchandise-store proof of concept." [D8 + Site case study]; relevant to: Technology advice · Workplace technology and email · Websites and business applications · Difficult problems. **Mail server:** status "Completed proof of concept · Retired" [D9]; description "A business email platform designed and validated as a proof of concept — secure inbound delivery, authenticated outbound relay, TLS and SPF, DKIM and DMARC — and since retired." [Site validation results + D9]; relevant to: Infrastructure · Difficult problems. **thedsouza.com:** status "Live · Continuously improved" [Site]; description [Site, unchanged]; relevant to: Websites and business applications. |
+| **Proposed intro** | "Real systems I have built, supported or operated, each written up with what was done and what was learned." [Site; "operate" → "operated"]. |
+| **Proposed card copy** | **Epping:** status "Formalised engagement · Store POC completed" [D8, Site]; description "A formalised technology engagement covering email migration, domain and user support, plus a completed merchandise-store proof of concept." [D8 + Site case study]; relevant to: Technology advice · Workplace technology and email · Websites and business applications · Difficult problems. **thedsouza.com:** status "Live · Continuously improved" [Site]; description [Site, unchanged]; relevant to: Websites and business applications. |
 | **Primary CTA** | None in-section (proof, not a sales block). Each card links to its case study, and each case study ends with the CTA. |
-| **Evidence** | Case-study routes; D8, D9. |
+| **Evidence** | Case-study routes; D8. |
 | **Change type** | **Layout/content change** in `Projects.tsx` and `ProjectCard.tsx`, reusing P4's implemented pattern (§5). **Anchor:** rename the section id to `#work`. Keep a `#projects` target (for example an empty anchor element) because every case study links back to `/#projects`; alternatively update those five links in the same MS. |
 
 Why thedsouza.com is featured and GHDC is not:
@@ -203,7 +202,7 @@ Why thedsouza.com is featured and GHDC is not:
 | `<title>` / OG / Twitter title | "Glen D'Souza \| Technology Engineering for Small Businesses" | "Glen D'Souza \| Technology Consultant & Engineer" | D1 |
 | Description | "Practical technology engineering for small businesses and founders in Melbourne and across Australia: workplace IT, websites, automation and infrastructure, backed by 22+ years…" | "Technology consultant and engineer in Melbourne, working across Australia: advice and hands-on delivery for workplace IT and email, websites and applications, and infrastructure, backed by 22+ years of professional IT experience." | D1–D3, Site |
 | JSON-LD `jobTitle` | "Technology Consultant" | "Technology Consultant & Engineer" | D1 |
-| JSON-LD `knowsAbout` | includes "AI solutions", "Disaster recovery" | Remove both. ⚠ Keep "Cybersecurity" only if Glen confirms; otherwise replace it with "Email authentication and deliverability" [Site: mail server, Epping]. | MS-018 §3e |
+| JSON-LD `knowsAbout` | includes "AI solutions", "Disaster recovery" | Remove both. ⚠ Keep "Cybersecurity" only if Glen confirms; otherwise replace it with "Email authentication and deliverability" [Site: Epping]. | MS-018 §3e |
 | `keywords` | includes "AI solutions" | Remove "AI solutions"; add "technology consultant and engineer" | D1, no AI evidence |
 
 Change type: **copy-only**. `ProfessionalService`/`Service` schema stays in a later SEO MS (MS-018 §10).
@@ -261,16 +260,14 @@ The shared component is **existing component reuse, modified**: `components/Cont
 | No consulting service card | Add "Technology advice and direction" first | Consulting is the front door | D2; Site Health Check copy |
 | "Automating repetitive work" card | Fold into "Websites and business applications" as one bullet | No published automation evidence | MS-018 §6 |
 | Workplace card proof: Epping only | Epping + link to career (M365/Intune/Entra) | Epping disclaims M365 tenant administration | Site: Epping aside, `career.ts` |
-| "Backup and recovery that has actually been tested" | "Backup and recovery planning" | No published tested-recovery evidence | Site: mail server list; GHDC Phase 2 "Planned" |
+| "Backup and recovery that has actually been tested" | "Backup and recovery planning" | No published tested-recovery evidence | Site: GHDC Phase 2 "Planned" |
 | "Fixed price · $X", "From $X", "Quoted by project or milestone" + tags | Remove price lines; keep the engagement descriptions | No pricing | D5 |
 | "Not sure where your project fits? … free 15-minute call" box | Remove | Booking-dependent; duplicate CTA | D4 |
 | Proof section (metrics, PageSpeed, signals) | Remove the section; redistribute (§2.10) | Self-referential; dated scores | MS-018 §3c |
 | Delivery 8 steps | P5's 4 steps | Client-facing | P5 |
 | Teaser above the case studies | Move to "Currently building" after the evidence | Secondary | D10 |
 | GHDC as first case-study card | Move to "Currently building", "In development · Phase 0" | Phase 0; mostly planned | D7; Site |
-| Mail card "Operational proof of concept" / "A privately operated… platform designed and validated…" | "Completed proof of concept · Retired" / past tense, "since retired" | Not currently operating | D9 |
 | Epping card "Ongoing support • POC completed" / "Ongoing email, domain and user support…" | "Formalised engagement · Store POC completed" / "A formalised technology engagement covering…" | Engagement formalised | D8 |
-| Projects intro "Real systems I have built, supported or operate" | "…supported or operated" | Mail server retired | D9 |
 | Skills heading (no colour → dark on dark in light scheme) | Explicit text colour | Contrast defect | MS-018 §3f (verified) |
 | Contact "Prefer to see the code first? View my GitHub" | Remove from Contact; GitHub stays in the footer | De-emphasise | D11 |
 | Contact H2 "Discuss Your Project" | "Tell me about the technology problem" | Problem-led, broad | D2, D3 |
@@ -285,7 +282,6 @@ These are not homepage sections, but they would contradict the new homepage.
 
 | File | Current | Correction | Basis |
 |---|---|---|---|
-| `app/projects/self-hosted-mail-server/page.tsx` | Badge and eyebrow "Operational proof of concept"; "Continued operation will be governed…"; "The mail platform is one of the infrastructure workloads used to extend GHDC" (present tense) | "Completed proof of concept · Retired"; past tense; add one line saying the platform has been retired | D9 |
 | `app/projects/epping-tennis-club/page.tsx` | "The next operational step is to formalise the support arrangement…" | State that the engagement has been formalised. **Do not add terms, scope or outcomes that are not already in the repository.** | D8 |
 | `app/projects/thedsouza-com/page.tsx` | "Framer Motion" in the technical foundation; the "homepage journey" list of 9 sections; "Person JSON-LD"; the PageSpeed paragraph | Remove Framer Motion; update the journey list to the §2 order; re-measure PageSpeed or date it clearly | `package.json`; this spec |
 | All 5 case studies | Booking CTA via `ContactCtas` | Fixed automatically by §3 | D4 |
@@ -297,7 +293,7 @@ These are not homepage sections, but they would contradict the new homepage.
 | | P4 `feat/p4-featured-projects` @ `b206438` | P5 `feat/p5-compress-process` @ `e4dee89` |
 |---|---|---|
 | **Changes** | `Projects.tsx`: featured 3 (Epping, Mail, GHDC) + "More case studies" (thedsouza.com, GVI) as compact links; teaser moved below. `ProjectCard.tsx`: status badge above the title, new `relevance` prop ("Relevant to: …"). Removes the `overflow-wrap:anywhere` style hack. `CurrentlyBuilding.tsx`: margin and heading-size tweak. | `Delivery.tsx`: 8 steps → 4 client-facing steps; new intro sentence; grid `md:` → `sm:`. |
-| **Relevant to this spec** | **Pattern: yes.** The featured/more split, the `relevance` prop and the badge fix are all used in §2.3. **Content: partly.** Featured GHDC conflicts with D7/§2.4 (GHDC moves to Currently building; thedsouza.com is featured instead); the mail and Epping copy predates D8/D9; the relevance labels use the old service names. | **Fully.** The 4 steps are used verbatim in §2.5. |
+| **Relevant to this spec** | **Pattern: yes.** The featured/more split, the `relevance` prop and the badge fix are all used in §2.3. **Content: partly.** Featured GHDC conflicts with D7/§2.4 (GHDC moves to Currently building; thedsouza.com is featured instead); the Epping copy predates D8; the relevance labels use the old service names. | **Fully.** The 4 steps are used verbatim in §2.5. |
 | **Conflicts with MS2** | None: touches only `CurrentlyBuilding.tsx`, `ProjectCard.tsx`, `Projects.tsx` (untouched by MS2). | None: touches only `Delivery.tsx`. |
 | **Recommendation** | **Use P4 as the starting point of the Evidence MS (§6, MS-022),** not as a stand-alone merge. Merging P4 as-is and then changing its featured set, statuses and labels would churn the same files twice. Glen's call: rebase P4 onto MS2 and extend it in the same PR, or close PR #5 and re-implement the pattern. | **Integrate as-is, separately** (small, already reviewed). The engagement-type move into the same section is a *later* MS, so P5 stays unchanged when it lands. |
 
