@@ -41,7 +41,6 @@ The site is technically sound and honest in tone. Its gaps are commercial, not t
 | `/` | 200 | "I solve problems." | ~1,690 | 9 H2 sections; full nav and footer |
 | `/projects/home-datacenter` | 200 | Building GHDC… | ~1,100 | No site nav or footer |
 | `/projects/thedsouza-com` | 200 | Building thedsouza.com… | ~700 | No site nav or footer |
-| `/projects/self-hosted-mail-server` | 200 | Self-Hosted Business Mail Server | ~510 | No site nav or footer |
 | `/projects/gvi-home-lab` | 200 | GVI: The Virtualisation Foundation of GHDC | ~430 | No site nav or footer |
 | `/projects/epping-tennis-club` | 200 | Epping Tennis Club Digital Support | ~290 | No site nav or footer |
 
@@ -78,7 +77,6 @@ All [V]. Sources: `app/page.tsx`, `app/projects/*/page.tsx`, live fetches.
 | Epping Tennis Club | **Client** (community club) | "Email migration completed" | Clear scope, including an honest note that it wasn't full M365 administration. Outcomes are qualitative; **no dates, no numbers, no testimonial** |
 | GHDC | Own project | "In development · Phase 0 — Network stabilisation"; stack includes Tailscale, Portainer and Nginx Proxy Manager | Detailed roadmap. **May be out of date:** GVI work since 13 Oct has moved well past "Phase 0", and the in-house plan retires Tailscale [H, needs Glen to confirm] |
 | thedsouza.com | Own project | "Live • Continuously improved" | Good technical detail; references the dated PageSpeed scores |
-| Self-hosted mail server | Own POC | "Completed proof of concept · Retired" | Clearly labelled as a POC |
 | GVI | Own lab | "Evolved into GHDC" | Clearly labelled as historical |
 | thebharattalent.com teaser | Private build | "More to come" | No information. It's the first card in the Projects section [V] |
 
