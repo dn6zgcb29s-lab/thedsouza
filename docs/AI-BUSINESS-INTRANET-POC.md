@@ -87,11 +87,13 @@ harness need no changes. Validate that every citation points at a real section
 
 ## Changes outside the new feature
 
-- `package.json`: added a `test` script (no dependencies added).
+- `package.json`: added a `test` script (no dependencies added). This is the
+  only POC-specific change to `package.json`.
 - `tsconfig.json`: added `allowImportingTsExtensions` so tests can run under
   Node's built-in TypeScript support with `node --test`.
-- `package.json` and `package-lock.json`: security dependency update, listed
-  under "Security dependency update" below. This is not part of the feature.
+- `package.json` and `package-lock.json`: the security dependency update is
+  now inherited from GitHub `main` through PR #13, listed under "Security
+  dependency update" below. It is not part of the feature.
 
 ## Path to production (rough estimate)
 
@@ -114,8 +116,7 @@ Estimates assume one engineer and a client with documents ready to ingest.
    sales conversations.
 3. Whether to add `/demo/` to `robots.txt` (touches an existing file).
 4. Whether the `tsconfig.json` flag and `test` script are acceptable.
-5. Whether and when to merge the security update (`ce3c9bf`) into `main`.
-6. How access to any hosted copy will be restricted (not yet designed).
+5. How access to any hosted copy will be restricted (not yet designed).
 
 ## Security dependency update
 
@@ -125,7 +126,7 @@ all patched in 16.4.1. A separate advisory, GHSA-mrhx-c7xc-m3w5, affected
 `zod` below 4.6.6. `zod` is a dev-tooling dependency, reached through
 `eslint-config-next`.
 
-This working tree uses the patched versions:
+This branch uses the patched versions:
 
 | Package              | Version |
 | -------------------- | ------- |
@@ -133,15 +134,38 @@ This working tree uses the patched versions:
 | `eslint-config-next` | 16.4.1  |
 | `zod` (transitive)   | 4.6.7   |
 
-The same remediation exists as commit `ce3c9bf` on the branch
-`fix/nextjs-security-advisories` (a separate worktree). That commit is **not
-merged into `main`**, so `main` still pins Next.js 16.4.0. The change here
-duplicates its `package.json` version lines and `package-lock.json` diff.
+The remediation was merged into GitHub `main` through PR #13. The merge commit
+is `0e0aaf75a2b139de15d4f7e07eaf247c699d6e16`, and `ce3c9bf` ("fix: patch
+Next.js security advisories") is part of that merged history. GitHub `main`
+(as of the last local fetch) uses Next.js 16.4.1 and `eslint-config-next`
+16.4.1; Zod 4.6.7 is confirmed in the lockfile.
 
-After the update: lint, the 10 POC tests, the type-check, the production build
-and `npm audit` (0 vulnerabilities) passed on this working tree. The first
-build run before the update was interrupted by an upgrade prompt, which is why
-it was recorded as unverified at the time.
+This branch incorporates `origin/main` through the local merge commit
+`8d2530efc4fda6e7b9bba917a6adb148a4dd7c96`. That merge commit is local and has
+not been pushed. Local `main` has **not** been updated and is still behind
+GitHub `main`.
+
+Checks reported after the merge:
+
+- TypeScript passed. It first failed on stale generated `.next/types`
+  (duplicate files and references to the removed mail-server page) and passed
+  after the production build regenerated them.
+- ESLint passed.
+- The 10 POC tests were reported passing.
+- The production build passed.
+- `npm audit` reported 0 vulnerabilities.
+- The 11-question evaluation was reported 11/11 passing in a local browser
+  against the development server, along with a smoke test of the dashboard,
+  library, a document page and the assistant. The browser pane logged React
+  development-mode `eval()` errors, which React does not use in production
+  mode.
+
+The exit codes of the test and audit commands were not captured in that run,
+so those two results rest on their printed output and are not independently
+verified. These checks were not re-run when this document was updated.
+
+The Vercel production alias for `www.thedsouza.com` has not been verified
+here.
 
 ## Current status and limits
 
