@@ -104,7 +104,6 @@ const improvements = [
   "Services and engagement models",
   "Professional experience section",
   "GHDC case study and roadmap",
-  "Self-hosted mail-server case study",
   "Epping Tennis Club case study",
   "SEO and structured metadata foundation",
   "Removal or correction of outdated portfolio records",

@@ -52,7 +52,7 @@ const projectStatus = [
 const purposes = [
   "Secure access to my development environment from anywhere.",
   "A dependable platform for hosting and demonstrating authorised projects.",
-  "A private environment for testing ideas before moving them to a public cloud.",
+  "A private environment for testing ideas before moving them to an appropriate production environment.",
   "Centralised storage for virtual machines, project data and backups.",
   "Practical experience with virtualisation, networking, storage, cybersecurity, automation and observability.",
   "A heterogeneous environment combining x86, ARM64, Windows, Linux and macOS capabilities over time.",
@@ -305,6 +305,13 @@ export default function HomeDatacenterPage() {
                 console.
               </p>
               <p>
+                Tailscale is a deliberate, reviewed exception to my in-house
+                principle. It provides authenticated private access with
+                encrypted traffic; the trade-off is that its coordination
+                service sees connection metadata and may relay traffic when a
+                direct connection cannot be made.
+              </p>
+              <p>
                 Rather than replacing everything at once, GHDC follows a staged
                 and evidence-led approach. Existing equipment is reused wherever
                 practical, each new component must address a demonstrated
@@ -345,7 +352,7 @@ export default function HomeDatacenterPage() {
 
         <section className={`${section} bg-slate-900`}>
           <div className="mx-auto max-w-4xl">
-            <h2 className={heading}>Current milestone</h2>
+            <h2 className={heading}>Current engineering milestone</h2>
             <div className="mt-8 rounded-2xl border border-amber-400/30 bg-amber-400/10 p-6 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-wider text-amber-200">
                 Phase 0 — Network stabilisation
@@ -369,7 +376,7 @@ export default function HomeDatacenterPage() {
         <section className={`${section} bg-slate-900`}>
           <div className="mx-auto max-w-4xl">
             <h2 className={heading}>
-              Current focus: AI-assisted infrastructure operations
+              Current way of working: AI-assisted infrastructure operations
             </h2>
             <div className={`mt-8 space-y-6 ${body}`}>
               <p>
@@ -391,7 +398,9 @@ export default function HomeDatacenterPage() {
                 A guiding principle for GHDC: no third-party service sits in the
                 data path or holds data unnecessarily. Infrastructure is built
                 and operated in-house wherever practical — a deliberate
-                constraint, not a default.
+                constraint, not a default. Tailscale, used for private remote
+                access, is a deliberate exception, explained in the project
+                mission above.
               </p>
               <p>
                 Part of the lab is now also being evaluated as a home for client
@@ -562,8 +571,8 @@ export default function HomeDatacenterPage() {
                 GHDC is more than a home lab. It is a long-term investment in
                 practical engineering capability—a privately operated
                 environment where authorised projects can be built, protected,
-                demonstrated and validated before graduating to the public
-                cloud.
+                demonstrated and validated before production deployment, whether
+                that is a public cloud or another appropriate environment.
               </p>
               <p>
                 The platform will grow alongside my technical knowledge,

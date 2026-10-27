@@ -1,7 +1,7 @@
 const experienceAreas = [
   "Supported users, devices and business systems across large enterprise environments",
   "Managed Microsoft workplace environments, device deployment and identity",
-  "Built and run my own infrastructure, from virtualisation labs to a self-hosted mail platform",
+  "Built and run my own infrastructure, from virtualisation labs to containerised services",
   "Designed, built and shipped websites and web applications, including this one",
 ];
 
