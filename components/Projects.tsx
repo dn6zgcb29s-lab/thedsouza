@@ -33,11 +33,11 @@ const projects: {
   {
     title: "Epping Tennis Club — Digital Support",
     description:
-      "Email, domain and user support, including the migration and stabilisation of the club's email environment.",
+      "Volunteer email, domain and user support for a community club, including the migration and stabilisation of its email environment.",
     tech: "Outlook • DNS • Email Migration",
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
-    status: "Email migration completed • Technology consulting available",
+    status: "Community sponsorship (volunteer) · Completed",
     tone: "completed",
   },
   {
@@ -67,7 +67,8 @@ export default function Projects() {
           <p className="lead mt-6 text-slate-400">
             Real systems I have built, supported or operate, each written up
             with what was done and what was learned. More case studies are added
-            as work is completed.
+            as work is completed, and AI work appears here only once there is
+            something finished to show.
           </p>
         </div>
 

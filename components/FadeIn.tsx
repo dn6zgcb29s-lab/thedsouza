@@ -22,6 +22,9 @@ export default function FadeIn({ children }: FadeInProps) {
     if (!el || typeof IntersectionObserver === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    // A hash load (e.g. /#about) scrolls after hydration; don't hide the target.
+    if (window.location.hash) return;
+
     // Already on screen (or above it): leave untouched.
     if (el.getBoundingClientRect().top < window.innerHeight) return;
 

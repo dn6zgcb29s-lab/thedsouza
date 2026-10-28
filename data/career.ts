@@ -3,13 +3,13 @@
  * list — edit dates and roles here only.
  */
 
-export const experienceClaim = "22+ years of professional IT experience";
-
 export type CareerStage = {
   id: string;
   start: number;
   /** null = current / ongoing. */
   end: number | null;
+  /** Optional label shown instead of the year range. */
+  label?: string;
   title: string;
   /** Short capability-focused summary (Experience section). */
   summary: string;
@@ -19,29 +19,32 @@ export const careerStages: CareerStage[] = [
   {
     id: "enterprise-it-support",
     start: 2003,
-    end: 2024,
-    title: "Enterprise IT Support",
+    end: 2011,
+    title: "Enterprise IT Support, Kuwait",
     summary:
-      "Built a strong foundation in user support, incident resolution, Windows environments and structured troubleshooting.",
+      "Enterprise IT support and help desk for an engineering company: user support, incident resolution, Windows environments and structured troubleshooting.",
   },
   {
     id: "end-user-computing",
-    start: 2024,
+    start: 2011,
     end: 2025,
-    title: "End User Computing Engineer",
+    title: "Service Desk and End User Computing, Melbourne",
     summary:
-      "Expanded into endpoint engineering, deployment, Microsoft Intune, Autopilot, Microsoft Entra ID, VMware vCenter, PowerCLI and enterprise support workflows.",
+      "Service desk and end-user computing roles in enterprise environments, expanding into endpoint engineering and deployment: Microsoft Intune, Autopilot, Microsoft Entra ID, VMware vCenter and PowerCLI.",
   },
   {
-    id: "independent-consulting",
+    id: "independent-engineering",
     start: 2025,
     end: null,
-    title: "Independent Technology Consulting",
+    label: "Now",
+    title: "Independent IT Engineering Services",
     summary:
-      "Applying practical experience to independent consulting, self-hosted infrastructure, web projects and documented technical delivery.",
+      "Independent technology engineering and consulting, focused on practical technology challenges.",
   },
 ];
 
-export function formatPeriod(stage: Pick<CareerStage, "start" | "end">) {
-  return `${stage.start}–${stage.end ?? "Present"}`;
+export function formatPeriod(
+  stage: Pick<CareerStage, "start" | "end" | "label">
+) {
+  return stage.label ?? `${stage.start}–${stage.end ?? "Present"}`;
 }

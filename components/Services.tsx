@@ -11,78 +11,55 @@ const services: {
   proof?: ProofLink[];
 }[] = [
   {
-    title: "Workplace technology that just works",
+    title: "AI Opportunity & Strategy",
     description:
-      "Get computers, email, accounts and Microsoft 365 set up properly, secured and easy to manage, so your team can get on with their work.",
+      "Work out where AI could genuinely help your business, and where it would not, before you spend money building anything.",
     deliverables: [
-      "Setting up and securing new computers and staff accounts",
-      "Sorting out email, domains and mail delivery problems",
-      "Moving email and files away from old or unreliable services",
-      "Tidying up who has access to what",
-      "Clear notes so you are not dependent on one person",
+      "Finding the processes and decisions worth testing with AI",
+      "Weighing AI against simple automation, or no change at all",
+      "Understanding data, privacy and ownership constraints up front",
+      "A clear, prioritised view of sensible next steps",
+    ],
+  },
+  {
+    title: "AI-Enabled Applications",
+    description:
+      "Design and build practical applications and internal tools that use AI where it adds value, with people reviewing the results.",
+    deliverables: [
+      "Internal tools and workflows with an AI-assisted step",
+      "Web applications built with Next.js, React and TypeScript",
+      "Human review designed into AI-assisted work",
+      "Documentation so you can own and maintain what is built",
+    ],
+  },
+  {
+    title: "Technology Architecture & Integration",
+    description:
+      "Design how your systems, data and services fit together, and connect the tools you already use, with security and recovery planned from the start.",
+    deliverables: [
+      "Practical cloud, on-premises or hybrid designs",
+      "Integrations and automation between existing systems",
+      "Microsoft 365, identity and email set up to be easy to manage",
+      "Secure remote access, backup and recovery planning",
     ],
     proof: [
       {
-        label: "Epping Tennis Club",
+        label: "Epping Tennis Club (volunteer)",
         href: "/projects/epping-tennis-club",
       },
-      { label: "Enterprise background", href: "/#experience" },
-    ],
-  },
-  {
-    title: "Websites and digital platforms",
-    description:
-      "Design and build fast, maintainable websites, online stores and internal tools that you own and that keep working after launch.",
-    deliverables: [
-      "New websites or rebuilds of outdated ones",
-      "Internal tools and simple business applications",
-      "Hosting, domains and deployment you control",
-      "Testing on phones, tablets and desktops before go-live",
-    ],
-    proof: [{ label: "thedsouza.com", href: "/projects/thedsouza-com" }],
-  },
-  {
-    title: "Automating repetitive work",
-    description:
-      "Replace manual copying, re-keying and repetitive admin with scripts, integrations and sensible automation that is documented and easy to hand over.",
-    deliverables: [
-      "Identifying the tasks that are worth automating",
-      "Scripts and scheduled jobs for routine admin",
-      "Connecting the systems you already use",
-      "Documentation so the automation can be maintained",
-    ],
-  },
-  {
-    title: "Reliable, secure infrastructure",
-    description:
-      "Design, build and fix the servers, networks, cloud and self-hosted services your business depends on, with security and recovery planned from the start.",
-    deliverables: [
-      "Planning practical cloud, on-premises or hybrid setups",
-      "Building and hardening servers and self-hosted services",
-      "Secure remote access for you and your team",
-      "Backup and recovery planning",
-      "Operational documentation for what was built",
-    ],
-    proof: [
-      { label: "GHDC", href: "/projects/home-datacenter" },
       { label: "GVI", href: "/projects/gvi-home-lab" },
+      { label: "GHDC", href: "/projects/home-datacenter" },
     ],
   },
   {
-    title: "Solving difficult technical problems",
+    title: "Technical Discovery & Prototyping",
     description:
-      "When something keeps breaking and nobody can explain why, I investigate the root cause, fix it and show you what changed.",
+      "Explore an idea at small scale before committing to a full build, and get an honest answer about whether it is worth pursuing.",
     deliverables: [
-      "Investigating recurring faults and unexplained failures",
-      "Untangling inherited or undocumented setups",
-      "A clear explanation of the cause and the fix",
-      "A practical plan for anything that should change next",
-    ],
-    proof: [
-      {
-        label: "Epping Tennis Club",
-        href: "/projects/epping-tennis-club",
-      },
+      "A short, scoped discovery to define the problem and test feasibility",
+      "Working prototypes you can try with real users",
+      "Plain findings, including when an idea should not go ahead",
+      "Scope and cost agreed before any work starts",
     ],
   },
 ];
@@ -119,16 +96,16 @@ export default function Services() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="eyebrow">What I can help with</p>
+          <p className="eyebrow">Services</p>
 
           <h2 className="section-title mt-5">
-            Technology problems I can solve for your business
+            Where I can help your business with AI and technology
           </h2>
 
           <p className="lead mt-6">
-            You don&apos;t need to know the technical terms. Tell me what is
-            slowing the business down, and I will design, build or fix the
-            technology behind it.
+            You don&apos;t need to know the technical terms. Tell me the
+            challenge your business is facing, and I will help you decide what
+            to do about it, then design and build it.
           </p>
 
           <p className="mt-5 leading-7 text-slate-400">
@@ -138,67 +115,69 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-16 border-t border-white/10">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
           {services.map((service, index) => (
             <article
               key={service.title}
-              className="grid gap-6 border-b border-white/10 py-10 lg:grid-cols-12 lg:gap-12 lg:py-12"
+              className="card flex flex-col p-6 sm:p-8"
             >
-              <div className="lg:col-span-5">
-                <span
-                  aria-hidden="true"
-                  className="font-mono text-sm text-sky-400"
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+              <span
+                aria-hidden="true"
+                className="font-mono text-sm text-sky-400"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-snug tracking-tight text-white">
-                  {service.title}
-                </h3>
+              <h3 className="mt-3 text-2xl font-semibold leading-snug tracking-tight text-white">
+                {service.title}
+              </h3>
 
-                <p className="mt-4 leading-7 text-slate-300">
-                  {service.description}
-                </p>
-              </div>
+              <p className="mt-4 leading-7 text-slate-300">
+                {service.description}
+              </p>
 
-              <div className="lg:col-span-7 lg:pt-9">
-                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  What this can look like
-                </h4>
-                <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-                  {service.deliverables.map((deliverable) => (
-                    <li
-                      key={deliverable}
-                      className="flex gap-4 leading-6 text-slate-300"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="mt-3 h-px w-4 shrink-0 bg-sky-400"
-                      />
-                      <span>{deliverable}</span>
-                    </li>
-                  ))}
-                </ul>
+              <h4 className="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                What this can look like
+              </h4>
+              <ul className="mt-4 space-y-3">
+                {service.deliverables.map((deliverable) => (
+                  <li
+                    key={deliverable}
+                    className="flex gap-4 leading-6 text-slate-300"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="mt-3 h-px w-4 shrink-0 bg-sky-400"
+                    />
+                    <span>{deliverable}</span>
+                  </li>
+                ))}
+              </ul>
 
-                {service.proof && (
-                  <p className="mt-6 text-sm leading-6 text-slate-400">
-                    <span className="font-semibold text-slate-200">
-                      See it in practice:{" "}
+              {service.proof && (
+                <p className="mt-auto border-t border-white/10 pt-6 text-sm leading-6 text-slate-400">
+                  <span className="font-semibold text-slate-200">
+                    Related work:{" "}
+                  </span>
+                  {service.proof.map((item, proofIndex) => (
+                    <span key={item.label}>
+                      {proofIndex > 0 && ", "}
+                      <Link href={item.href} className="text-link">
+                        {item.label}
+                      </Link>
                     </span>
-                    {service.proof.map((item, index) => (
-                      <span key={item.label}>
-                        {index > 0 && ", "}
-                        <Link href={item.href} className="text-link">
-                          {item.label}
-                        </Link>
-                      </span>
-                    ))}
-                  </p>
-                )}
-              </div>
+                  ))}
+                </p>
+              )}
             </article>
           ))}
         </div>
+
+        <p className="mt-8 max-w-3xl text-sm leading-6 text-slate-400">
+          The case studies below show the engineering behind these services.
+          AI-specific work is added there once it is complete and can be
+          evidenced.
+        </p>
 
         <div className="mt-24 max-w-3xl">
           <p className="eyebrow">How to get started</p>
@@ -243,7 +222,7 @@ export default function Services() {
         <div className="mt-16 rounded-2xl border border-sky-400/25 bg-sky-400/[0.06] p-6 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
           <div className="max-w-2xl">
             <h3 className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
-              Not sure where your project fits?
+              Not sure where your challenge fits?
             </h3>
             <p className="mt-4 leading-7 text-slate-300">
               Start with the problem you are trying to solve. A short email is
