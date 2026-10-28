@@ -42,7 +42,7 @@ export default function Contact() {
         <p className="mt-6 text-sm text-slate-400">
           Prefer to see the code first?{" "}
           <a
-            href="https://github.com/lbbextreme"
+            href="https://github.com/dn6zgcb29s-lab"
             target="_blank"
             rel="noreferrer"
             className="text-link"
