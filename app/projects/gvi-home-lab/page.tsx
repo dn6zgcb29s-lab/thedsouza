@@ -137,7 +137,7 @@ export default function GviHomeLabPage() {
             <h2 className={heading}>Where GVI began</h2>
             <div className={`mt-8 space-y-6 ${body}`}>
               <p>
-                The idea grew from more than ten years of virtualisation work at
+                The idea grew from years of virtualisation work at
                 NTT DATA. During that professional experience, Glen developed
                 strong PowerCLI capability and used automation for repeatable
                 virtual-infrastructure provisioning and administrative work.

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { emailHref } from "@/data/contact";
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -52,16 +53,31 @@ export default function Navbar() {
           Discuss Your Project
         </a>
 
-        <button
-          type="button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="rounded-lg border border-white/10 px-3 py-1.5 text-xl text-white transition-colors hover:bg-white/5 focus-ring md:hidden"
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </button>
+        {/* Mobile keeps an enquiry action on screen at every scroll position. */}
+        <div className="flex items-center gap-3 md:hidden">
+          <a
+            href={emailHref}
+            data-cta="email-nav"
+            className="btn-primary px-4 py-2 text-sm"
+          >
+            Email
+            <span className="sr-only">
+              {" "}
+              glen@thedsouza.com (opens your email app)
+            </span>
+          </a>
+
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="rounded-lg border border-white/10 px-3 py-1.5 text-xl text-white transition-colors hover:bg-white/5 focus-ring"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
       {isMenuOpen && (

@@ -23,7 +23,7 @@ const services: {
     ],
     proof: [
       {
-        label: "Epping Tennis Club",
+        label: "Epping Tennis Club (volunteer)",
         href: "/projects/epping-tennis-club",
       },
       { label: "Enterprise background", href: "/#experience" },
@@ -44,9 +44,10 @@ const services: {
   {
     title: "Automating repetitive work",
     description:
-      "Replace manual copying, re-keying and repetitive admin with scripts, integrations and sensible automation that is documented and easy to hand over.",
+      "Replace manual copying, re-keying and repetitive admin with scripts, integrations and sensible automation, using AI only where it genuinely helps, documented and easy to hand over.",
     deliverables: [
       "Identifying the tasks that are worth automating",
+      "Assessing where AI can genuinely help, and where simple automation is the better choice",
       "Scripts and scheduled jobs for routine admin",
       "Connecting the systems you already use",
       "Documentation so the automation can be maintained",
@@ -80,7 +81,7 @@ const services: {
     ],
     proof: [
       {
-        label: "Epping Tennis Club",
+        label: "Epping Tennis Club (volunteer)",
         href: "/projects/epping-tennis-club",
       },
     ],

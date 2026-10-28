@@ -1,5 +1,5 @@
 const experienceAreas = [
-  "Supported users, devices and business systems across large enterprise environments",
+  "Supported users, devices and business systems across enterprise environments",
   "Managed Microsoft workplace environments, device deployment and identity",
   "Built and run my own infrastructure, from virtualisation labs to containerised services",
   "Designed, built and shipped websites and web applications, including this one",
@@ -22,7 +22,7 @@ export default function About() {
           <div className="max-w-[65ch] space-y-6 text-lg leading-8 text-slate-300">
             <p>
               I&apos;m Glen D&apos;Souza, a technology consultant and engineer.
-              In 22+ years of IT, I&apos;ve worked under different titles and
+              Across my IT career, I&apos;ve worked under different titles and
               across different technologies: Service Desk, End User Computing,
               systems administration, infrastructure, virtualisation, Microsoft
               technologies, automation and now software development.

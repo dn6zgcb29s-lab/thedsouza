@@ -58,8 +58,8 @@ export default function Contact() {
             Ltd.
           </p>
           <p className="mt-2 text-sm text-slate-400">
-            glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
-            Australia
+            glen@thedsouza.com · Melbourne, Victoria · Onsite in Melbourne,
+            remote across Australia
           </p>
         </div>
       </div>

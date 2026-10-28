@@ -98,7 +98,7 @@ export default function EppingTennisClubPage() {
               Back to projects
             </Link>
             <p className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400 sm:tracking-[0.25em]">
-              Email migration completed • Technology consulting available
+              Community sponsorship (volunteer) • Completed
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
               {title}
@@ -153,7 +153,7 @@ export default function EppingTennisClubPage() {
 
         <section className={`${section} bg-slate-800`}>
           <div className="mx-auto max-w-5xl">
-            <h2 className={heading}>Engineering and consulting lessons</h2>
+            <h2 className={heading}>Engineering lessons</h2>
             <BulletList items={lessons} />
           </div>
         </section>
@@ -164,9 +164,11 @@ export default function EppingTennisClubPage() {
             <div className={`mt-8 space-y-6 ${body}`}>
               <p>
                 The email migration and associated technical work are now
-                complete. I remain available to ETC as their technology
-                consultant for any future technical, website or software
-                development requirements.
+                complete. This was a volunteer community sponsorship: I donated
+                my time and expertise and charged no fee for the work; expenses
+                were reimbursed at my request. The contribution was recognised
+                at the club&apos;s Monthly General Body Meeting and in its
+                newsletter.
               </p>
             </div>
           </div>

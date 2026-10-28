@@ -27,10 +27,11 @@ export default function Hero() {
 
         <div className="order-4 mt-10 grid gap-8 lg:order-3 lg:mt-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
-            I look at a complicated process and ask why it has to be so
-            complicated—then find a simpler way. I combine 22+ years of IT
-            experience with modern software development, infrastructure,
-            automation and AI-assisted development to build practical solutions.
+            I help businesses fix, build and automate their technology —
+            workplace IT and Microsoft 365, websites and internal tools,
+            automation and infrastructure. Extensive enterprise IT experience,
+            delivered hands-on with a human-led, AI-assisted workflow. Available
+            for contract and project engagements, including MSP overflow.
           </p>
 
           <div className="border-l border-sky-400/60 pl-6 lg:self-end">
@@ -40,7 +41,7 @@ export default function Hero() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-slate-400">
-              Melbourne, Victoria · Remote consulting across Australia
+              Melbourne, Victoria · Onsite in Melbourne, remote across Australia
             </p>
           </div>
         </div>
