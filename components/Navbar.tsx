@@ -6,10 +6,9 @@ import { emailHref } from "@/data/contact";
 
 const navigation = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -58,11 +57,12 @@ export default function Navbar({ hrefPrefix = "" }: NavbarProps) {
           href={`${hrefPrefix}#contact`}
           className="btn-primary hidden px-5 py-2.5 text-sm lg:inline-flex"
         >
-          Discuss Your Project
+          Discuss a challenge
         </Anchor>
 
-        {/* Mobile keeps an enquiry action on screen at every scroll position. */}
-        <div className="flex items-center gap-3 md:hidden">
+        {/* Below lg the full CTA is hidden, so an enquiry action stays on
+            screen at every scroll position; the menu toggle is mobile-only. */}
+        <div className="flex items-center gap-3 lg:hidden">
           <a
             href={emailHref}
             data-cta="email-nav"
@@ -78,7 +78,7 @@ export default function Navbar({ hrefPrefix = "" }: NavbarProps) {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="rounded-lg border border-white/10 px-3 py-1.5 text-xl text-white transition-colors hover:bg-white/5 focus-ring"
+            className="rounded-lg border border-white/10 px-3 py-1.5 text-xl text-white transition-colors hover:bg-white/5 focus-ring md:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -112,7 +112,7 @@ export default function Navbar({ hrefPrefix = "" }: NavbarProps) {
             onClick={closeMenu}
             className="btn-primary mt-6 flex w-full"
           >
-            Discuss Your Project
+            Discuss a challenge
           </Anchor>
         </div>
       )}

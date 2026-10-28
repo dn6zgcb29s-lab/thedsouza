@@ -11,12 +11,12 @@ export default function Contact() {
       <div className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950 px-6 py-14 text-center sm:px-12 sm:py-20">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-10%,rgb(56_189_248/0.14),transparent_70%)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-10%,rgb(77_148_255/0.13),transparent_70%)]"
         />
 
         <p className="eyebrow justify-center">Start a conversation</p>
 
-        <h2 className="section-title mt-5">Discuss Your Project</h2>
+        <h2 className="section-title mt-5">Discuss a challenge</h2>
 
         <p className="lead mx-auto mt-6 max-w-2xl">
           Tell me what your business is trying to improve, build or fix. I will

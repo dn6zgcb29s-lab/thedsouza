@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Glen D'Souza | Technology Consultant & Engineer";
+const title = "Glen D'Souza | AI Technology Consultant & Engineer";
 const description =
-  "Technology consultant and engineer in Melbourne, working across Australia. Practical problem solving across workplace IT, software, infrastructure and automation, backed by extensive professional IT experience.";
+  "AI technology consultant and engineer in Melbourne, working across Australia. Helps business owners explore AI, design practical technology solutions and turn promising ideas into working systems.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -31,13 +31,15 @@ const jsonLd = {
       "@id": personId,
       name: "Glen D'Souza",
       url: siteUrl,
-      jobTitle: "Technology Consultant & Engineer",
+      jobTitle: "AI Technology Consultant & Engineer",
       worksFor: {
         "@type": "Organization",
         name: "TD Group of Companies Pty Ltd",
       },
       knowsAbout: [
         "Technology consulting",
+        "AI-assisted software development",
+        "Technology architecture and integration",
         "Digital infrastructure",
         "Linux",
         "Docker",
@@ -69,16 +71,21 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "Glen D'Souza",
-    "technology consultant",
+    "AI technology consultant",
+    "AI consulting for business",
     "technology consultant and engineer",
-    "proof of concept development",
+    "AI opportunity and strategy",
+    "AI-enabled applications",
+    "technology architecture and integration",
+    "technical discovery",
+    "prototyping",
     "business technology",
     "website development",
-    "business email migration",
     "Microsoft 365",
     "digital infrastructure",
     "workflow automation",
     "Melbourne technology consultant",
+    "Melbourne AI consultant",
   ],
   authors: [{ name: "Glen D'Souza" }],
   creator: "Glen D'Souza",

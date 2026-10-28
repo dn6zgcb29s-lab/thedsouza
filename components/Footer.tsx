@@ -29,7 +29,7 @@ export default function Footer({ hrefPrefix = "", children }: FooterProps) {
           </h2>
 
           <p className="mt-2 text-sm">
-            Technology Consultant &amp; Engineer · Melbourne, Victoria
+            AI Technology Consultant &amp; Engineer · Melbourne, Victoria
           </p>
         </div>
 
@@ -37,12 +37,16 @@ export default function Footer({ hrefPrefix = "", children }: FooterProps) {
           aria-label="Footer navigation"
           className="flex flex-wrap justify-center gap-x-6 gap-y-3"
         >
-          <Anchor href={`${hrefPrefix}#about`} className={footerLink}>
-            About
+          <Anchor href={`${hrefPrefix}#services`} className={footerLink}>
+            Services
           </Anchor>
 
           <Anchor href={`${hrefPrefix}#projects`} className={footerLink}>
             Projects
+          </Anchor>
+
+          <Anchor href={`${hrefPrefix}#about`} className={footerLink}>
+            About
           </Anchor>
 
           <Anchor href={`${hrefPrefix}#contact`} className={footerLink}>

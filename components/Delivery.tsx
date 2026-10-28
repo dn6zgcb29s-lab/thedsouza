@@ -3,51 +3,27 @@ import Link from "next/link";
 const workflow = [
   {
     number: "01",
-    title: "Define the problem",
+    title: "Explore",
     description:
-      "Clarify the practical need, intended users and successful outcome before selecting technology.",
+      "Clarify the real need, who it is for and what success looks like. Separate verified facts from assumptions, and test whether AI is the right tool at all.",
   },
   {
     number: "02",
-    title: "Confirm evidence and boundaries",
+    title: "Design",
     description:
-      "Separate verified facts from assumptions while identifying privacy, ownership and disclosure constraints.",
+      "Choose the simplest maintainable approach, with privacy, ownership and cost boundaries agreed before anything is built.",
   },
   {
     number: "03",
-    title: "Design the smallest useful solution",
+    title: "Build",
     description:
-      "Choose a maintainable technical approach that delivers useful value without unnecessary complexity.",
+      "Deliver in small, reviewable increments with explicit scope and stopping points. AI can assist the work; people make the decisions.",
   },
   {
     number: "04",
-    title: "Build in focused micro-sprints",
+    title: "Validate",
     description:
-      "Implement small, reviewable increments with explicit scope and stopping points.",
-  },
-  {
-    number: "05",
-    title: "Validate quality and privacy",
-    description:
-      "Run type, lint, build, responsive, accessibility, security and privacy checks appropriate to the work.",
-  },
-  {
-    number: "06",
-    title: "Review before release",
-    description:
-      "Inspect the complete change, confirm claims and obtain approval before committing or publishing.",
-  },
-  {
-    number: "07",
-    title: "Publish through controlled versioning",
-    description:
-      "Use Git history and normal deployment workflows so every production change remains attributable and recoverable.",
-  },
-  {
-    number: "08",
-    title: "Verify production",
-    description:
-      "Confirm live routes, content, metadata, security behavior and browser health after propagation.",
+      "Check quality, accessibility, security and privacy before release, and document what was built so it can be maintained.",
   },
 ];
 
@@ -55,20 +31,20 @@ export default function Delivery() {
   return (
     <section
       id="delivery"
-      className="border-t border-white/5 bg-slate-950 px-6 py-24 text-white sm:px-8 lg:py-32"
+      className="border-t border-white/5 bg-slate-900/40 px-6 py-24 text-white sm:px-8 lg:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="eyebrow">Delivery approach</p>
+          <p className="eyebrow">Approach</p>
 
           <h2 className="section-title mt-5">
-            A controlled path from problem to production
+            Explore, design, build, validate
           </h2>
 
           <p className="lead mt-6">
             Every engagement is divided into focused, reviewable steps so
-            decisions remain clear, risk stays contained and releases remain
-            recoverable.
+            decisions stay clear, risk stays contained and the work can be
+            handed over.
           </p>
         </div>
 
@@ -96,7 +72,7 @@ export default function Delivery() {
           </p>
 
           <Link href="/#contact" className="btn-primary shrink-0">
-            Discuss Your Project
+            Discuss a challenge
           </Link>
         </div>
       </div>

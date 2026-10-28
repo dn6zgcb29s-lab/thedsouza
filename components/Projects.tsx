@@ -67,7 +67,8 @@ export default function Projects() {
           <p className="lead mt-6 text-slate-400">
             Real systems I have built, supported or operate, each written up
             with what was done and what was learned. More case studies are added
-            as work is completed.
+            as work is completed, and AI work appears here only once there is
+            something finished to show.
           </p>
         </div>
 

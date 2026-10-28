@@ -1,12 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
 import Services from "@/components/Services";
-import Proof from "@/components/Proof";
-import Delivery from "@/components/Delivery";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import About from "@/components/About";
+import Delivery from "@/components/Delivery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -20,23 +17,7 @@ export default function Home() {
         <Hero />
 
         <FadeIn>
-          <About />
-        </FadeIn>
-
-        <FadeIn>
-          <Experience />
-        </FadeIn>
-
-        <FadeIn>
           <Services />
-        </FadeIn>
-
-        <FadeIn>
-          <Proof />
-        </FadeIn>
-
-        <FadeIn>
-          <Delivery />
         </FadeIn>
 
         <FadeIn>
@@ -44,7 +25,11 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn>
-          <Skills />
+          <About />
+        </FadeIn>
+
+        <FadeIn>
+          <Delivery />
         </FadeIn>
 
         <FadeIn>
