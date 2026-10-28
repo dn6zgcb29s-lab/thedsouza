@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactCtas from "@/components/ContactCtas";
 import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
 
 const title = "Epping Tennis Club Digital Support";
@@ -54,7 +53,7 @@ const outcomes = [
 const lessons = [
   "Small organisations often depend on technology with unclear ownership and limited documentation.",
   "Email migration requires attention to user continuity, domain configuration and handover.",
-  "Ongoing informal support benefits from clearly defined scope, responsibility and cost.",
+  "Informal support is easier to sustain when scope and responsibility are agreed at the outset.",
   "Documentation and knowledge transfer are essential for organisational continuity.",
 ];
 
@@ -98,7 +97,7 @@ export default function EppingTennisClubPage() {
               Back to projects
             </Link>
             <p className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400 sm:tracking-[0.25em]">
-              Community sponsorship (volunteer) • Completed
+              Community sponsorship (volunteer) · Completed
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
               {title}
@@ -171,30 +170,6 @@ export default function EppingTennisClubPage() {
                 newsletter.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section className={`${section} bg-slate-800`}>
-          <div className="mx-auto max-w-5xl">
-            <aside className="rounded-2xl border border-sky-500/40 bg-sky-500/10 p-6 sm:p-8">
-              <h2 className="text-2xl font-bold text-sky-300 sm:text-3xl">
-                Need practical support or a proof of concept?
-              </h2>
-              <p className="mt-4 text-lg leading-8 text-slate-200">
-                I can help clarify an existing technology problem, complete a
-                focused migration or build a working demonstration before a
-                larger project is commissioned.
-              </p>
-              <div className="mt-8">
-                <ContactCtas align="start" />
-              </div>
-              <Link
-                href="/#projects"
-                className={`mt-6 inline-flex font-medium text-sky-400 transition hover:text-sky-300 ${focus}`}
-              >
-                Return to Projects
-              </Link>
-            </aside>
           </div>
         </section>
       </article>

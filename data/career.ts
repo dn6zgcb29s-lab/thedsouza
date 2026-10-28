@@ -39,7 +39,7 @@ export const careerStages: CareerStage[] = [
     label: "Now",
     title: "Independent IT Engineering Services",
     summary:
-      "Available for contract and project engagements, including MSP overflow, alongside self-hosted infrastructure and web projects.",
+      "Independent technology engineering and consulting, focused on practical technology challenges.",
   },
 ];
 

@@ -37,7 +37,7 @@ const projects: {
     tech: "Outlook • DNS • Email Migration",
     href: "/projects/epping-tennis-club",
     action: "Read the Epping Tennis Club case study",
-    status: "Community sponsorship (volunteer) • Completed",
+    status: "Community sponsorship (volunteer) · Completed",
     tone: "completed",
   },
   {

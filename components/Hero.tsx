@@ -30,8 +30,9 @@ export default function Hero() {
             I help businesses fix, build and automate their technology —
             workplace IT and Microsoft 365, websites and internal tools,
             automation and infrastructure. Extensive enterprise IT experience,
-            delivered hands-on with a human-led, AI-assisted workflow. Available
-            for contract and project engagements, including MSP overflow.
+            delivered hands-on with a human-led, AI-assisted workflow.
+            Independent technology engineering and consulting, focused on
+            practical technology challenges.
           </p>
 
           <div className="border-l border-sky-400/60 pl-6 lg:self-end">
@@ -41,7 +42,8 @@ export default function Hero() {
             </p>
 
             <p className="mt-4 text-sm font-medium text-slate-400">
-              Melbourne, Victoria · Onsite in Melbourne, remote across Australia
+              Melbourne, Victoria · Onsite in Melbourne and remote across
+              Australia
             </p>
           </div>
         </div>
