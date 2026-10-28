@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+// Set CSP_ALLOW_HTTP=1 only for local plain-HTTP test builds (e.g. Safari on
+// 127.0.0.1, which applies the upgrade to loopback). Unset, production keeps it.
+const allowLocalHttp = process.env.CSP_ALLOW_HTTP === "1";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "base-uri 'self'",
@@ -11,7 +15,7 @@ const contentSecurityPolicy = [
   "img-src 'self'",
   "connect-src 'self'",
   "frame-src 'none'",
-  "upgrade-insecure-requests",
+  ...(allowLocalHttp ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const nextConfig: NextConfig = {
