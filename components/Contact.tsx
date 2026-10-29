@@ -1,4 +1,5 @@
 import ContactCtas from "@/components/ContactCtas";
+import ContactDetails from "@/components/ContactDetails";
 import { scopeCommitment } from "@/data/contact";
 
 export default function Contact() {
@@ -10,12 +11,12 @@ export default function Contact() {
       <div className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950 px-6 py-14 text-center sm:px-12 sm:py-20">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-10%,rgb(56_189_248/0.14),transparent_70%)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(40rem_20rem_at_50%_-10%,rgb(77_148_255/0.13),transparent_70%)]"
         />
 
         <p className="eyebrow justify-center">Start a conversation</p>
 
-        <h2 className="section-title mt-5">Discuss Your Project</h2>
+        <h2 className="section-title mt-5">Discuss a challenge</h2>
 
         <p className="lead mx-auto mt-6 max-w-2xl">
           Tell me what your business is trying to improve, build or fix. I will
@@ -42,7 +43,7 @@ export default function Contact() {
         <p className="mt-6 text-sm text-slate-400">
           Prefer to see the code first?{" "}
           <a
-            href="https://github.com/lbbextreme"
+            href="https://github.com/dn6zgcb29s-lab"
             target="_blank"
             rel="noreferrer"
             className="text-link"
@@ -53,14 +54,7 @@ export default function Contact() {
         </p>
 
         <div className="mx-auto mt-12 max-w-2xl border-t border-white/10 pt-8">
-          <p className="text-sm leading-6 text-slate-400">
-            Technology consulting delivered through TD Group of Companies Pty
-            Ltd.
-          </p>
-          <p className="mt-2 text-sm text-slate-400">
-            glen@thedsouza.com · Melbourne, Victoria · Remote consulting across
-            Australia
-          </p>
+          <ContactDetails />
         </div>
       </div>
     </section>

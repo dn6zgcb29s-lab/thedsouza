@@ -5,11 +5,32 @@ html {
 @import "tailwindcss";
 
 /*
- * Visual system. The site is dark-only: deep navy (slate-950) surfaces,
- * white headings, slate body text and a single sky/cyan accent used for
- * interactive and emphasis elements. Shared treatments live in the
- * utilities below so components stay consistent.
+ * Visual system. The site is dark-only: charcoal (slate-950) surfaces,
+ * white headings, neutral grey body text and a single restrained electric
+ * blue accent (sky-400) used for interactive and emphasis elements. Shared
+ * treatments live in the utilities below so components stay consistent.
+ *
+ * The slate and sky scales are re-tuned here rather than per component:
+ * slate becomes a near-neutral charcoal, and sky becomes a deeper electric
+ * blue. Contrast measured on slate-950: slate-300 12.9:1, slate-400 7.5:1,
+ * slate-500 about 5:1, sky-400 6.4:1; slate-950 text on sky-400 buttons 6.4:1.
  */
+@theme {
+  --color-slate-300: #cfd4dc;
+  --color-slate-400: #9ba3af;
+  --color-slate-500: #7b8493;
+  --color-slate-600: #4a515c;
+  --color-slate-700: #2f343d;
+  --color-slate-800: #21252c;
+  --color-slate-900: #16191e;
+  --color-slate-950: #0d0f12;
+
+  --color-sky-300: #8fbaff;
+  --color-sky-400: #4d94ff;
+  --color-sky-500: #2f7bee;
+  --color-sky-950: #0b2a55;
+}
+
 :root {
   --background: var(--color-slate-950);
   --foreground: var(--color-slate-100);
@@ -30,7 +51,7 @@ body {
 }
 
 ::selection {
-  background: rgb(56 189 248 / 0.3);
+  background: rgb(77 148 255 / 0.3);
   color: #fff;
 }
 
@@ -89,16 +110,17 @@ body {
   @apply rounded-2xl border border-white/10 bg-white/[0.03] transition-colors duration-200 hover:border-sky-400/40 hover:bg-white/[0.05] focus-ring;
 }
 
-/* Scroll reveal: applied by FadeIn only after hydration, only below the fold. */
+/*
+ * Scroll reveal: applied by FadeIn only after hydration, only below the fold.
+ * Opacity only: a translate here shifts the section after an in-page anchor
+ * has already scrolled to it, so the target would land off by that distance.
+ */
 [data-fade-in][data-reveal] {
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+  transition: opacity 0.7s ease;
 }
 
 [data-fade-in][data-reveal="pending"] {
   opacity: 0;
-  transform: translateY(30px);
 }
 
 /* Hero entrance: transform-only, so text is never invisible. */

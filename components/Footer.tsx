@@ -1,9 +1,23 @@
+import Link from "next/link";
+
 const footerLink =
   "rounded-sm text-sm transition-colors hover:text-white focus-ring";
 
-export default function Footer() {
+type FooterProps = {
+  /** Prepended to each section anchor, e.g. "/" on routes other than the homepage. */
+  hrefPrefix?: string;
+  /** Optional content rendered above the brand row, inside the footer landmark. */
+  children?: React.ReactNode;
+};
+
+export default function Footer({ hrefPrefix = "", children }: FooterProps) {
+  // Off-page anchors use Link so the client-side navigation lands on the section.
+  const Anchor = hrefPrefix ? Link : "a";
+
   return (
     <footer className="border-t border-white/10 bg-slate-950 px-6 py-12 text-slate-400 sm:px-8">
+      {children}
+
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 text-center md:flex-row md:items-start md:justify-between md:text-left">
         <div>
           <h2 className="flex items-center justify-center gap-3 text-lg font-semibold tracking-tight text-white md:justify-start">
@@ -15,7 +29,7 @@ export default function Footer() {
           </h2>
 
           <p className="mt-2 text-sm">
-            Technology Consultant &amp; Engineer · Melbourne, Victoria
+            AI Technology Consultant &amp; Engineer · Melbourne, Victoria
           </p>
         </div>
 
@@ -23,20 +37,24 @@ export default function Footer() {
           aria-label="Footer navigation"
           className="flex flex-wrap justify-center gap-x-6 gap-y-3"
         >
-          <a href="#about" className={footerLink}>
-            About
-          </a>
+          <Anchor href={`${hrefPrefix}#services`} className={footerLink}>
+            Services
+          </Anchor>
 
-          <a href="#projects" className={footerLink}>
+          <Anchor href={`${hrefPrefix}#projects`} className={footerLink}>
             Projects
-          </a>
+          </Anchor>
 
-          <a href="#contact" className={footerLink}>
+          <Anchor href={`${hrefPrefix}#about`} className={footerLink}>
+            About
+          </Anchor>
+
+          <Anchor href={`${hrefPrefix}#contact`} className={footerLink}>
             Contact
-          </a>
+          </Anchor>
 
           <a
-            href="https://github.com/lbbextreme"
+            href="https://github.com/dn6zgcb29s-lab"
             target="_blank"
             rel="noopener noreferrer"
             className={footerLink}
