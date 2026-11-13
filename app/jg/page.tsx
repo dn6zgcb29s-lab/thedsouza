@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import Image, { type StaticImageData } from "next/image";
+import interfaceConcept from "@/public/jg/jg-interface-concept.webp";
+import commandCentre from "@/public/jg/jg-desktop-command-centre.webp";
+import worldEnvironment from "@/public/jg/jg-world-command-environment.webp";
 import { socialImageUrl } from "@/components/StructuredData";
 
 const title = "Introducing JG";
@@ -37,6 +41,42 @@ const vision = [
   "Eventually connect approved digital intelligence with the physical world.",
 ];
 
+const disclosure =
+  "Concept visual — illustrative future direction, not a screenshot of the current product.";
+
+function ConceptFigure({
+  src,
+  alt,
+  caption,
+  eager = false,
+}: {
+  src: StaticImageData;
+  alt: string;
+  caption: string;
+  eager?: boolean;
+}) {
+  return (
+    <figure className="mt-10">
+      <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
+        <Image
+          src={src}
+          alt={alt}
+          fetchPriority={eager ? "high" : "auto"}
+          loading={eager ? "eager" : "lazy"}
+          sizes="(min-width: 1024px) 960px, 100vw"
+          className="h-auto w-full"
+        />
+      </div>
+      <figcaption className="mt-4 text-sm leading-6 text-slate-400">
+        <span className="block text-slate-300">{caption}</span>
+        <span className="mt-1 block text-xs uppercase tracking-wide text-sky-300/80">
+          {disclosure}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function JgPage() {
   return (
     <main id="main-content" tabIndex={-1} className="flex-1">
@@ -58,6 +98,17 @@ export default function JgPage() {
             persistent context and the ability to work across the digital world.
           </p>
           <p className={`${body} mt-4`}>We call this the beginning of JG.</p>
+        </div>
+      </section>
+
+      <section className="px-6 pb-12 sm:px-8">
+        <div className="mx-auto max-w-5xl">
+          <ConceptFigure
+            src={interfaceConcept}
+            eager
+            alt="Concept design of the JG desktop interface on a laptop: a Junior Glen (AI) home screen with a prompt bar, Build, Analyse, Plan and Automate shortcuts and project cards, beside notes on a single workspace, multiple AI assistants, your knowledge and data, and build and automate."
+            caption="A first look at the intended JG workspace: one place where AI assistants, projects and company knowledge come together."
+          />
         </div>
       </section>
 
@@ -85,6 +136,11 @@ export default function JgPage() {
             Inspired by the idea of a real-world intelligent assistant, JG is
             being developed towards a future where AI can:
           </p>
+          <ConceptFigure
+            src={commandCentre}
+            alt="Concept render of a futuristic desk at night with a curved widescreen display showing a glowing holographic globe centred on Asia and Australia, surrounded by digital panels and controls."
+            caption="The JG command centre: a single desktop environment bringing multiple AI capabilities and tools together."
+          />
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {vision.map((item) => (
               <li
@@ -99,6 +155,11 @@ export default function JgPage() {
             This is a long-term ambition. We intend to build it carefully,
             capability by capability.
           </p>
+          <ConceptFigure
+            src={worldEnvironment}
+            alt="Concept render of a dark command room with a large illuminated holographic globe on a circular platform, flowing data visualisations on the walls and a city skyline behind."
+            caption="The wider JG world: a long-term vision of connected intelligence working across the digital world, and eventually the physical one."
+          />
         </div>
       </section>
 
