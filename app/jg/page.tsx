@@ -7,7 +7,7 @@ import { socialImageUrl } from "@/components/StructuredData";
 
 const title = "Introducing JG";
 const description =
-  "JG (Junior Glen AI) is an experimental AI operating environment from TD Group of Companies, launching as a proof of concept on 14 November 2026.";
+  "JG, Junior Glen (AI), is an experimental AI operating environment from TD Group of Companies, launching as a proof of concept on 14 November 2026.";
 const section = "px-6 py-20 sm:px-8";
 const heading = "text-3xl font-bold text-white sm:text-4xl";
 const body = "text-lg leading-8 text-slate-300";
