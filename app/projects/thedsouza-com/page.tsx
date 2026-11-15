@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
 import {
   ProjectStructuredData,
+  siteUrl,
   socialImageUrl,
 } from "@/components/StructuredData";
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    url: "https://www.thedsouza.com/projects/thedsouza-com",
+    url: `${siteUrl}/projects/thedsouza-com`,
     siteName: "Glen D'Souza",
     title,
     description,
@@ -288,11 +289,11 @@ export default function ThedsouzaComPage() {
             <h2 className={heading}>Trust and Proof layer</h2>
             <p className={`mt-8 ${body}`}>
               The homepage presents evidence rather than promises: four
-              published technical case studies, a background summary grounded
-              in 30 years of IT experience, a grouped skills profile and a
-              delivery approach that checks quality, accessibility, security
-              and privacy before release, with AI assisting the work and people
-              making the decisions.
+              published technical case studies, a background summary grounded in
+              30 years of IT experience, a grouped skills profile and a delivery
+              approach that checks quality, accessibility, security and privacy
+              before release, with AI assisting the work and people making the
+              decisions.
             </p>
             <p className={`mt-8 ${body}`}>
               Google PageSpeed Insights mobile lab results measured 9 September

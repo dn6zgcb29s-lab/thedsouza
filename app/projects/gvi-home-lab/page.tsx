@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
-import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
+import {
+  ProjectStructuredData,
+  siteUrl,
+  socialImageUrl,
+} from "@/components/StructuredData";
 
 const title = "GVI: The Virtualisation Foundation of GHDC";
 const description =
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    url: "https://www.thedsouza.com/projects/gvi-home-lab",
+    url: `${siteUrl}/projects/gvi-home-lab`,
     siteName: "Glen D'Souza",
     title,
     description,
