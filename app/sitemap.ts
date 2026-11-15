@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = "https://www.thedsouza.com";
+import { siteUrl } from "@/components/StructuredData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
