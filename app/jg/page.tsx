@@ -3,7 +3,7 @@ import Image, { type StaticImageData } from "next/image";
 import interfaceConcept from "@/public/jg/jg-interface-concept.webp";
 import commandCentre from "@/public/jg/jg-desktop-command-centre.webp";
 import worldEnvironment from "@/public/jg/jg-world-command-environment.webp";
-import { socialImageUrl } from "@/components/StructuredData";
+import { siteUrl, socialImageUrl } from "@/components/StructuredData";
 
 const title = "Introducing JG";
 const description =
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/jg" },
   openGraph: {
     type: "article",
-    url: "https://www.thedsouza.com/jg",
+    url: `${siteUrl}/jg`,
     siteName: "Glen D'Souza",
     title,
     description,
@@ -91,11 +91,12 @@ export default function JgPage() {
             over time.
           </p>
           <p className={`${body} mx-auto mt-6 max-w-2xl`}>
-            JG, Junior Glen (AI), is an experimental AI operating environment created by TD Group
-            of Companies. Our ambition is to bring the world&apos;s leading
-            artificial intelligence capabilities together in one intelligent
-            environment, combining different AI models, specialist agents,
-            persistent context and the ability to work across the digital world.
+            JG, Junior Glen (AI), is an experimental AI operating environment
+            created by TD Group of Companies. Our ambition is to bring the
+            world&apos;s leading artificial intelligence capabilities together
+            in one intelligent environment, combining different AI models,
+            specialist agents, persistent context and the ability to work across
+            the digital world.
           </p>
           <p className={`${body} mt-4`}>We call this the beginning of JG.</p>
         </div>
@@ -178,7 +179,9 @@ export default function JgPage() {
 
       <section className={section}>
         <div className="mx-auto max-w-3xl">
-          <h2 className={heading}>Built by TD Group. Developed for the future.</h2>
+          <h2 className={heading}>
+            Built by TD Group. Developed for the future.
+          </h2>
           <p className={`${body} mt-6`}>
             JG is an in-house TD Group initiative. We believe the future of AI
             should not be limited to using one model or one provider. It should

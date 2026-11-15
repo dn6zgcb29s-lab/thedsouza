@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
-import { ProjectStructuredData, socialImageUrl } from "@/components/StructuredData";
+import {
+  ProjectStructuredData,
+  siteUrl,
+  socialImageUrl,
+} from "@/components/StructuredData";
 
 const title = "Epping Tennis Club Digital Support";
 const description =
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    url: "https://www.thedsouza.com/projects/epping-tennis-club",
+    url: `${siteUrl}/projects/epping-tennis-club`,
     siteName: "Glen D'Souza",
     title,
     description,

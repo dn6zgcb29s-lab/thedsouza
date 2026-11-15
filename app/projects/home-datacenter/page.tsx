@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
 import {
   ProjectStructuredData,
+  siteUrl,
   socialImageUrl,
 } from "@/components/StructuredData";
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    url: "https://www.thedsouza.com/projects/home-datacenter",
+    url: `${siteUrl}/projects/home-datacenter`,
     siteName: "Glen D'Souza",
     title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
     description:
