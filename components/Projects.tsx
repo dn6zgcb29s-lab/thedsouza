@@ -57,7 +57,7 @@ const projects: {
     tech: "Multi-model AI • Agents • Context",
     href: "/jg",
     action: "Read the JG announcement",
-    status: "Proof of concept • Launches 14 November 2026",
+    status: "Proof of concept • Launched 14 November 2026",
     tone: "development",
   },
 ];
