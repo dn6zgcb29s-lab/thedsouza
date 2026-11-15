@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
 import {
   ProjectStructuredData,
+  siteName,
   siteUrl,
   socialImageUrl,
 } from "@/components/StructuredData";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     url: `${siteUrl}/projects/home-datacenter`,
-    siteName: "Glen D'Souza",
+    siteName,
     title: "Building GHDC: A Staged Heterogeneous Home Datacenter",
     description:
       "Follow the staged development of Glen D'Souza’s secure, modular and heterogeneous private home datacenter built with Proxmox, Linux, Docker and Tailscale.",

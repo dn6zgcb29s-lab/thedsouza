@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactCtas from "@/components/ContactCtas";
 import {
   ProjectStructuredData,
+  siteName,
   siteUrl,
   socialImageUrl,
 } from "@/components/StructuredData";
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     url: `${siteUrl}/projects/thedsouza-com`,
-    siteName: "Glen D'Souza",
+    siteName,
     title,
     description,
     images: [{ url: socialImageUrl, width: 1200, height: 630, alt: title }],
