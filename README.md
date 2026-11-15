@@ -30,4 +30,4 @@ npx prettier --check <changed files>
 - `app/` holds the routes: the homepage (`app/page.tsx`), case studies under `app/projects/<slug>`, and `app/jg`.
 - `components/SubpageLayout.tsx` provides the shared nav and footer for every page except the homepage.
 - `data/contact.ts` is the single source for contact details.
-- `app/sitemap.ts` is maintained by hand. Add every new route to it.
+- `data/routes.ts` declares every public route once. `app/sitemap.ts` builds the sitemap from that list, in the same order. Add a new page, such as a case study, to `data/routes.ts`, not to the sitemap. Homepage project-card links (`components/Projects.tsx`) must be routes from that list; the type check enforces this.
