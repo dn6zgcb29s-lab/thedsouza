@@ -7,6 +7,8 @@ const capabilities = [
   "Technical Troubleshooting",
   "Documentation and Knowledge Transfer",
   "Web and Technical Project Delivery",
+  "Software and Web Engineering",
+  "AI-assisted Development and Automation",
 ];
 
 export default function Experience() {
@@ -24,8 +26,10 @@ export default function Experience() {
         </h2>
 
         <p className="lead mt-6 max-w-3xl">
-          22+ years of professional IT experience, starting on the frontline of
-          enterprise support and moving into engineering.
+          30 years of IT experience, with a professional career that began on
+          the frontline of enterprise support and moved into engineering. Today
+          that enterprise grounding is applied to modern business problems
+          through software development and AI.
         </p>
 
         <ol className="mt-14 grid gap-6 lg:grid-cols-3">

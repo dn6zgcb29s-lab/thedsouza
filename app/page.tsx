@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 import Delivery from "@/components/Delivery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -26,6 +27,10 @@ export default function Home() {
 
         <FadeIn>
           <About />
+        </FadeIn>
+
+        <FadeIn>
+          <Skills />
         </FadeIn>
 
         <FadeIn>
