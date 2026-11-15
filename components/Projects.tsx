@@ -53,8 +53,8 @@ const projects: {
   {
     title: "JG — Intelligence without boundaries",
     description:
-      "Junior Glen (AI): an experimental AI operating environment from TD Group, bringing multiple AI providers, specialist agents and persistent context together.",
-    tech: "Multi-model AI • Agents • Context",
+      "Junior Glen (AI): an experimental AI operating environment from TD Group. The vision: multiple AI providers, specialist agents and persistent context working together.",
+    tech: "Vision • Multi-model AI • Agents • Context",
     href: "/jg",
     action: "Read the JG announcement",
     status: "Proof of concept • Launched 14 November 2026",
