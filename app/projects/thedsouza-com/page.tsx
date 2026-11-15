@@ -287,10 +287,12 @@ export default function ThedsouzaComPage() {
           <div className="mx-auto max-w-5xl">
             <h2 className={heading}>Trust and Proof layer</h2>
             <p className={`mt-8 ${body}`}>
-              The homepage now presents evidence rather than promises: 30 years
-              of IT experience, five published technical case
-              studies and delivery signals covering security, accessibility,
-              human-led AI use and controlled releases.
+              The homepage presents evidence rather than promises: four
+              published technical case studies, a background summary grounded
+              in 30 years of IT experience, a grouped skills profile and a
+              delivery approach that checks quality, accessibility, security
+              and privacy before release, with AI assisting the work and people
+              making the decisions.
             </p>
             <p className={`mt-8 ${body}`}>
               Google PageSpeed Insights mobile lab results measured 9 September

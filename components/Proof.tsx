@@ -1,6 +1,6 @@
 const proofMetrics = [
   { value: "30", label: "Years of IT experience" },
-  { value: "5", label: "Published technical case studies" },
+  { value: "4", label: "Published technical case studies" },
   { value: "98", label: "Mobile performance", score: true },
   { value: "96", label: "Accessibility", score: true },
   { value: "100", label: "Best Practices", score: true },
