@@ -6,6 +6,9 @@ import {
   socialImageUrl,
   personId,
   websiteId,
+  ownerName,
+  siteName,
+  companyName,
 } from "@/components/StructuredData";
 import "./globals.css";
 
@@ -19,7 +22,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Glen D'Souza | AI Technology Consultant & Engineer";
+const title = `${siteName} | AI Technology Consultant & Engineer`;
 const description =
   "AI technology consultant and engineer in Melbourne, working across Australia. Combines 30 years of IT experience with modern software engineering and AI to help businesses solve technology problems, modernise systems and build practical digital solutions.";
 
@@ -29,12 +32,12 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": personId,
-      name: "Glen D'Souza",
+      name: ownerName,
       url: siteUrl,
       jobTitle: "AI Technology Consultant & Engineer",
       worksFor: {
         "@type": "Organization",
-        name: "TD Group of Companies Pty Ltd",
+        name: companyName,
       },
       knowsAbout: [
         "Technology consulting",
@@ -60,7 +63,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": websiteId,
       url: siteUrl,
-      name: "Glen D'Souza",
+      name: siteName,
       description,
       publisher: { "@id": personId },
       inLanguage: "en-AU",
@@ -72,11 +75,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s | Glen D'Souza",
+    template: `%s | ${siteName}`,
   },
   description,
   keywords: [
-    "Glen D'Souza",
+    ownerName,
     "AI technology consultant",
     "AI consulting for business",
     "technology consultant and engineer",
@@ -93,10 +96,10 @@ export const metadata: Metadata = {
     "Melbourne technology consultant",
     "Melbourne AI consultant",
   ],
-  authors: [{ name: "Glen D'Souza" }],
-  creator: "Glen D'Souza",
-  publisher: "TD Group of Companies Pty Ltd",
-  applicationName: "Glen D'Souza",
+  authors: [{ name: ownerName }],
+  creator: ownerName,
+  publisher: companyName,
+  applicationName: siteName,
   alternates: {
     canonical: "/",
   },
@@ -104,7 +107,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AU",
     url: siteUrl,
-    siteName: "Glen D'Souza",
+    siteName,
     title,
     description,
     images: [{ url: socialImageUrl, width: 1200, height: 630, alt: title }],
