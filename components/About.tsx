@@ -37,10 +37,13 @@ export default function About() {
             </p>
 
             <p>
-              I combine that approach with Next.js, React, TypeScript, Docker,
-              AI-assisted development, APIs and automation, backed by years of
-              enterprise IT work across service desk, end-user computing,
-              Microsoft environments and virtualisation.
+              My foundation is 30 years of IT experience, including enterprise
+              roles across service desk, end user computing, Microsoft
+              Intune, Autopilot and Entra ID, and VMware virtualisation. Today
+              I apply that experience through hands-on software and web
+              engineering with Next.js, React, TypeScript and Docker, and
+              through AI-assisted development and automation, so I can
+              understand a problem properly and then build the solution.
             </p>
           </div>
 

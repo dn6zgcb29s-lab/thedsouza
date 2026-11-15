@@ -1,5 +1,5 @@
 const proofMetrics = [
-  { value: "22+", label: "Years of professional IT experience" },
+  { value: "30", label: "Years of IT experience" },
   { value: "5", label: "Published technical case studies" },
   { value: "98", label: "Mobile performance", score: true },
   { value: "96", label: "Accessibility", score: true },
@@ -31,8 +31,7 @@ export default function Proof() {
               The best evidence is working technology. The case studies below
               show real systems I have designed, built and supported, from a
               community club&apos;s email and domains to self-hosted
-              infrastructure. They sit on top of 22+ years of professional IT
-              experience.
+              infrastructure. They build on 30 years of IT experience.
             </p>
           </div>
 

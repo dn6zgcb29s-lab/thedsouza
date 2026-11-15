@@ -28,8 +28,9 @@ export default function Hero() {
 
         <div className="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
-            I help businesses explore AI, design practical technology solutions
-            and turn promising ideas into working systems.
+            I combine 30 years of IT experience with modern software
+            engineering and AI capabilities to help businesses solve technology
+            problems, modernise systems and build practical digital solutions.
           </p>
 
           <div className="border-l border-sky-400/60 pl-6 lg:self-end">

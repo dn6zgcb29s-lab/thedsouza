@@ -502,8 +502,8 @@ export default function HomeDatacenterPage() {
               From enterprise support to platform engineering
             </h2>
             <p className={`mt-8 ${body}`}>
-              GHDC represents the next stage of 22+ years of professional IT
-              experience. My background in service desk consulting, end-user
+              GHDC represents the next stage of 30 years of IT experience. My
+              professional background in service desk consulting, end-user
               computing, Windows administration, virtualisation and enterprise
               support is being extended into designing, building and operating
               an independent technology platform.

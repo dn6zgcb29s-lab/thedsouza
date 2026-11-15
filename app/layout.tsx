@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 const title = "Glen D'Souza | AI Technology Consultant & Engineer";
 const description =
-  "AI technology consultant and engineer in Melbourne, working across Australia. Helps business owners explore AI, design practical technology solutions and turn promising ideas into working systems.";
+  "AI technology consultant and engineer in Melbourne, working across Australia. Combines 30 years of IT experience with modern software engineering and AI to help businesses solve technology problems, modernise systems and build practical digital solutions.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -39,6 +39,12 @@ const jsonLd = {
       knowsAbout: [
         "Technology consulting",
         "AI-assisted software development",
+        "Software and web engineering",
+        "End user computing",
+        "Microsoft Intune",
+        "Windows Autopilot",
+        "Microsoft Entra ID",
+        "VMware",
         "Technology architecture and integration",
         "Digital infrastructure",
         "Linux",
