@@ -1,37 +1,11 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/components/StructuredData";
+import { routes } from "@/data/routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteUrl,
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${siteUrl}/projects/home-datacenter`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/projects/epping-tennis-club`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/projects/thedsouza-com`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/projects/gvi-home-lab`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/jg`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  return routes.map(({ path, priority }) => ({
+    url: path === "/" ? siteUrl : `${siteUrl}${path}`,
+    changeFrequency: "monthly",
+    priority,
+  }));
 }

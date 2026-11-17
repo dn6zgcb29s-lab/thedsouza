@@ -1,11 +1,12 @@
 import ProjectCard, { type ProjectTone } from "@/components/ProjectCard";
 import CurrentlyBuilding from "@/components/CurrentlyBuilding";
+import type { RoutePath } from "@/data/routes";
 
 const projects: {
   title: string;
   description: string;
   tech: string;
-  href: string;
+  href: RoutePath;
   status: string;
   tone: ProjectTone;
   action: string;
