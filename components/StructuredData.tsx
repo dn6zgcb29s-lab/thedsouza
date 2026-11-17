@@ -1,4 +1,7 @@
 const siteUrl = "https://www.thedsouza.com";
+const ownerName = "Glen D'Souza";
+const siteName = ownerName;
+const companyName = "TD Group of Companies Pty Ltd";
 const socialImageUrl = `${siteUrl}/social-preview.png`;
 const personId = `${siteUrl}/#person`;
 const websiteId = `${siteUrl}/#website`;
@@ -68,4 +71,12 @@ export function ProjectStructuredData({
   );
 }
 
-export { personId, siteUrl, socialImageUrl, websiteId };
+export {
+  companyName,
+  ownerName,
+  personId,
+  siteName,
+  siteUrl,
+  socialImageUrl,
+  websiteId,
+};

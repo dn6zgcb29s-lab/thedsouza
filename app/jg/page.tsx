@@ -3,7 +3,7 @@ import Image, { type StaticImageData } from "next/image";
 import interfaceConcept from "@/public/jg/jg-interface-concept.webp";
 import commandCentre from "@/public/jg/jg-desktop-command-centre.webp";
 import worldEnvironment from "@/public/jg/jg-world-command-environment.webp";
-import { siteUrl, socialImageUrl } from "@/components/StructuredData";
+import { siteName, siteUrl, socialImageUrl } from "@/components/StructuredData";
 
 const title = "Introducing JG";
 const description =
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     url: `${siteUrl}/jg`,
-    siteName: "Glen D'Souza",
+    siteName,
     title,
     description,
     images: [{ url: socialImageUrl, width: 1200, height: 630, alt: title }],
