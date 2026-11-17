@@ -3,7 +3,7 @@ import SubpageLayout from "@/components/SubpageLayout";
 
 export default function NotFound() {
   return (
-    <SubpageLayout>
+    <SubpageLayout fillHeight>
       <main
         id="main-content"
         tabIndex={-1}

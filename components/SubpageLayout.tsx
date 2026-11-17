@@ -9,6 +9,11 @@ type SubpageLayoutProps = {
    * whose hero already reserves that space.
    */
   offsetForNav?: boolean;
+  /**
+   * Make the content area a flex column so a child `main` with `flex-1`
+   * fills the space between nav and footer.
+   */
+  fillHeight?: boolean;
 };
 
 /**
@@ -19,13 +24,14 @@ type SubpageLayoutProps = {
 export default function SubpageLayout({
   children,
   offsetForNav = true,
+  fillHeight = false,
 }: SubpageLayoutProps) {
   return (
     <>
       <Navbar hrefPrefix="/" />
 
       <div
-        className={`flex-1 ${offsetForNav ? "pt-20 " : ""}[&>main]:scroll-mt-20`}
+        className={`flex-1 ${fillHeight ? "flex flex-col " : ""}${offsetForNav ? "pt-20 " : ""}[&>main]:scroll-mt-20`}
       >
         {children}
       </div>
